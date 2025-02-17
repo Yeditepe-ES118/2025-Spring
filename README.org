@@ -39,10 +39,9 @@
 ** Resources
 #+REVEAL_HTML: <div style="font-size: 60%;">
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- *~README.html~ for each lecture posted on Yulearn course page*
-- Presentations & lab documents: *https://yeditepe-es118.github.io/2025-Spring/*
-  + for example lecture-1 is in *https://yeditepe-es118.github.io/2025-Spring/lecture-1/*
-  + for example lab-1 is in *https://yeditepe-es118.github.io/2025-Spring/lab-1/*
+- *Presentations & lab documents: https://yeditepe-es118.github.io/2025-Spring/*
+  + *for example lecture-1 is in https://yeditepe-es118.github.io/2025-Spring/lecture-1/*
+  + *for example lab-1 is in https://yeditepe-es118.github.io/2025-Spring/lab-1/*
 - Free online books
   #+ATTR_REVEAL: :frag (appear appear appear ...)
   + *Scientific Python: https://lectures.scientific-python.org/*
