@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>ES118 Introduction to Scientific Computing with Python</title>
+<meta name="author" content="Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="./mystyle.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>ES118 Introduction to Scientific Computing with Python</h2> <h3>Spring 2025, Sections 1 and 2</h3>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org20b0c6d">Syllabus</a></li>
+<li><a href="#/slide-org94391c9">Contact</a></li>
+<li><a href="#/slide-org80bd773">Key terms</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<section>
+<section id="slide-org20b0c6d">
+<h2 id="org20b0c6d">Syllabus</h2>
+<div class="outline-text-2" id="text-org20b0c6d">
+</div>
+</section>
+<section id="slide-orgc188b40">
+<h3 id="orgc188b40">Course objectives</h3>
+<ul>
+<li class="fragment appear">To <span class="underline">provide students with the ability of using a computer</span> in engineering practice</li>
+<li class="fragment appear"><span class="underline">Software applications</span> in problem solving</li>
+
+</ul>
+
+</section>
+<section id="slide-orgfb2b5dd">
+<h3 id="orgfb2b5dd">Weekly plan</h3>
+<div style="font-size: 80%;">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Week</th>
+<th scope="col" class="org-left">Lecture</th>
+<th scope="col" class="org-left">Laboratory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">Course conduct</td>
+<td class="org-left">No lab</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">Interacting with an operating system</td>
+<td class="org-left">Terminal crash course w/ openAI</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Programming environments: Octave, Python, and Git</td>
+<td class="org-left">Octave, Python, and Git crash course</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">Data types, operator precedence, registers</td>
+<td class="org-left">Basic calculations</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Array definitions in Octave and Python</td>
+<td class="org-left">Demo of built-in functions</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">Basic input and output, and defining functions</td>
+<td class="org-left">Writing user functions</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">Midterm</td>
+<td class="org-left">User interaction demo, reading data from file</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">Logical operators, using 'find'</td>
+<td class="org-left">Debugging algorithms</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-left">The "if-else" conditional</td>
+<td class="org-left">A script that calculates GPA</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">For loops for repeated tasks</td>
+<td class="org-left">The fibonacci numbers, the golden ratio</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-left">While loops for repeated tasks</td>
+<td class="org-left">Bisection method (rootfinding)</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-left">Generating data series for plotting</td>
+<td class="org-left">Data visualization crash course</td>
+</tr>
+
+<tr>
+<td class="org-right">13</td>
+<td class="org-left">File read/write operations</td>
+<td class="org-left">Convergence algorithms (rootfinding)</td>
+</tr>
+
+<tr>
+<td class="org-right">14</td>
+<td class="org-left">Review</td>
+<td class="org-left">Experimental data plotting</td>
+</tr>
+</tbody>
+</table>
+<div>
+
+</section>
+<section id="slide-org7ae2eed">
+<h3 id="org7ae2eed">Resources</h3>
+<div style="font-size: 60%;">
+<ul>
+<li class="fragment appear"><code>README.html</code> for each lecture posted on Yulearn course page</li>
+<li class="fragment appear">Free online books
+<ul>
+<li class="fragment appear">Scientific Python: <a href="https://lectures.scientific-python.org/">https://lectures.scientific-python.org/</a></li>
+<li class="fragment appear">Version control, git book: <a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a></li>
+
+</ul></li>
+<li class="fragment appear">Additional textbooks
+<ul>
+<li>Learning the Unix Operating System, Jerry Peak, et. al, 5th Edition</li>
+<li>Operating system concepts, Abraham Silberschatz, et. al, 8th Edition</li>
+
+</ul></li>
+<li class="fragment ...">Free online documentation
+<ul>
+<li class="fragment appear">Python programming language: <a href="https://www.python.org/">https://www.python.org/</a></li>
+<li class="fragment appear">A numerical computing Python library: <a href="https://numpy.org/">https://numpy.org/</a></li>
+<li class="fragment appear">A visualization Python library: <a href="https://matplotlib.org/">https://matplotlib.org/</a></li>
+<li class="fragment ...">Operating systems: <a href="https://openosorg.github.io/openos/textbook/intro/pref.html">https://openosorg.github.io/openos/textbook/intro/pref.html</a></li>
+
+</ul></li>
+
+</ul>
+<ul>
+<li class="fragment appear">Software
+<ul>
+<li class="fragment appear">Integrated development environment (IDE)
+<ul>
+<li class="fragment appear">Spyder for Python: <a href="https://www.spyder-ide.org/">https://www.spyder-ide.org/</a></li>
+
+</ul></li>
+<li class="fragment appear">Editors
+<ul>
+<li class="fragment appear">Notepad++: <a href="https://notepad-plus-plus.org/">https://notepad-plus-plus.org/</a></li>
+<li class="fragment appear">Emacs, more than an editor:  <a href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a></li>
+<li class="fragment appear">VS Code (proprietary software): <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+<li class="fragment ...">VS Codium: <a href="https://vscodium.com/">https://vscodium.com/</a></li>
+<li class="fragment ...">If you want to plan and/or get things done in an organized manner in Emacs: <a href="https://orgmode.org/">https://orgmode.org/</a></li>
+
+</ul></li>
+<li class="fragment appear">Version control
+<ul>
+<li class="fragment appear">Using git terminal on different operating systems: <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
+<li class="fragment appear">Windows Subsystem for Linux: <a href="https://learn.microsoft.com/en-us/windows/wsl/install">https://learn.microsoft.com/en-us/windows/wsl/install</a></li>
+
+</ul></li>
+<li class="fragment ...">Operating systems
+<ul>
+<li class="fragment appear">Arch Linux, a GNU/Linux distribution: <a href="https://archlinux.org/">https://archlinux.org/</a></li>
+<li class="fragment appear">Free and open-source software: <a href="https://www.gnu.org/">https://www.gnu.org/</a></li>
+
+</ul></li>
+
+</ul></li>
+<li class="fragment appear">Github, software developer platform: <a href="https://github.com/">https://github.com/</a></li>
+<li class="fragment appear">Github classroom: <a href="https://classroom.github.com/">https://classroom.github.com/</a></li>
+
+</ul>
+<div>
+
+</section>
+<section id="slide-org0453fb6">
+<h3 id="org0453fb6">Assesment</h3>
+<div style="font-size: 90%;">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">In-term studies</th>
+<th scope="col" class="org-right">Percentage (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Midterm</td>
+<td class="org-right">35</td>
+</tr>
+
+<tr>
+<td class="org-left">In-term performance</td>
+<td class="org-right">15</td>
+</tr>
+
+<tr>
+<td class="org-left">Final</td>
+<td class="org-right">50</td>
+</tr>
+</tbody>
+</table>
+
+<div>
+
+</section>
+</section>
+<section>
+<section id="slide-org94391c9">
+<h2 id="org94391c9">Contact</h2>
+<p>
+Email: ufuktan@utblr.xyz
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org80bd773">
+<h2 id="org80bd773">Key terms</h2>
+<div style="font-size: 90%;">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">computer</td>
+<td class="org-left">user</td>
+<td class="org-left">program</td>
+<td class="org-left">software</td>
+<td class="org-left">hardware</td>
+</tr>
+
+<tr>
+<td class="org-left">keyboard</td>
+<td class="org-left">mouse</td>
+<td class="org-left">editor</td>
+<td class="org-left">terminal</td>
+<td class="org-left">IDE</td>
+</tr>
+
+<tr>
+<td class="org-left">CPU</td>
+<td class="org-left">memory</td>
+<td class="org-left">disk</td>
+<td class="org-left">network</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+#+TITLE: ES118 Introduction to Scientific Computing with Python
+#+SUBTITLE: Spring 2025, Sections 1 and 2
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3>
+#+OPTIONS: timestamp:nil toc:1 num:nil
+#+REVEAL_EXTRA_CSS: ./mystyle.css
+
+
+* Syllabus
+** Course objectives
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- To _provide students with the ability of using a computer_ in engineering practice
+- _Software applications_ in problem solving
+  
+** Weekly plan
+#+REVEAL_HTML: <div style="font-size: 80%;">
+| Week | Lecture                                           | Laboratory                                    |
+|------+---------------------------------------------------+-----------------------------------------------|
+|    1 | Course conduct                                    | No lab                                        |
+|    2 | Interacting with an operating system              | Terminal crash course w/ openAI               |
+|    3 | Programming environments: Octave, Python, and Git | Octave, Python, and Git crash course          |
+|    4 | Data types, operator precedence, registers        | Basic calculations                            |
+|    5 | Array definitions in Octave and Python            | Demo of built-in functions                    |
+|    6 | Basic input and output, and defining functions    | Writing user functions                        |
+|    7 | Midterm                                           | User interaction demo, reading data from file |
+|    8 | Logical operators, using 'find'                   | Debugging algorithms                          |
+|    9 | The "if-else" conditional                         | A script that calculates GPA                  |
+|   10 | For loops for repeated tasks                      | The fibonacci numbers, the golden ratio       |
+|   11 | While loops for repeated tasks                    | Bisection method (rootfinding)                |
+|   12 | Generating data series for plotting               | Data visualization crash course               |
+|   13 | File read/write operations                        | Convergence algorithms (rootfinding)          |
+|   14 | Review                                            | Experimental data plotting                    |
+#+REVEAL_HTML: <div>
+
+** Resources
+#+REVEAL_HTML: <div style="font-size: 60%;">
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- ~README.html~ for each lecture posted on Yulearn course page
+- Free online books
+  #+ATTR_REVEAL: :frag (appear appear appear ...)
+  + Scientific Python: https://lectures.scientific-python.org/
+  + Version control, git book: https://git-scm.com/book/en/v2
+- Additional textbooks
+  + Learning the Unix Operating System, Jerry Peak, et. al, 5th Edition
+  + Operating system concepts, Abraham Silberschatz, et. al, 8th Edition
+- Free online documentation
+  #+ATTR_REVEAL: :frag (appear appear appear ...)
+  + Python programming language: https://www.python.org/
+  + A numerical computing Python library: https://numpy.org/
+  + A visualization Python library: https://matplotlib.org/
+  + Operating systems: https://openosorg.github.io/openos/textbook/intro/pref.html
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Software
+  #+ATTR_REVEAL: :frag (appear appear appear ...)
+  + Integrated development environment (IDE)
+    #+ATTR_REVEAL: :frag (appear appear appear ...)    
+    * Spyder for Python: https://www.spyder-ide.org/
+  + Editors
+    #+ATTR_REVEAL: :frag (appear appear appear ...)
+    * Notepad++: https://notepad-plus-plus.org/
+    * Emacs, more than an editor:  https://www.gnu.org/software/emacs/
+    * VS Code (proprietary software): https://code.visualstudio.com/
+    * VS Codium: https://vscodium.com/
+    * If you want to plan and/or get things done in an organized manner in Emacs: https://orgmode.org/
+  + Version control
+    #+ATTR_REVEAL: :frag (appear appear appear ...)
+    * Using git terminal on different operating systems: https://git-scm.com/downloads
+    * Windows Subsystem for Linux: https://learn.microsoft.com/en-us/windows/wsl/install
+  + Operating systems
+    #+ATTR_REVEAL: :frag (appear appear appear ...)
+    * Arch Linux, a GNU/Linux distribution: https://archlinux.org/
+    * Free and open-source software: https://www.gnu.org/  
+- Github, software developer platform: https://github.com/
+- Github classroom: https://classroom.github.com/
+#+REVEAL_HTML: <div>
+
+** Assesment
+#+REVEAL_HTML: <div style="font-size: 90%;">
+| In-term studies     | Percentage (%) |
+|---------------------+----------------|
+| Midterm             |             35 |
+| In-term performance |             15 |
+| Final               |             50 |
+
+#+REVEAL_HTML: <div>
+
+* Contact
+Email: ufuktan@utblr.xyz
+
+* Key terms
+#+REVEAL_HTML: <div style="font-size: 90%;">
+| computer | user   | program | software | hardware |
+| keyboard | mouse  | editor  | terminal | IDE      |
+| CPU      | memory | disk    | network  |          |
+#+REVEAL_HTML: <div>
