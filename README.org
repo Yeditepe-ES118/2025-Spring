@@ -4,9 +4,10 @@
 #+STARTUP: overview
 #+REVEAL_THEME: simple
 #+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
-#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3>
-#+OPTIONS: timestamp:nil toc:1 num:nil
-#+REVEAL_EXTRA_CSS: ./mystyle.css
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ./style.css
+#+LATEX_HEADER: \usepackage{amsmath}
 
 
 * Syllabus
@@ -38,29 +39,31 @@
 ** Resources
 #+REVEAL_HTML: <div style="font-size: 60%;">
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- ~README.html~ for each lecture posted on Yulearn course page
+- *~README.html~ for each lecture posted on Yulearn course page*
+- Presentations & lab documents: *https://yeditepe-es118.github.io/2025-Spring/*
+  + for example lecture-1 is in *https://yeditepe-es118.github.io/2025-Spring/lecture-1/*
+  + for example lab-1 is in *https://yeditepe-es118.github.io/2025-Spring/lab-1/*
 - Free online books
   #+ATTR_REVEAL: :frag (appear appear appear ...)
-  + Scientific Python: https://lectures.scientific-python.org/
-  + Version control, git book: https://git-scm.com/book/en/v2
+  + *Scientific Python: https://lectures.scientific-python.org/*
+  + *Version control, git book: https://git-scm.com/book/en/v2*
 - Additional textbooks
   + Learning the Unix Operating System, Jerry Peak, et. al, 5th Edition
   + Operating system concepts, Abraham Silberschatz, et. al, 8th Edition
 - Free online documentation
   #+ATTR_REVEAL: :frag (appear appear appear ...)
+  + *A numerical computing Python library: https://numpy.org/*
+  + *A visualization Python library: https://matplotlib.org/*
   + Python programming language: https://www.python.org/
-  + A numerical computing Python library: https://numpy.org/
-  + A visualization Python library: https://matplotlib.org/
   + Operating systems: https://openosorg.github.io/openos/textbook/intro/pref.html
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- Integrated development environment (IDE)
-  #+ATTR_REVEAL: :frag (appear appear appear ...)    
-  * Spyder for Python: https://www.spyder-ide.org/
+- Spyder, integrated development environment (IDE): https://www.spyder-ide.org/
+  + *install Spyder via Conda package manager: https://www.anaconda.com/download*
 - Version control
   #+ATTR_REVEAL: :frag (appear appear appear ...)
-  * Git software: https://git-scm.com/downloads
-  * Github, software developer platform: https://github.com/
-  * Github classroom: https://classroom.github.com/
+  * *Install Git bash software: https://git-scm.com/downloads*
+  * *Github, software developer platform: https://github.com/*
+  * *Github classroom: https://classroom.github.com/*
 #+REVEAL_HTML: <div>
 
 ** Assesment
