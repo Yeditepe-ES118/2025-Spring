@@ -53,28 +53,14 @@
   + A visualization Python library: https://matplotlib.org/
   + Operating systems: https://openosorg.github.io/openos/textbook/intro/pref.html
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- Software
+- Integrated development environment (IDE)
+  #+ATTR_REVEAL: :frag (appear appear appear ...)    
+  * Spyder for Python: https://www.spyder-ide.org/
+- Version control
   #+ATTR_REVEAL: :frag (appear appear appear ...)
-  + Integrated development environment (IDE)
-    #+ATTR_REVEAL: :frag (appear appear appear ...)    
-    * Spyder for Python: https://www.spyder-ide.org/
-  + Editors
-    #+ATTR_REVEAL: :frag (appear appear appear ...)
-    * Notepad++: https://notepad-plus-plus.org/
-    * Emacs, more than an editor:  https://www.gnu.org/software/emacs/
-    * VS Code (proprietary software): https://code.visualstudio.com/
-    * VS Codium: https://vscodium.com/
-    * If you want to plan and/or get things done in an organized manner in Emacs: https://orgmode.org/
-  + Version control
-    #+ATTR_REVEAL: :frag (appear appear appear ...)
-    * Using git terminal on different operating systems: https://git-scm.com/downloads
-    * Windows Subsystem for Linux: https://learn.microsoft.com/en-us/windows/wsl/install
-  + Operating systems
-    #+ATTR_REVEAL: :frag (appear appear appear ...)
-    * Arch Linux, a GNU/Linux distribution: https://archlinux.org/
-    * Free and open-source software: https://www.gnu.org/  
-- Github, software developer platform: https://github.com/
-- Github classroom: https://classroom.github.com/
+  * Git software: https://git-scm.com/downloads
+  * Github, software developer platform: https://github.com/
+  * Github classroom: https://classroom.github.com/
 #+REVEAL_HTML: <div>
 
 ** Assesment
