@@ -80,7 +80,10 @@ Email: ufuktan@utblr.xyz
 
 * Key terms
 #+REVEAL_HTML: <div style="font-size: 90%;">
-| computer | user   | program | software | hardware |
-| keyboard | mouse  | editor  | terminal | IDE      |
-| CPU      | memory | disk    | network  |          |
+| computer         | user             | program               | software | hardware |
+| keyboard         | mouse            | editor                | terminal | IDE      |
+| CPU              | memory           | disk                  | network  | script   |
+| console          | variable         | arithmetic            | import   | library  |
+| module           | binary           | bit                   | register | integer  |
+| one's complement | two's complement | floating-point number |          |          |
 #+REVEAL_HTML: <div>
