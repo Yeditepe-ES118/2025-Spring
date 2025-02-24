@@ -1,0 +1,32 @@
+#+TITLE: ES118 Lab #1
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+DATE: 2025-02-24
+#+SUBTITLE: Crash course with the IDE
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+
+* Demo session
+- IDE navigation
+- Using console
+- File system
+  + file tree
+  + paths
+- Simple arithmetic operations with variables
+- Writing simple codes
+- Executing the codes
+
+* Deliverables
++ Draw a file tree of the following folders and write their paths
+  - Root folder
+  - User folder
+  - ~Documents~
+  - ~Desktop~
+
++ Write a code to compute the surface area of Earth using $A = 4\pi r^2$
+  - $r \approx 6370$ km
+  - define $\pi$ up to 16 significant figures
