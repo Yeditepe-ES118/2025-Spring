@@ -336,7 +336,7 @@ matlab_R2024a_Linux.zip  Public/    test.m
 - The working directory is another special type of directory that you're *currently in*
 - The filesystem can be modeled as a *tree*, which has *root directory* shown by ~/~
 
-* Classwork #2, assigned for Lecture #3
+* Classwork #1, assigned to 24 Feb 2025
 - How to access Python console through Spyder IDE?
 - How to define a variable in Spyder IDE?
 - Is ~5 = x~ correct way to define a variable?  
