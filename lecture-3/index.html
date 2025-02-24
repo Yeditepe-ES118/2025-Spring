@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>ES118 Lecture #3</title>
+<meta name="author" content="Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../codestyle.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>ES118 Lecture #3</h2> <h3>Programming environment</h3> <h4>Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar</h4> <h4></h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-orgcf9f913">IPython Console</a></li>
+<li><a href="#/slide-org8b2472c">Deliverables</a></li>
+<li><a href="#/slide-orgf6662a1">Classwork #3</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-orgcf9f913">
+<h2 id="orgcf9f913">IPython Console</h2>
+<div class="column" style="float:left; width:50%">
+<p class="fragment (appear)">
+Arithmetic operations
+</p>
+
+<div id="org85a3ceb" class="figure">
+<p><img src="./ipython_arithmetic.png" alt="ipython_arithmetic.png" class="fragment (appear)" width="900px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p class="fragment (appear)">
+Variable definitions
+</p>
+
+<div id="org7b248a2" class="figure">
+<p><img src="./ipython_vardefs.png" alt="ipython_vardefs.png" class="fragment (appear)" width="900px" />
+</p>
+</div>
+
+<p class="fragment (appear)">
+Check the <b>variable explorer</b>:
+</p>
+
+<div id="orgc9a49db" class="figure">
+<p><img src="./spyder_varexplorer.png" alt="spyder_varexplorer.png" class="fragment (appear)" width="900px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-orgcf9f913-split">
+<p>
+What is the value of <code>y</code> after execution of the commands shown in the console?
+</p>
+
+<div id="org9f17a36" class="figure">
+<p><img src="./console_example.png" alt="console_example.png" width="900px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgc385bd8">
+<h3 id="orgc385bd8">Creating scripts for repeating tasks</h3>
+<p>
+Instead of writing code in the console, let's create a <b>script file</b> which contains the same code in the console.
+</p>
+
+<div class="column" style="float:left; width:50%">
+<ul>
+<li class="fragment appear">Click on the <code>File/New file</code> button on the top menu bar to write a new script file</li>
+<li class="fragment appear">A new file similar to <code>untitled0.py*</code> will be opened. Notice that
+<ul>
+<li class="fragment appear"><code>untitled0.py</code> is the script name</li>
+<li class="fragment appear"><code>.py</code> is the <b>file extension</b> which represents the file type</li>
+<li class="fragment appear"><code>*</code>   appears when the file is not saved after any editing</li>
+
+</ul></li>
+
+</ul>
+
+<div id="org7b40180" class="figure">
+<p><img src="./spyder_editor.png" alt="spyder_editor.png" width="900px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<ul>
+<li class="fragment appear">Click on the <code>File/Save</code> button to save it in a folder which is tracked by you
+<ul>
+<li class="fragment appear"><code>/home/utblr/Documents</code> is the working folder</li>
+<li class="fragment appear"><code>myscript.py</code> is the saved script</li>
+
+</ul></li>
+
+</ul>
+
+<div id="org9cca8b1" class="figure">
+<p><img src="./spyder_files.png" alt="spyder_files.png" width="900px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org518d08b">
+<h3 id="org518d08b">Running the scripts</h3>
+<div class="column" style="float:left; width:50%">
+<p class="fragment (appear)">
+Press the play button or F5 key on the keyboard
+</p>
+
+<div id="orge077f20" class="figure">
+<p><img src="./spyder_run.png" alt="spyder_run.png" class="fragment (appear)" width="550px" />
+</p>
+</div>
+
+<p class="fragment (appear)">
+Check
+</p>
+<ul>
+<li class="fragment appear">the console if there is <b>errors</b></li>
+<li class="fragment appear">the <b>variables</b> in the variable explorer</li>
+
+</ul>
+
+<div id="org226378e" class="figure">
+<p><img src="./spyder_output.png" alt="spyder_output.png" class="fragment (appear)" width="690px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p class="fragment (appear)">
+The variables can be accessed through the console
+</p>
+
+<div id="orge8bc446" class="figure">
+<p><img src="./spyder_console_check.png" alt="spyder_console_check.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org8b2472c">
+<h2 id="org8b2472c">Deliverables</h2>
+<ul>
+<li>Defining variables on the terminal</li>
+<li>Performing arithmetic operations</li>
+<li>Creating scripts for repeating tasks</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf6662a1">
+<h2 id="orgf6662a1">Classwork #3</h2>
+<ul>
+<li>What is Numpy, and how is it used in scientific computing?</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>

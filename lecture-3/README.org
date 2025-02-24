@@ -1,0 +1,99 @@
+#+TITLE: ES118 Lecture #3
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+SUBTITLE: Programming environment
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+
+* IPython Console
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+Arithmetic operations
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 900px
+[[./ipython_arithmetic.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+Variable definitions
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 900px
+[[./ipython_vardefs.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+Check the *variable explorer*:
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 900px
+[[./spyder_varexplorer.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+What is the value of ~y~ after execution of the commands shown in the console?
+#+ATTR_HTML: :width 900px
+[[./console_example.png]]
+
+** Creating scripts for repeating tasks
+Instead of writing code in the console, let's create a *script file* which contains the same code in the console.
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+ATTR_REVEAL: :frag (appear)
++ Click on the ~File/New file~ button on the top menu bar to write a new script file
++ A new file similar to ~untitled0.py*~ will be opened. Notice that
+  #+ATTR_REVEAL: :frag (appear)
+  - ~untitled0.py~ is the script name
+  - ~.py~ is the *file extension* which represents the file type
+  - ~*~   appears when the file is not saved after any editing
+#+ATTR_HTML: :width 900px
+[[./spyder_editor.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
++ Click on the ~File/Save~ button to save it in a folder which is tracked by you
+  #+ATTR_REVEAL: :frag (appear)
+  - ~/home/utblr/Documents~ is the working folder
+  - ~myscript.py~ is the saved script
+#+ATTR_HTML: :width 900px
+[[./spyder_files.png]]
+#+REVEAL_HTML: </div>
+
+** Running the scripts
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+Press the play button or F5 key on the keyboard
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 550px
+[[./spyder_run.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+Check
+#+ATTR_REVEAL: :frag (appear)
++ the console if there is *errors*
++ the *variables* in the variable explorer
+#+ATTR_REVEAL: :frag (appear)  
+#+ATTR_HTML: :width 690px
+[[./spyder_output.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+The variables can be accessed through the console
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./spyder_console_check.png]]
+#+REVEAL_HTML: </div>
+
+
+* Deliverables
+- Defining variables on the terminal
+- Performing arithmetic operations
+- Creating scripts for repeating tasks
+
+* Classwork #2, assigned to 3 Mar 2025
+- What is Numpy, and how is it used in scientific computing?
+- What is operator precedence in an algebraic expression?
