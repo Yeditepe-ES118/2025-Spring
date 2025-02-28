@@ -1,0 +1,28 @@
+#+TITLE: ES118 Lab #1 Solution
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+STARTUP: overview
+#+LATEX_HEADER: \usepackage{amsmath}
+
+* Question 1
+#+ATTR_HTML: :width 100px
+[[./part_1a.png]]
+
++ ~C:~
++ ~C:\Users\user~
++ ~C:\Users\user\Documents~
++ ~C:\Users\user\Desktop~
+
+* Question 2
+Python script:
+#+BEGIN_SRC python
+# Compute approximately the surface area of earth
+r = 6370 # km
+pi = 3.141592653589793
+A = 4*pi*r*r
+#+END_SRC
+
+Computed surface area:
+#+BEGIN_SRC bash
+In [2]: A
+Out[2]: 509904363.7817907
+#+END_SRC
