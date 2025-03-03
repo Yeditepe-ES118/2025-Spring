@@ -18,22 +18,22 @@
   
 ** Weekly plan
 #+REVEAL_HTML: <div style="font-size: 80%;">
-| Week | Lecture                                           | Laboratory                                    |
-|------+---------------------------------------------------+-----------------------------------------------|
-|    1 | Course conduct                                    | No lab                                        |
-|    2 | Interacting with an operating system              | Terminal crash course w/ openAI               |
-|    3 | Programming environments: Octave, Python, and Git | Octave, Python, and Git crash course          |
-|    4 | Data types, operator precedence, registers        | Basic calculations                            |
-|    5 | Array definitions in Octave and Python            | Demo of built-in functions                    |
-|    6 | Basic input and output, and defining functions    | Writing user functions                        |
-|    7 | Midterm                                           | User interaction demo, reading data from file |
-|    8 | Logical operators, using 'find'                   | Debugging algorithms                          |
-|    9 | The "if-else" conditional                         | A script that calculates GPA                  |
-|   10 | For loops for repeated tasks                      | The fibonacci numbers, the golden ratio       |
-|   11 | While loops for repeated tasks                    | Bisection method (rootfinding)                |
-|   12 | Generating data series for plotting               | Data visualization crash course               |
-|   13 | File read/write operations                        | Convergence algorithms (rootfinding)          |
-|   14 | Review                                            | Experimental data plotting                    |
+| Week | Lecture                                        | Laboratory                                    |
+|------+------------------------------------------------+-----------------------------------------------|
+|    1 | Course conduct                                 | No lab                                        |
+|    2 | Interacting with an operating system           | Terminal crash course w/ openAI               |
+|    3 | Programming environments: Python, and Git      | Python, and Git crash course                  |
+|    4 | Data types, operator precedence, registers     | Basic calculations                            |
+|    5 | Array definitions in Python                    | Demo of built-in functions                    |
+|    6 | Basic input and output, and defining functions | Writing user functions                        |
+|    7 | Midterm                                        | User interaction demo, reading data from file |
+|    8 | Logical operators, using 'find'                | Debugging algorithms                          |
+|    9 | The "if-else" conditional                      | A script that calculates GPA                  |
+|   10 | For loops for repeated tasks                   | The fibonacci numbers, the golden ratio       |
+|   11 | While loops for repeated tasks                 | Bisection method (rootfinding)                |
+|   12 | Generating data series for plotting            | Data visualization crash course               |
+|   13 | File read/write operations                     | Convergence algorithms (rootfinding)          |
+|   14 | Review                                         | Experimental data plotting                    |
 #+REVEAL_HTML: <div>
 
 ** Resources
@@ -80,10 +80,14 @@ Email: ufuktan@utblr.xyz
 
 * Key terms
 #+REVEAL_HTML: <div style="font-size: 90%;">
-| computer         | user             | program               | software | hardware |
-| keyboard         | mouse            | editor                | terminal | IDE      |
-| CPU              | memory           | disk                  | network  | script   |
-| console          | variable         | arithmetic            | import   | library  |
-| module           | binary           | bit                   | register | integer  |
-| one's complement | two's complement | floating-point number |          |          |
+| computer         | user             | program               | software    | hardware   |
+| keyboard         | mouse            | editor                | terminal    | IDE        |
+| CPU              | memory           | disk                  | network     | script     |
+| console          | variable         | arithmetic            | import      | library    |
+| module           | binary           | bit                   | register    | integer    |
+| one's complement | two's complement | floating-point number | list        | index      |
+| tuple            | string           | precedence            | term        | expression |
+| formatting       | specifier        | whole                 | fractional  | input      |
+| relational       | logic            | indentation           | conditional | nesting    |
+
 #+REVEAL_HTML: <div>
