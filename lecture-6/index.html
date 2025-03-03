@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>ES118 Lecture #6</title>
+<meta name="author" content="Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../codestyle.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>ES118 Lecture #6</h2> <h3>Logical operators, and if-else conditionals</h3> <h4>Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar</h4> <h4></h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-orgab5ed24">relational operators</a></li>
+<li><a href="#/slide-orgc3b6227">logical operators</a></li>
+<li><a href="#/slide-orgc58e3f4">conditional statements</a></li>
+<li><a href="#/slide-org02904fa">Classwork #3, assigned to 10 Mar 2025</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-orgab5ed24">
+<h2 id="orgab5ed24">relational operators</h2>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Name</th>
+<th scope="col" class="org-left">Operator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Greater than</td>
+<td class="org-left"><code>&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left">Less than</td>
+<td class="org-left"><code>&lt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left">Greater than or equal</td>
+<td class="org-left"><code>&gt;=</code></td>
+</tr>
+
+<tr>
+<td class="org-left">Less than or equal</td>
+<td class="org-left"><code>&lt;=</code></td>
+</tr>
+
+<tr>
+<td class="org-left">Equal</td>
+<td class="org-left"><code>==</code></td>
+</tr>
+
+<tr>
+<td class="org-left">Not equal</td>
+<td class="org-left"><code>!=</code></td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-orgab5ed24-split">
+
+<p>
+Result of the relational operators is a <b>boolean value</b>: <code>True</code>, <code>False</code>
+</p>
+
+
+<div id="orge31e2aa" class="figure">
+<p><img src="./comparison_example.png" alt="comparison_example.png" class="fragment (appear)" width="1300px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc3b6227">
+<h2 id="orgc3b6227">logical operators</h2>
+<p>
+Logical operators are as follows
+</p>
+<ul>
+<li class="fragment appear">AND: <code>and</code></li>
+<li class="fragment appear">OR: <code>or</code></li>
+<li class="fragment appear">NOT: <code>not</code></li>
+
+</ul>
+
+<p class="fragment (appear)">
+They are generally used with booleans.
+</p>
+
+
+<div id="orgb8e34a3" class="figure">
+<p><img src="./logical_operator_example.png" alt="logical_operator_example.png" class="fragment (appear)" width="1000px" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgc58e3f4">
+<h2 id="orgc58e3f4">conditional statements</h2>
+<div class="outline-text-2" id="text-orgc58e3f4">
+</div>
+</section>
+<section id="slide-orgac584ac">
+<h3 id="orgac584ac"><code>if</code> conditional</h3>
+<p class="fragment (appear)">
+The <code>if</code> conditional is a statement that evaluates a code block <b>when the given condition is satisfied</b>.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="fragment (appear)"   ><code trim><span style="color: #F0DFAF; font-weight: bold;">if</span> CONDITION:
+    CODE-BLOCK
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org260be83">
+<h3 id="org260be83"><code>else</code> conditional</h3>
+<p class="fragment (appear)">
+When the CONDITION is <b>not</b> satisfied, then a code block written under <code>else</code> statement is evaluated,
+</p>
+
+<div class="org-src-container">
+
+<pre  class="fragment (appear)"   ><code trim><span style="color: #F0DFAF; font-weight: bold;">if</span> CONDITION:
+    CODE-BLOCK-1
+<span style="color: #F0DFAF; font-weight: bold;">else</span>:
+    CODE-BLOCK-2
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org5e98440">
+<h3 id="org5e98440"><code>elif</code> conditional</h3>
+<p class="fragment (appear)">
+<code>elif</code> comes from <b>(el)se (if)</b>
+</p>
+
+<div class="org-src-container">
+
+<pre  class="fragment (appear)"   ><code trim><span style="color: #F0DFAF; font-weight: bold;">if</span> CONDITION-1:
+    CODE-BLOCK-1
+<span style="color: #F0DFAF; font-weight: bold;">elif</span> CONDITION-2:
+    CODE-BLOCK-2
+<span style="color: #F0DFAF; font-weight: bold;">else</span>:
+    CODE-BLOCK-3
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org933ee19">
+<h3 id="org933ee19">examples</h3>
+<div class="outline-text-3" id="text-org933ee19">
+</div>
+</section>
+<section id="slide-org3958c52">
+<h4 id="org3958c52">example-1</h4>
+<p>
+For example, let's print a physical state if the required condition is true,
+</p>
+
+<div id="org9e7aee0" class="figure">
+<p><img src="./example1.png" alt="example1.png" class="fragment (appear)" width="1000px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org42b2a91">
+<h4 id="org42b2a91">example-2</h4>
+<p>
+We can nest multiple <code>if</code> conditionals to check additional conditions,
+</p>
+
+<div id="org442e9a2" class="figure">
+<p><img src="./example2.png" alt="example2.png" class="fragment (appear)" width="1000px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org7c7bca1">
+<h4 id="org7c7bca1">example-3</h4>
+<p>
+Write a program whether a triangle can be formed or not according to the given user input for three angles. If it cannot be formed, then print how much degrees is needed to form the triangle.
+</p>
+
+<div id="orgfc7df2c" class="figure">
+<p><img src="./example3.png" alt="example3.png" class="fragment (appear)" width="1000px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org54d76cc">
+<h4 id="org54d76cc">example-4</h4>
+
+<div id="org0e6f7df" class="figure">
+<p><img src="./example4.png" alt="example4.png" class="fragment (appear)" width="1000px" />
+</p>
+</div>
+<p class="fragment (appear)">
+Source: <a href="https://www.w3resource.com" class="fragment (appear)">https://www.w3resource.com</a>
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org02904fa">
+<h2 id="org02904fa">Classwork #3, assigned to 10 Mar 2025</h2>
+<ul>
+<li>Where do we put indentation other than if conditionals in Python?</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+#+TITLE: ES118 Lecture #6
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+SUBTITLE: Logical operators, and if-else conditionals
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+
+* relational operators
+| Name                  | Operator |
+|-----------------------+----------|
+| Greater than          | ~>~      |
+| Less than             | ~<~      |
+| Greater than or equal | ~>=~     |
+| Less than or equal    | ~<=~     |
+| Equal                 | ~==~     |
+| Not equal             | ~!=~     |
+
+#+REVEAL: split
+
+Result of the relational operators is a *boolean value*: ~True~, ~False~
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1300px
+[[./comparison_example.png]]
+
+* logical operators
+Logical operators are as follows
+#+ATTR_REVEAL: :frag (appear)
+- AND: ~and~
+- OR: ~or~
+- NOT: ~not~
+
+#+ATTR_REVEAL: :frag (appear)  
+They are generally used with booleans.
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1000px
+[[./logical_operator_example.png]]
+* conditional statements
+** ~if~ conditional
+#+ATTR_REVEAL: :frag (appear)
+The ~if~ conditional is a statement that evaluates a code block *when the given condition is satisfied*.
+
+#+ATTR_REVEAL: :frag (appear)
+#+BEGIN_SRC python
+if CONDITION:
+    CODE-BLOCK
+#+END_SRC
+
+** ~else~ conditional
+#+ATTR_REVEAL: :frag (appear)
+When the CONDITION is *not* satisfied, then a code block written under ~else~ statement is evaluated,
+
+#+ATTR_REVEAL: :frag (appear)
+#+BEGIN_SRC python
+if CONDITION:
+    CODE-BLOCK-1
+else:
+    CODE-BLOCK-2
+#+END_SRC
+
+** ~elif~ conditional
+#+ATTR_REVEAL: :frag (appear)
+~elif~ comes from *(el)se (if)*
+
+#+ATTR_REVEAL: :frag (appear)
+#+BEGIN_SRC python
+if CONDITION-1:
+    CODE-BLOCK-1
+elif CONDITION-2:
+    CODE-BLOCK-2
+else:
+    CODE-BLOCK-3
+#+END_SRC
+
+** examples
+*** example-1
+For example, let's print a physical state if the required condition is true,
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1000px
+[[./example1.png]]
+
+*** example-2
+We can nest multiple ~if~ conditionals to check additional conditions,
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1000px
+[[./example2.png]]
+
+*** example-3
+Write a program whether a triangle can be formed or not according to the given user input for three angles. If it cannot be formed, then print how much degrees is needed to form the triangle.
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1000px
+[[./example3.png]]
+
+*** example-4
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1000px
+[[./example4.png]]
+#+ATTR_REVEAL: :frag (appear)
+Source: https://www.w3resource.com
+
+* Classwork #3, assigned to 10 Mar 2025
+- Where do we put indentation other than if conditionals in Python?
