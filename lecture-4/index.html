@@ -36,19 +36,22 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-org3dcd9f1">Software libraries/modules</a></li>
-<li><a href="#/slide-orgd3db068">Importing a library</a></li>
-<li><a href="#/slide-org4918f87">Reading manuals function</a></li>
-<li><a href="#/slide-orgb644ba4">Using functions</a></li>
-<li><a href="#/slide-orgdc40e3e">Data types/classes</a></li>
+<li><a href="#/slide-org47d5160">Software libraries/modules</a></li>
+<li><a href="#/slide-orgf2c8bdd">Importing a library</a></li>
+<li><a href="#/slide-orga8f097a">Reading manuals function</a></li>
+<li><a href="#/slide-orgd359c33">Using functions</a></li>
+<li><a href="#/slide-orgb98c271">Data types/classes</a></li>
+<li><a href="#/slide-orgaf061bd">Operator precedence</a></li>
+<li><a href="#/slide-org2d959c6">Elementary math functions</a></li>
+<li><a href="#/slide-org3337085">Implementation of mathematical expressions, and some equations</a></li>
 </ul>
 </div>
 </div>
 </section>
 
 <section>
-<section id="slide-org3dcd9f1">
-<h2 id="org3dcd9f1">Software libraries/modules</h2>
+<section id="slide-org47d5160">
+<h2 id="org47d5160">Software libraries/modules</h2>
 <ul>
 <li class="fragment appear">They are a collection of functions, and variables</li>
 <li class="fragment appear">We intentionally select a software library to serve a specific purpose (e.g. NumPy for matrix manipulation)</li>
@@ -64,7 +67,7 @@
 
 <div class="column" style="float:left; width:50%">
 
-<div id="org00b1c72" class="figure">
+<div id="orgb091e9a" class="figure">
 <p><img src="./numpy_logo.png" alt="numpy_logo.png" class="fragment (appear)" width="400px" />
 </p>
 </div>
@@ -72,7 +75,7 @@
 
 <div class="column" style="float:right; width:50%">
 
-<div id="org2e10ea2" class="figure">
+<div id="org4f2100b" class="figure">
 <p><img src="./matplotlib_logo.png" alt="matplotlib_logo.png" class="fragment (appear)" width="400px" />
 </p>
 </div>
@@ -81,8 +84,8 @@
 </section>
 </section>
 <section>
-<section id="slide-orgd3db068">
-<h2 id="orgd3db068">Importing a library</h2>
+<section id="slide-orgf2c8bdd">
+<h2 id="orgf2c8bdd">Importing a library</h2>
 <ul>
 <li>a library is <b>imported</b> with the <code>import</code> statement.</li>
 <li><code>import</code> is generally followed by the <code>as</code> statement to call the library with a shorter name</li>
@@ -97,8 +100,8 @@
 </section>
 </section>
 <section>
-<section id="slide-org4918f87">
-<h2 id="org4918f87">Reading manuals function</h2>
+<section id="slide-orga8f097a">
+<h2 id="orga8f097a">Reading manuals function</h2>
 <p>
 The information of a NumPy function or variable can be obtained by
 </p>
@@ -107,7 +110,7 @@ The information of a NumPy function or variable can be obtained by
 <code>np.info()</code> function
 </p>
 
-<div id="orgd87a344" class="figure">
+<div id="orgf759537" class="figure">
 <p><img src="./np_info.png" alt="np_info.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
@@ -118,17 +121,17 @@ The information of a NumPy function or variable can be obtained by
 <a href="https://numpy.org/doc/stable/" class="fragment (appear)">https://numpy.org/doc/stable/</a>
 </p>
 
-<div id="orgf3502d8" class="figure">
+<div id="org86e0425" class="figure">
 <p><img src="./numpy_search_exp1.png" alt="numpy_search_exp1.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
 
-<div id="org30dff27" class="figure">
+<div id="org7ac92e0" class="figure">
 <p><img src="./numpy_search_exp2.png" alt="numpy_search_exp2.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
 
-<div id="orge78da5c" class="figure">
+<div id="org07c41a9" class="figure">
 <p><img src="./numpy_search_exp3.png" alt="numpy_search_exp3.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
@@ -137,8 +140,8 @@ The information of a NumPy function or variable can be obtained by
 </section>
 </section>
 <section>
-<section id="slide-orgb644ba4">
-<h2 id="orgb644ba4">Using functions</h2>
+<section id="slide-orgd359c33">
+<h2 id="orgd359c33">Using functions</h2>
 <p>
 Functions have
 </p>
@@ -178,13 +181,13 @@ Out[18]: 1
 </section>
 </section>
 <section>
-<section id="slide-orgdc40e3e">
-<h2 id="orgdc40e3e">Data types/classes</h2>
-<div class="outline-text-2" id="text-orgdc40e3e">
+<section id="slide-orgb98c271">
+<h2 id="orgb98c271">Data types/classes</h2>
+<div class="outline-text-2" id="text-orgb98c271">
 </div>
 </section>
-<section id="slide-orge8259c6">
-<h3 id="orge8259c6">numeric data types</h3>
+<section id="slide-orgd465625">
+<h3 id="orgd465625">numeric data types</h3>
 <ul>
 <li>integers
 <ul>
@@ -203,10 +206,10 @@ Out[18]: 1
 
 </ul>
 </section>
-<section id="slide-orge8259c6-split">
+<section id="slide-orgd465625-split">
 </section>
-<section id="slide-orgd23c479">
-<h4 id="orgd23c479">integer (int)</h4>
+<section id="slide-orgce93329">
+<h4 id="orgce93329">integer (int)</h4>
 <p>
 A computer can store numbers represented in <b>sequences of bits</b>.
 </p>
@@ -217,7 +220,7 @@ A computer can store numbers represented in <b>sequences of bits</b>.
 
 </ul>
 </section>
-<section id="slide-orgd23c479-split">
+<section id="slide-orgce93329-split">
 <ul>
 <li>Ex.: 114 =&gt; \(114 = 1(2^6) + 1(2^5) + 1(2^4) + 0(2^3) + 0(2^2) + 1(2^1) + 0(2^0)\) =&gt;*0* 1 1 1 0 0 1 0</li>
 <li>Ex.: -114 =&gt;
@@ -231,7 +234,7 @@ A computer can store numbers represented in <b>sequences of bits</b>.
 
 </ul>
 </section>
-<section id="slide-orgd23c479-split">
+<section id="slide-orgce93329-split">
 <ul>
 <li>Ex.: Compute \(4-110\) in binary representation:
 <ul>
@@ -254,7 +257,7 @@ A computer can store numbers represented in <b>sequences of bits</b>.
 </ul>
 <hr />
 
-<div id="org57a3156" class="figure">
+<div id="org520d379" class="figure">
 <p><img src="./twoscomplement.png" alt="twoscomplement.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
@@ -271,7 +274,7 @@ A computer can store numbers represented in <b>sequences of bits</b>.
 </ul>
 
 <ul class="org-ul">
-<li><a id="org079115d"></a>Limitation on integers<br />
+<li><a id="orgc2e8c80"></a>Limitation on integers<br />
 <p>
 You could store 32-bit or 64-bit integers depending on your register size of your CPU
 </p>
@@ -333,7 +336,7 @@ You could store 32-bit or 64-bit integers depending on your register size of you
 </table>
 </li>
 
-<li><a id="orgc90f421"></a>Conversion of integers<br />
+<li><a id="orgc38a8b5"></a>Conversion of integers<br />
 <p class="fragment (appear)">
 Data type of a real number is converted using
 </p>
@@ -349,7 +352,7 @@ Data type of a real number is converted using
 <i>Ex.</i>: Conversion of real numbers to 8-bit integers in NumPy
 </p>
 
-<div id="orgbc1546d" class="figure">
+<div id="org79efa30" class="figure">
 <p><img src="./intconversion.png" alt="intconversion.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
@@ -357,8 +360,8 @@ Data type of a real number is converted using
 </ul>
 
 </section>
-<section id="slide-orgf3a6cdf">
-<h4 id="orgf3a6cdf">floating-point numbers (IEEE 754 standard)</h4>
+<section id="slide-orgf76e8a6">
+<h4 id="orgf76e8a6">floating-point numbers (IEEE 754 standard)</h4>
 <p>
 <i>Remark</i>:
 Let's define a number in <b>scientific notation</b> in base-10.
@@ -374,7 +377,7 @@ Let's define a number in <b>scientific notation</b> in base-10.
 
 </ul>
 </section>
-<section id="slide-orgf3a6cdf-split">
+<section id="slide-orgf76e8a6-split">
 <p>
 Now, let's convert -40.500900 to a single precision (32-bit CPU) floating-point number:
 </p>
@@ -388,7 +391,7 @@ Now, let's convert -40.500900 to a single precision (32-bit CPU) floating-point 
 
 </ul>
 </section>
-<section id="slide-orgf3a6cdf-split">
+<section id="slide-orgf76e8a6-split">
 <ul>
 <li>convert <b>0.500900</b> to binary:
 <ul>
@@ -407,7 +410,7 @@ Now, let's convert -40.500900 to a single precision (32-bit CPU) floating-point 
 
 </ul>
 </section>
-<section id="slide-orgf3a6cdf-split">
+<section id="slide-orgf76e8a6-split">
 <ul>
 <li class="fragment appear">0.921600 * 2 = 1.843200 =&gt; <b>1</b></li>
 <li class="fragment appear">0.843200 * 2 = 1.686400 =&gt; <b>1</b></li>
@@ -433,7 +436,7 @@ Continue the algorithm until the <b>fraction is equal to 0</b>.
 In this case the fraction goes as <b>1000000000111010111110110111111010010000111111111001&#x2026;</b>
 </p>
 </section>
-<section id="slide-orgf3a6cdf-split">
+<section id="slide-orgf76e8a6-split">
 <p>
 Lastly,
 </p>
@@ -450,7 +453,7 @@ Lastly,
 
 </ul>
 </section>
-<section id="slide-orgf3a6cdf-split">
+<section id="slide-orgf76e8a6-split">
 <p>
 Therefore in a 32-bit CPU -40.500900 is <b>approximately</b> represented as a floating-point data type as
 </p>
@@ -493,12 +496,482 @@ If the floating-point data is converted to the decimal number:
 
 </ul>
 </section>
-<section id="slide-orgf3a6cdf-split">
+<section id="slide-orgf76e8a6-split">
 
 <ul>
 <li class="fragment appear">Therefore, we can say that <b>NOT ALL</b> numbers are accurately represented with floating-point number data type.</li>
 <li class="fragment appear">Neverthless, floating-point number data type can approximately <b>represent</b> the real numbers.</li>
 <li class="fragment appear">Regardless of their limitations, they are well suited for real world problems.</li>
+
+</ul>
+
+</section>
+<section id="slide-org1f57e1a">
+<h4 id="org1f57e1a">Scientific notation in Python</h4>
+<ul>
+<li class="fragment appear">\(x = 1.192(10^5)\) \(\rightarrow\) <font color="orange">x = 1.192e+5</font></li>
+<li class="fragment appear">\(y = 5.08(10^{-12})\) \(\rightarrow\) <font color="orange">y = 5.08e-12</font></li>
+
+</ul>
+
+</section>
+<section id="slide-org4126b03">
+<h3 id="org4126b03">lists</h3>
+<div class="column" style="float:left; width:50%">
+<ul>
+<li>A <b>list</b> is a set of data enclosed by square brackets: <code>[ ]</code></li>
+
+</ul>
+
+<div id="org503c904" class="figure">
+<p><img src="./listexample.png" alt="listexample.png" class="fragment (appear)" width="600px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear"><b>An element</b> of a list is accessed using an <b>index</b> value</li>
+
+</ul>
+<p class="fragment (appear)">
+<code>v[</code> <font color="magenta">index</font> <code>]</code>
+</p>
+<p class="fragment (appear)">
+<font color="magenta">index</font> starts from <b>0</b>
+</p>
+
+<div id="org0739dcb" class="figure">
+<p><img src="./listexample_elemaccess.png" alt="listexample_elemaccess.png" class="fragment (appear)" width="200px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<ul>
+<li class="fragment appear"><b>Multiple elements</b> of a list is accessed using <b>start and stop</b> indices:</li>
+
+</ul>
+<p class="fragment (appear)">
+<code>v[</code> <font color="green">start_index</font> <font color="blue">:</font> <font color="red">stop_index</font> <code>]</code>  
+</p>
+
+<div id="org3876b19" class="figure">
+<p><img src="./listexample_multielemaccess.png" alt="listexample_multielemaccess.png" class="fragment (appear)" width="250px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">Jump through elements of the array using an <b>increment</b> value:</li>
+
+</ul>
+<p class="fragment (appear)">
+<code>v[</code> <font color="green">start_index</font> <font color="blue">:</font> <font color="red">stop_index</font> <font color="blue">:</font> <font color="orange">increment</font> <code>]</code>
+</p>
+
+<div id="org15b6a5a" class="figure">
+<p><img src="./listexample_incelemaccess.png" alt="listexample_incelemaccess.png" class="fragment (appear)" width="250px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">Change the elements of the array utilizing indexing:</li>
+
+</ul>
+
+<div id="org8b3bcbb" class="figure">
+<p><img src="./listexample_changeelem.png" alt="listexample_changeelem.png" class="fragment (appear)" width="400px" />  
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-orgfe33f7f">
+<h3 id="orgfe33f7f">tuples</h3>
+<ul>
+<li>Tuples is another set of data enclosed by <b>parantheses</b>: <code>( )</code></li>
+
+</ul>
+
+<div id="org033b63a" class="figure">
+<p><img src="./tupleexample.png" alt="tupleexample.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+
+<ul>
+<li class="fragment appear">but it is <b>not mutable</b> -&gt; the elements cannot be changed</li>
+
+</ul>
+
+<div id="org680aa57" class="figure">
+<p><img src="./tupleexample_changeelem.png" alt="tupleexample_changeelem.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgee6cd45">
+<h3 id="orgee6cd45">strings</h3>
+<ul>
+<li class="fragment appear">String is another set of data enclosed by <b>quotation marks</b>: <code>" "</code> or <code>' '</code></li>
+<li class="fragment appear">The data consist of characters</li>
+
+</ul>
+
+
+<div id="org348414c" class="figure">
+<p><img src="./string_definition.png" alt="string_definition.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+
+
+<div id="orgc04464d" class="figure">
+<p><img src="./string_varexplorer.png" alt="string_varexplorer.png" class="fragment (appear)" width="1000px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgaf061bd">
+<h2 id="orgaf061bd">Operator precedence</h2>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="fragment (appear)">
+<caption class="t-above"><span class="table-number">Table 1:</span> Arithmetic operators</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Operation</th>
+<th scope="col" class="org-left">Character</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">addition</td>
+<td class="org-left">+</td>
+</tr>
+
+<tr>
+<td class="org-left">substraction</td>
+<td class="org-left">-</td>
+</tr>
+
+<tr>
+<td class="org-left">multiplication</td>
+<td class="org-left">*</td>
+</tr>
+
+<tr>
+<td class="org-left">division</td>
+<td class="org-left">/</td>
+</tr>
+
+<tr>
+<td class="org-left">exponentiation</td>
+<td class="org-left">**</td>
+</tr>
+
+<tr>
+<td class="org-left">modulus</td>
+<td class="org-left">%</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-orgc572685">
+<h3 id="orgc572685">term</h3>
+<ul>
+<li class="fragment appear">Terms are <b>separated</b> by <code>+</code> or <code>-</code> sign:</li>
+
+</ul>
+<p class="fragment (appear)">
+<code>1/9</code>
+<code>3.2*z**10</code>
+</p>
+
+</section>
+<section id="slide-orga202f4a">
+<h3 id="orga202f4a">expression</h3>
+<ul>
+<li class="fragment appear">An expression is a <b>collection</b> of terms:</li>
+
+</ul>
+<p class="fragment (appear)">
+<code>1/9 + 7/80/100 + 3.2*z**10 - 1.4</code>
+</p>
+
+<ul>
+<li class="fragment appear">Exponentiation operation has precedence over multiplication and division</li>
+
+</ul>
+<p class="fragment (appear)">
+<code>3.2*z**10/2</code>
+</p>
+
+<ul>
+<li class="fragment appear">Parantheses <b><code>()</code></b> have precedence over anything</li>
+
+</ul>
+<p class="fragment (appear)">
+<code>1/(9 + (7/80)/100) + 3.2*z**10/2 - 1.4</code>
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org2d959c6">
+<h2 id="org2d959c6">Elementary math functions</h2>
+<div class="outline-text-2" id="text-org2d959c6">
+</div>
+</section>
+<section id="slide-orgdba7811">
+<h3 id="orgdba7811">Rounding (round-off) functions</h3>
+<p>
+There are round-off functions in NumPy
+</p>
+<ul>
+<li class="fragment appear"><code>np.fix</code>: round towards 0, Ex.: <code>np.fix(-4.33) = -4</code> or <code>np.fix(4.66) = 4</code></li>
+<li class="fragment appear"><code>np.floor</code>: round towards \(-\inf\), Ex.: <code>np.floor(-4.33) = -5</code> or <code>np.floor(4.66) = 4</code></li>
+<li class="fragment appear"><code>np.ceil</code>: round towards \(\inf\), Ex.: <code>np.ceil(-4.33) = -4</code> or <code>np.ceil(4.66) = 5</code></li>
+<li class="fragment appear"><code>np.round</code>: round towards the nearest integer, Ex.: <code>np.round(-4.33) = -4</code> or <code>np.round(4.66) = 5</code></li>
+
+</ul>
+
+</section>
+<section id="slide-orgee294ea">
+<h3 id="orgee294ea">Trigonometric functions</h3>
+<ul>
+<li class="fragment appear">The unit is in <b>radians</b> for the angle values</li>
+<li class="fragment appear">To compute in <b>degrees</b>: <code>np.sin(</code> <font color="red">angle</font> <code>*np.pi/180)</code></li>
+
+</ul>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="fragment (appear)">
+<caption class="t-above"><span class="table-number">Table 2:</span> Trigonometric functions</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">function</th>
+<th scope="col" class="org-left">NumPy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">sine</td>
+<td class="org-left"><code>np.sin</code></td>
+</tr>
+
+<tr>
+<td class="org-left">inverse sine</td>
+<td class="org-left"><code>np.arcsin</code></td>
+</tr>
+
+<tr>
+<td class="org-left">cosine</td>
+<td class="org-left"><code>np.cos</code></td>
+</tr>
+
+<tr>
+<td class="org-left">inverse cosine</td>
+<td class="org-left"><code>np.arccos</code></td>
+</tr>
+
+<tr>
+<td class="org-left">tangent</td>
+<td class="org-left"><code>np.tan</code></td>
+</tr>
+
+<tr>
+<td class="org-left">inverse tangent</td>
+<td class="org-left"><code>np.arctan</code></td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-orgee294ea-split">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="fragment (appear)">
+<caption class="t-above"><span class="table-number">Table 3:</span> Hyperbolic trigonometric functions</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">function</th>
+<th scope="col" class="org-left">NumPy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">hyperbolic sine</td>
+<td class="org-left"><code>np.sinh</code></td>
+</tr>
+
+<tr>
+<td class="org-left">inverse hyperbolic sine</td>
+<td class="org-left"><code>np.arcsinh</code></td>
+</tr>
+
+<tr>
+<td class="org-left">hyperbolic cosine</td>
+<td class="org-left"><code>np.cosh</code></td>
+</tr>
+
+<tr>
+<td class="org-left">inverse hyperbolic cosine</td>
+<td class="org-left"><code>np.arccosh</code></td>
+</tr>
+
+<tr>
+<td class="org-left">hyperbolic tangent</td>
+<td class="org-left"><code>np.tanh</code></td>
+</tr>
+
+<tr>
+<td class="org-left">inverse hyperbolic tangent</td>
+<td class="org-left"><code>np.arctanh</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slide-orgee294ea-split">
+
+</section>
+<section id="slide-orgf35c9a0">
+<h3 id="orgf35c9a0">Exponential and logarithmic functions</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="fragment (appear)">
+<caption class="t-above"><span class="table-number">Table 4:</span> Exponential and logarithmic functions</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">function</th>
+<th scope="col" class="org-left">NumPy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">exponential</td>
+<td class="org-left"><code>np.exp</code></td>
+</tr>
+
+<tr>
+<td class="org-left">natural logarithm</td>
+<td class="org-left"><code>np.log</code></td>
+</tr>
+
+<tr>
+<td class="org-left">base-10 logarithm</td>
+<td class="org-left"><code>np.log10</code></td>
+</tr>
+
+<tr>
+<td class="org-left">square root</td>
+<td class="org-left"><code>np.sqrt</code></td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-org69e3222">
+<h3 id="org69e3222">Other mathematical functions</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="fragment (appear)">
+<caption class="t-above"><span class="table-number">Table 5:</span> Other mathematical functions</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">function</th>
+<th scope="col" class="org-left">NumPy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">absolute value</td>
+<td class="org-left"><code>np.abs</code></td>
+</tr>
+
+<tr>
+<td class="org-left">determine sign</td>
+<td class="org-left"><code>np.sign</code></td>
+</tr>
+
+<tr>
+<td class="org-left">remainder after division</td>
+<td class="org-left"><code>np.remainder</code></td>
+</tr>
+</tbody>
+</table>
+
+</section>
+</section>
+<section>
+<section id="slide-org3337085">
+<h2 id="org3337085">Implementation of mathematical expressions, and some equations</h2>
+<p>
+Compute the variables below in NumPy
+</p>
+
+<ul>
+<li class="fragment appear">\(y_1 = x^{-20.44} \cos(x^{-8} \log{(x)})\)</li>
+<li class="fragment appear">$y<sub>2</sub> = x<sup>&pi; k</sup> e<sup>x-2</sup> $</li>
+<li class="fragment appear">\(y_3 = -\Bigg( 5k - \frac{1}{4} \Bigg)\pi\)</li>
+<li class="fragment appear">\(y_4 = \sqrt{z - 3}\)</li>
+
+</ul>
+</section>
+<section id="slide-org3337085-split">
+<ul>
+<li class="fragment appear">\(z_1 = \frac{1}{\sqrt{2(y^2 - x^2)}}\)</li>
+<li class="fragment appear">\(z_2 = \frac{|x-1|}{\ln{(1/y)}\log{(6z)}}\)</li>
+<li class="fragment appear">\(z_3 = \sin^{-1}\Bigg(\frac{7x}{\pi}\Bigg)\)</li>
+<li class="fragment appear">\(z_4 = 20.2 (10)^{-17}\)</li>
+<li class="fragment appear">\(z_5 = 8\pi (10)^4\)</li>
+
+</ul>
+</section>
+<section id="slide-org3337085-split">
+
+<ul>
+<li class="fragment appear">Find \(r\), when \(x=5\) and \(y=1\)
+<ul>
+<li>\(r = ((x-20)^{-2} + (y+10)^2)^{1/2}\)</li>
+
+</ul></li>
+<li class="fragment appear">Find \(f\), when \(x=3\), \(y=\log{(8)}^4\), \(z=|\tan^{-1}{(0.1029)}|\), \(d=2\), and \(b=50\)
+<ul>
+<li>\(f = \frac{2^{{(x + (z+1)^{-3}/2)}^d}}{x+y+\sqrt{b}}\)</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-org3337085-split">
+
+<ul>
+<li>Find \(c\), when \(x=3(10)^{-2}\), \(y=e^2\), \(g=9.81\) and \(v=|\cos^{-1}{(0.1029)}|\)
+<ul>
+<li>\(c = \frac{1}{9 g^{y^2 + \ln{(\sqrt{1-x})}}} - v^{1/4} + \Big|e^{\frac{2 \pi x}{\tan^{-1}(\pi y/180)}}\Big|\)</li>
+
+</ul></li>
+<li>Find the remainder of \(\frac{19}{3}\) and assign/equate to a variable called <code>k</code></li>
 
 </ul>
 </section>

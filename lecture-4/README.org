@@ -8,6 +8,7 @@
 #+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
 #+REVEAL_EXTRA_CSS: ../codestyle.css
 #+LATEX_HEADER: \usepackage{amsmath}
+#+MACRO: color @@html:<font color="$1">$2</font>@@
 
 * Software libraries/modules
 #+ATTR_REVEAL: :frag (appear)
@@ -244,3 +245,195 @@ If the floating-point data is converted to the decimal number:
 + Neverthless, floating-point number data type can approximately *represent* the real numbers.
 + Regardless of their limitations, they are well suited for real world problems.
 
+*** Scientific notation in Python
+#+ATTR_REVEAL: :frag (appear)
++ $x = 1.192(10^5)$ $\rightarrow$ {{{color(orange,x = 1.192e+5)}}}
++ $y = 5.08(10^{-12})$ $\rightarrow$ {{{color(orange,y = 5.08e-12)}}}  
+
+** lists
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
++ A *list* is a set of data enclosed by square brackets: ~[ ]~
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 600px
+[[./listexample.png]]
+#+ATTR_REVEAL: :frag (appear)
++ *An element* of a list is accessed using an *index* value
+#+ATTR_REVEAL: :frag (appear)  
+~v[~ {{{color(magenta,index)}}} ~]~
+#+ATTR_REVEAL: :frag (appear)  
+{{{color(magenta,index)}}} starts from *0*
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 200px
+[[./listexample_elemaccess.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
++ *Multiple elements* of a list is accessed using *start and stop* indices:
+#+ATTR_REVEAL: :frag (appear)  
+~v[~ {{{color(green,start_index)}}} {{{color(blue,:)}}} {{{color(red,stop_index)}}} ~]~  
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 250px
+[[./listexample_multielemaccess.png]]
+#+ATTR_REVEAL: :frag (appear)
++ Jump through elements of the array using an *increment* value:
+#+ATTR_REVEAL: :frag (appear)  
+~v[~ {{{color(green,start_index)}}} {{{color(blue,:)}}} {{{color(red,stop_index)}}} {{{color(blue,:)}}} {{{color(orange,increment)}}} ~]~
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 250px
+[[./listexample_incelemaccess.png]]
+#+ATTR_REVEAL: :frag (appear)
++ Change the elements of the array utilizing indexing:
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 400px
+[[./listexample_changeelem.png]]  
+#+REVEAL_HTML: </div>
+
+** tuples
+- Tuples is another set of data enclosed by *parantheses*: ~( )~
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./tupleexample.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+- but it is *not mutable* -> the elements cannot be changed
+#+ATTR_REVEAL: :frag (appear)  
+#+ATTR_HTML: :width 800px
+[[./tupleexample_changeelem.png]]
+
+** strings
+#+ATTR_REVEAL: :frag (appear)
+- String is another set of data enclosed by *quotation marks*: ~" "~ or ~' '~
+- The data consist of characters
+  
+#+ATTR_REVEAL: :frag (appear)  
+#+ATTR_HTML: :width 800px
+[[./string_definition.png]]
+  
+#+ATTR_REVEAL: :frag (appear)  
+#+ATTR_HTML: :width 1000px
+[[./string_varexplorer.png]]
+
+* Operator precedence
+#+ATTR_REVEAL: :frag (appear)  
+#+CAPTION: Arithmetic operators
+| Operation      | Character |
+|----------------+-----------|
+| addition       | +         |
+| substraction   | -         |
+| multiplication | *         |
+| division       | /         |
+| exponentiation | **        |
+| modulus        | %         |
+
+** term
+#+ATTR_REVEAL: :frag (appear)  
+- Terms are *separated* by ~+~ or ~-~ sign:
+#+ATTR_REVEAL: :frag (appear)
+~1/9~
+~3.2*z**10~
+
+** expression
+#+ATTR_REVEAL: :frag (appear)  
+- An expression is a *collection* of terms:
+#+ATTR_REVEAL: :frag (appear)  
+~1/9 + 7/80/100 + 3.2*z**10 - 1.4~
+
+#+ATTR_REVEAL: :frag (appear)
+- Exponentiation operation has precedence over multiplication and division
+#+ATTR_REVEAL: :frag (appear)  
+~3.2*z**10/2~
+
+#+ATTR_REVEAL: :frag (appear)  
+- Parantheses *~()~* have precedence over anything
+#+ATTR_REVEAL: :frag (appear)  
+~1/(9 + (7/80)/100) + 3.2*z**10/2 - 1.4~
+
+* Elementary math functions
+** Rounding (round-off) functions
+There are round-off functions in NumPy
+#+ATTR_REVEAL: :frag (appear) 
+- ~np.fix~: round towards 0, Ex.: ~np.fix(-4.33) = -4~ or ~np.fix(4.66) = 4~
+- ~np.floor~: round towards $-\inf$, Ex.: ~np.floor(-4.33) = -5~ or ~np.floor(4.66) = 4~
+- ~np.ceil~: round towards $\inf$, Ex.: ~np.ceil(-4.33) = -4~ or ~np.ceil(4.66) = 5~
+- ~np.round~: round towards the nearest integer, Ex.: ~np.round(-4.33) = -4~ or ~np.round(4.66) = 5~
+
+** Trigonometric functions
+#+ATTR_REVEAL: :frag (appear)
+- The unit is in *radians* for the angle values
+- To compute in *degrees*: ~np.sin(~ {{{color(red,angle)}}} ~*np.pi/180)~
+
+#+ATTR_REVEAL: :frag (appear)
+#+CAPTION: Trigonometric functions
+| function        | NumPy       |
+|-----------------+-------------|
+| sine            | ~np.sin~    |
+| inverse sine    | ~np.arcsin~ |
+| cosine          | ~np.cos~    |
+| inverse cosine  | ~np.arccos~ |
+| tangent         | ~np.tan~    |
+| inverse tangent | ~np.arctan~ |
+
+#+REVEAL: split
+
+#+ATTR_REVEAL: :frag (appear)
+#+CAPTION: Hyperbolic trigonometric functions
+| function                   | NumPy        |
+|----------------------------+--------------|
+| hyperbolic sine            | ~np.sinh~    |
+| inverse hyperbolic sine    | ~np.arcsinh~ |
+| hyperbolic cosine          | ~np.cosh~    |
+| inverse hyperbolic cosine  | ~np.arccosh~ |
+| hyperbolic tangent         | ~np.tanh~    |
+| inverse hyperbolic tangent | ~np.arctanh~ |
+#+REVEAL: split
+
+** Exponential and logarithmic functions
+
+#+ATTR_REVEAL: :frag (appear)
+#+CAPTION: Exponential and logarithmic functions
+| function          | NumPy      |
+|-------------------+------------|
+| exponential       | ~np.exp~   |
+| natural logarithm | ~np.log~   |
+| base-10 logarithm | ~np.log10~ |
+| square root       | ~np.sqrt~  |
+
+** Other mathematical functions
+
+#+ATTR_REVEAL: :frag (appear)
+#+CAPTION: Other mathematical functions
+| function                 | NumPy          |
+|--------------------------+----------------|
+| absolute value           | ~np.abs~       |
+| determine sign           | ~np.sign~      |
+| remainder after division | ~np.remainder~ |
+
+* Implementation of mathematical expressions, and some equations
+Compute the variables below in NumPy
+
+#+ATTR_REVEAL: :frag (appear)
+- $y_1 = x^{-20.44} \cos(x^{-8} \log{(x)})$
+- $y_2 = x^{\pi k} e^{x-2} $
+- $y_3 = -\Bigg( 5k - \frac{1}{4} \Bigg)\pi$
+- $y_4 = \sqrt{z - 3}$
+#+REVEAL: split
+#+ATTR_REVEAL: :frag (appear)
+- $z_1 = \frac{1}{\sqrt{2(y^2 - x^2)}}$
+- $z_2 = \frac{|x-1|}{\ln{(1/y)}\log{(6z)}}$
+- $z_3 = \sin^{-1}\Bigg(\frac{7x}{\pi}\Bigg)$
+- $z_4 = 20.2 (10)^{-17}$
+- $z_5 = 8\pi (10)^4$
+#+REVEAL: split
+
+#+ATTR_REVEAL: :frag (appear)
++ Find $r$, when $x=5$ and $y=1$
+  - $r = ((x-20)^{-2} + (y+10)^2)^{1/2}$
++ Find $f$, when $x=3$, $y=\log{(8)}^4$, $z=|\tan^{-1}{(0.1029)}|$, $d=2$, and $b=50$
+  - $f = \frac{2^{{(x + (z+1)^{-3}/2)}^d}}{x+y+\sqrt{b}}$
+
+#+REVEAL: split
+
++ Find $c$, when $x=3(10)^{-2}$, $y=e^2$, $g=9.81$ and $v=|\cos^{-1}{(0.1029)}|$
+  - $c = \frac{1}{9 g^{y^2 + \ln{(\sqrt{1-x})}}} - v^{1/4} + \Big|e^{\frac{2 \pi x}{\tan^{-1}(\pi y/180)}}\Big|$
++ Find the remainder of $\frac{19}{3}$ and assign/equate to a variable called ~k~
