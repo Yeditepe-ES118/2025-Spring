@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>ES118 Lecture #5</title>
+<meta name="author" content="Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../codestyle.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>ES118 Lecture #5</h2> <h3>Input, and formatted output</h3> <h4>Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar</h4> <h4></h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org539d65b">formatted output</a></li>
+<li><a href="#/slide-orgf3a9711">User input</a></li>
+<li><a href="#/slide-org98baea9">Deliverables</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-org539d65b">
+<h2 id="org539d65b">formatted output</h2>
+<ul>
+<li class="fragment appear">Strings are sequence of characters: <font color="green">"this is a string of characters"</font></li>
+<li class="fragment appear">We can put different variables in strings by <b>formatting</b></li>
+<li class="fragment appear">Numerical values can be used inside a string with its format <b>specified</b></li>
+
+</ul>
+
+
+<div class="column" style="float:left; width:40%">
+
+<div id="org5b8b816" class="figure">
+<p><img src="./formatted_output.png" alt="formatted_output.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+
+<div class="column" style="float:right; width:60%">
+<p class="fragment (appear)">
+Let's break it down:
+</p>
+<ul>
+<li class="fragment appear"><code>x</code> is calculated</li>
+<li class="fragment appear"><code>x</code> is displayed in the terminal</li>
+<li class="fragment appear"><font color="green">"44/3 is equal to %7.2f \n" % x</font> is given in <code>print</code> function
+<ul>
+<li class="fragment appear">first <code>%</code> must have character for the specifier</li>
+<li class="fragment appear"><code>7</code> is the <b>minimum</b> width of the output (including the digits, the decimal point, and spaces)</li>
+<li class="fragment appear"><code>2</code> is the number of the fractional digits</li>
+<li class="fragment appear"><code>.</code> separates the whole, and the fractional digits</li>
+<li class="fragment appear"><code>f</code> is for the fixed-point notation</li>
+<li class="fragment appear"><code>\n</code> is the *newline character</li>
+<li class="fragment appear">second <code>%</code> separates the string, and the given variables</li>
+<li class="fragment appear"><code>x</code> is the variable that is substituted with <code>%7.2f</code></li>
+
+</ul></li>
+
+</ul>
+</div>
+
+</section>
+<section id="slide-org539d65b-split">
+
+<p>
+Let's write 12 using different formats
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">notation</th>
+<th scope="col" class="org-left">format</th>
+<th scope="col" class="org-left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">integer</td>
+<td class="org-left"><code>%5d</code></td>
+<td class="org-left"><code>___12</code></td>
+</tr>
+
+<tr>
+<td class="org-left">fixed-point</td>
+<td class="org-left"><code>%5.4f</code></td>
+<td class="org-left"><code>12.0000</code></td>
+</tr>
+
+<tr>
+<td class="org-left">scientific</td>
+<td class="org-left"><code>%5.4e</code></td>
+<td class="org-left"><code>1.2000e+01</code></td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-org539d65b-split">
+
+<ul>
+<li>Multiple values can be incorporated with different formats</li>
+
+</ul>
+<ul>
+<li class="fragment appear">We give the printed variables in a tuple</li>
+
+</ul>
+
+
+<div id="orge0470f2" class="figure">
+<p><img src="./multiple_print.png" alt="multiple_print.png" class="fragment (appear)" width="1600px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf3a9711">
+<h2 id="orgf3a9711">User input</h2>
+<ul>
+<li class="fragment appear">The user can <font color="orange">input from the console</font></li>
+<li class="fragment appear">In this case, <code>input()</code> function is utilized</li>
+<li class="fragment appear"><font color="red">A message is given as the argument of input()</font></li>
+
+</ul>
+
+<p class="fragment (appear)">
+The input value has to be converted to a numerical data type by:
+</p>
+<ul>
+<li class="fragment appear"><code>np.float16()</code>, <code>np.float32()</code>, <code>np.float64()</code></li>
+
+</ul>
+<p class="fragment (appear)">
+or
+</p>
+<ul>
+<li class="fragment appear"><code>np.int16()</code>, <code>np.int32()</code>, <code>np.int64()</code></li>
+
+</ul>
+<p class="fragment (appear)">
+etc.
+</p>
+
+</section>
+<section id="slide-orgf3a9711-split">
+
+<div id="org65d79fe" class="figure">
+<p><img src="./input.png" alt="input.png" class="fragment (appear)" width="1800px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org98baea9">
+<h2 id="org98baea9">Deliverables</h2>
+<p>
+Being able to
+</p>
+<ul>
+<li>printing strings in console</li>
+<li>incorporating numerical values in strings by utilizing a format specifier</li>
+<li>taking user inputs from the user and converting them into numerical data types</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>

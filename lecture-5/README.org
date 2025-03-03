@@ -1,0 +1,90 @@
+#+TITLE: ES118 Lecture #5
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+SUBTITLE: Input, and formatted output
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+
+* formatted output
+#+ATTR_REVEAL: :frag (appear)
+- Strings are sequence of characters: {{{color(green,"this is a string of characters")}}}
+- We can put different variables in strings by *formatting*
+- Numerical values can be used inside a string with its format *specified*
+
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:40%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./formatted_output.png]]
+#+REVEAL_HTML: </div>  
+
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:60%">
+#+ATTR_REVEAL: :frag (appear)
+Let's break it down:
+#+ATTR_REVEAL: :frag (appear)
+- ~x~ is calculated
+- ~x~ is displayed in the terminal
+- {{{color(green,"44/3 is equal to %7.2f \n" % x)}}} is given in ~print~ function
+  #+ATTR_REVEAL: :frag (appear)
+  + first ~%~ must have character for the specifier
+  + ~7~ is the *minimum* width of the output (including the digits, the decimal point, and spaces)
+  + ~2~ is the number of the fractional digits
+  + ~.~ separates the whole, and the fractional digits
+  + ~f~ is for the fixed-point notation
+  + ~\n~ is the *newline character
+  + second ~%~ separates the string, and the given variables
+  + ~x~ is the variable that is substituted with ~%7.2f~
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+Let's write 12 using different formats
+| notation    | format  | result       |
+|-------------+---------+--------------|
+| integer     | ~%5d~   | ~___12~      |
+| fixed-point | ~%5.4f~ | ~12.0000~    |
+| scientific  | ~%5.4e~ | ~1.2000e+01~ |
+
+#+REVEAL: split
+
+- Multiple values can be incorporated with different formats
+#+ATTR_REVEAL: :frag (appear)  
+- We give the printed variables in a tuple
+  
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1600px
+[[./multiple_print.png]]
+
+* User input
+#+ATTR_REVEAL: :frag (appear)
+- The user can {{{color(orange,input from the console)}}}
+- In this case, ~input()~ function is utilized
+- {{{color(red,A message is given as the argument of input())}}}
+
+#+ATTR_REVEAL: :frag (appear)  
+The input value has to be converted to a numerical data type by:
+#+ATTR_REVEAL: :frag (appear)
+- ~np.float16()~, ~np.float32()~, ~np.float64()~
+#+ATTR_REVEAL: :frag (appear)  
+or
+#+ATTR_REVEAL: :frag (appear)
+- ~np.int16()~, ~np.int32()~, ~np.int64()~
+#+ATTR_REVEAL: :frag (appear)  
+etc.
+
+#+REVEAL: split
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1800px
+[[./input.png]]
+
+* Deliverables
+Being able to
+- printing strings in console
+- incorporating numerical values in strings by utilizing a format specifier
+- taking user inputs from the user and converting them into numerical data types
