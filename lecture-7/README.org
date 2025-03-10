@@ -1,0 +1,149 @@
+#+TITLE: ES118 Lecture #7
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+SUBTITLE: "for", and "while" loops for repeated tasks
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+
+* Which problems are loops utilized
+#+ATTR_REVEAL: :frag (appear)
++ numerical analysis: *solving mathematical problems* using algorithms
+  #+ATTR_REVEAL: :frag (appear)
+  - approximating a function $f(x)$
++ linear algebra: *solving system of equations*, matrix multiplication, eigenvalue problems
+  #+ATTR_REVEAL: :frag (appear)
+  - $Ax = b$, $\det (A)$
++ data processing: *aggregating data*, *filtering*
+  #+ATTR_REVEAL: :frag (appear)
+  - experimental data *acquisition*
+  - *post-processing* aggregated data  
++ machine learning and AI algorithms: *updating* model parameters
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+ATTR_REVEAL: :frag (appear)
++ optimization: *gradient-based* methods
+#+ATTR_REVEAL: :frag (appear)  
+#+ATTR_HTML: :width 300px
+[[./Gradient_descent.png]]
+#+ATTR_REVEAL: :frag (appear)  
+/[[https://en.wikipedia.org/wiki/File:Gradient_descent.svg][This image]]'s author is [[https://en.wikipedia.org/wiki/User:Olegalexandrov][Olegalexandrov]] and published under public domain/
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
++ iterative methods: *convergence*
+#+ATTR_REVEAL: :frag (appear)  
+#+ATTR_HTML: :width 250px
+[[./Bisection_method.png]]
+#+ATTR_REVEAL: :frag (appear)
+/[[https://en.wikipedia.org/wiki/File:Bisection_method.svg][This image]]'s author is [[https://commons.wikimedia.org/w/index.php?title=User:Tokuchan&action=edit&redlink=1][Tokuchan]], and licensed under [[https://creativecommons.org/licenses/by-sa/3.0/deed.en][Attribution-ShareAlike 3.0 Unported DEED]]/
+#+REVEAL_HTML: </div>
+
+* "~for~" loop
+#+ATTR_REVEAL: :frag (appear)
+- It is possible to *repeat* tasks for a *finite number of times*
+- *~for~* loop is used for this goal
+
+#+ATTR_REVEAL: :frag (appear)  
+#+BEGIN_SRC python
+for INDEX in SEQUENCE:
+  CODE-BLOCK
+#+END_SRC
+
+#+ATTR_REVEAL: :frag (appear)
+- ~INDEX~: the iteration variable that respectively *holds* a value in the ~SEQUENCE~
+- ~SEQUENCE~: an *iterable* object
+- ~CODE-BLOCK~: the section evaluated on every loop *iteration*
+
+#+ATTR_REVEAL: :frag (appear)  
+#+ATTR_HTML: :width 1500px
+[[./for_example1.png]]  
+  
+#+REVEAL: split
+Nesting two ~for~ loops:
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1500px
+[[./for_example2.png]]  
+
+#+REVEAL: split
+
+** examples
+*** example-1
+Compute $$c = \sum^{1000}_{i = 1} i$$
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1500px
+[[./for_example_1_a.png]]  
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 600px
+[[./for_example_1_b.png]]  
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 600px
+[[./for_example_1_c.png]]  
+#+REVEAL_HTML: </div>
+
+*** example-2
+You're given exam grades.
+$$G = \{40, 54, 90, 70, 80\}$$
+#+ATTR_REVEAL: :frag (appear)
+Your aim is to calculate the average.
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1500px
+[[./for_example_2.png]]
+
+*** example-3
+Let's see the all combinations of two flipped coins,
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1500px
+[[./for_example_3.png]]
+
+#+REVEAL: split
+
+* "~while~" loop
+A *~while~* loop is used to execute a code block *until* the given condition is *NO longer satisfied*.
+
+#+ATTR_REVEAL: :frag (appear)
+#+BEGIN_SRC python
+while CONDITION:
+  CODE-BLOCK
+#+END_SRC
+
+#+REVEAL: split
+
+Let us find all powers of 2 below 10000
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1500px
+[[./while_example1.png]]
+
+* "~break~" command
+~break~ *terminates* the execution of the loop.
+
+#+REVEAL: split
+Write a Python program that prints all the values of $e^{n}$ while satisfying $2 \leq e^{n} \leq 10000$. Use a while loop and include a break statement when $n$ exceeds 7.
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1500px
+[[./break_example.png]]
+
+* "~continue~" command
+#+ATTR_REVEAL: :frag (appear)
+~continue~ *jumps* to the next iteration in the loop.
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1500px
+[[./continue_example.png]]
+
+* Deliverables
+- Loops
+- Tracing a loop
+- Terminating or continuing a repeating task

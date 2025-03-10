@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>ES118 Lecture #7</title>
+<meta name="author" content="Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../codestyle.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>ES118 Lecture #7</h2> <h3>"for", and "while" loops for repeated tasks</h3> <h4>Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar</h4> <h4></h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org7e2008f">Which problems are loops utilized</a></li>
+<li><a href="#/slide-org0391870">"<code>for</code>" loop</a></li>
+<li><a href="#/slide-orgf35aabf">"<code>while</code>" loop</a></li>
+<li><a href="#/slide-org59d6989">"<code>break</code>" command</a></li>
+<li><a href="#/slide-org3a334f1">"<code>continue</code>" command</a></li>
+<li><a href="#/slide-org1edefef">Deliverables</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-org7e2008f">
+<h2 id="org7e2008f">Which problems are loops utilized</h2>
+<ul>
+<li class="fragment appear">numerical analysis: <b>solving mathematical problems</b> using algorithms
+<ul>
+<li class="fragment appear">approximating a function \(f(x)\)</li>
+
+</ul></li>
+<li class="fragment appear">linear algebra: <b>solving system of equations</b>, matrix multiplication, eigenvalue problems
+<ul>
+<li class="fragment appear">\(Ax = b\), \(\det (A)\)</li>
+
+</ul></li>
+<li class="fragment appear">data processing: <b>aggregating data</b>, <b>filtering</b>
+<ul>
+<li class="fragment appear">experimental data <b>acquisition</b></li>
+<li class="fragment appear"><b>post-processing</b> aggregated data</li>
+
+</ul></li>
+<li class="fragment appear">machine learning and AI algorithms: <b>updating</b> model parameters</li>
+
+</ul>
+
+<div class="column" style="float:left; width:50%">
+<ul>
+<li class="fragment appear">optimization: <b>gradient-based</b> methods</li>
+
+</ul>
+
+<div id="org4f85bbc" class="figure">
+<p><img src="./Gradient_descent.png" alt="Gradient_descent.png" class="fragment (appear)" width="300px" />
+</p>
+</div>
+<p class="fragment (appear)">
+<i><a href="https://en.wikipedia.org/wiki/File:Gradient_descent.svg" class="fragment (appear)">This image</a>'s author is <a href="https://en.wikipedia.org/wiki/User:Olegalexandrov">Olegalexandrov</a> and published under public domain</i>
+</p>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<ul>
+<li class="fragment appear">iterative methods: <b>convergence</b></li>
+
+</ul>
+
+<div id="orge120152" class="figure">
+<p><img src="./Bisection_method.png" alt="Bisection_method.png" class="fragment (appear)" width="250px" />
+</p>
+</div>
+<p class="fragment (appear)">
+<i><a href="https://en.wikipedia.org/wiki/File:Bisection_method.svg" class="fragment (appear)">This image</a>'s author is <a href="https://commons.wikimedia.org/w/index.php?title=User:Tokuchan&amp;action=edit&amp;redlink=1">Tokuchan</a>, and licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">Attribution-ShareAlike 3.0 Unported DEED</a></i>
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org0391870">
+<h2 id="org0391870">"<code>for</code>" loop</h2>
+<ul>
+<li class="fragment appear">It is possible to <b>repeat</b> tasks for a <b>finite number of times</b></li>
+<li class="fragment appear"><b><code>for</code></b> loop is used for this goal</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="fragment (appear)"   ><code trim><span style="color: #F0DFAF; font-weight: bold;">for</span> INDEX <span style="color: #F0DFAF; font-weight: bold;">in</span> SEQUENCE:
+  CODE-BLOCK
+</code></pre>
+</div>
+
+<ul>
+<li class="fragment appear"><code>INDEX</code>: the iteration variable that respectively <b>holds</b> a value in the <code>SEQUENCE</code></li>
+<li class="fragment appear"><code>SEQUENCE</code>: an <b>iterable</b> object</li>
+<li class="fragment appear"><code>CODE-BLOCK</code>: the section evaluated on every loop <b>iteration</b></li>
+
+</ul>
+
+
+<div id="org346c3f0" class="figure">
+<p><img src="./for_example1.png" alt="for_example1.png" class="fragment (appear)" width="1500px" />  
+</p>
+</div>
+
+</section>
+<section id="slide-org0391870-split">
+<p>
+Nesting two <code>for</code> loops:
+</p>
+
+
+<div id="org521f8ba" class="figure">
+<p><img src="./for_example2.png" alt="for_example2.png" class="fragment (appear)" width="1500px" />  
+</p>
+</div>
+
+</section>
+<section id="slide-org0391870-split">
+
+</section>
+<section id="slide-orgb9a1838">
+<h3 id="orgb9a1838">examples</h3>
+<div class="outline-text-3" id="text-orgb9a1838">
+</div>
+</section>
+<section id="slide-orgbe347ef">
+<h4 id="orgbe347ef">example-1</h4>
+<p>
+Compute \[c = \sum^{1000}_{i = 1} i\]
+</p>
+<div class="column" style="float:left; width:50%">
+
+<div id="orgda0fc5d" class="figure">
+<p><img src="./for_example_1_a.png" alt="for_example_1_a.png" class="fragment (appear)" width="1500px" />  
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+
+<div id="org139d8dd" class="figure">
+<p><img src="./for_example_1_b.png" alt="for_example_1_b.png" class="fragment (appear)" width="600px" />  
+</p>
+</div>
+
+<div id="orgaf8d20a" class="figure">
+<p><img src="./for_example_1_c.png" alt="for_example_1_c.png" class="fragment (appear)" width="600px" />  
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-orgafdb297">
+<h4 id="orgafdb297">example-2</h4>
+<p>
+You're given exam grades.
+\[G = \{40, 54, 90, 70, 80\}\]
+</p>
+<p class="fragment (appear)">
+Your aim is to calculate the average.
+</p>
+
+
+<div id="org2be7103" class="figure">
+<p><img src="./for_example_2.png" alt="for_example_2.png" class="fragment (appear)" width="1500px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgb0ce313">
+<h4 id="orgb0ce313">example-3</h4>
+<p>
+Let's see the all combinations of two flipped coins,
+</p>
+
+<div id="orgd3f7243" class="figure">
+<p><img src="./for_example_3.png" alt="for_example_3.png" class="fragment (appear)" width="1500px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgb0ce313-split">
+
+</section>
+</section>
+<section>
+<section id="slide-orgf35aabf">
+<h2 id="orgf35aabf">"<code>while</code>" loop</h2>
+<p>
+A <b><code>while</code></b> loop is used to execute a code block <b>until</b> the given condition is <b>NO longer satisfied</b>.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="fragment (appear)"   ><code trim><span style="color: #F0DFAF; font-weight: bold;">while</span> CONDITION:
+  CODE-BLOCK
+</code></pre>
+</div>
+
+</section>
+<section id="slide-orgf35aabf-split">
+
+<p>
+Let us find all powers of 2 below 10000
+</p>
+
+<div id="orgdd8887b" class="figure">
+<p><img src="./while_example1.png" alt="while_example1.png" class="fragment (appear)" width="1500px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org59d6989">
+<h2 id="org59d6989">"<code>break</code>" command</h2>
+<p>
+<code>break</code> <b>terminates</b> the execution of the loop.
+</p>
+
+</section>
+<section id="slide-org59d6989-split">
+<p>
+Write a Python program that prints all the values of \(e^{n}\) while satisfying \(2 \leq e^{n} \leq 10000\). Use a while loop and include a break statement when \(n\) exceeds 7.
+</p>
+
+
+<div id="org5ab2272" class="figure">
+<p><img src="./break_example.png" alt="break_example.png" class="fragment (appear)" width="1500px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org3a334f1">
+<h2 id="org3a334f1">"<code>continue</code>" command</h2>
+<p class="fragment (appear)">
+<code>continue</code> <b>jumps</b> to the next iteration in the loop.
+</p>
+
+
+<div id="org84e9a6f" class="figure">
+<p><img src="./continue_example.png" alt="continue_example.png" class="fragment (appear)" width="1500px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org1edefef">
+<h2 id="org1edefef">Deliverables</h2>
+<ul>
+<li>Loops</li>
+<li>Tracing a loop</li>
+<li>Terminating or continuing a repeating task</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
