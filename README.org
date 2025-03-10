@@ -89,5 +89,7 @@ Email: ufuktan@utblr.xyz
 | tuple            | string           | precedence            | term        | expression |
 | formatting       | specifier        | whole                 | fractional  | input      |
 | relational       | logic            | indentation           | conditional | nesting    |
+| loop             | iteration        | convergence           | for loop    | while loop |
+| break            | continue         |                       |             |            |
 
 #+REVEAL_HTML: <div>
