@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>ES118 Lab #3</title>
+<meta name="author" content="Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../codestyle.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>ES118 Lab #3</h2> <h3>GPA calculation</h3> <h4>Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar</h4> <h4></h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org8e67bb4">Demo session</a></li>
+<li><a href="#/slide-org1045b7e">Deliverables</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-org8e67bb4">
+<h2 id="org8e67bb4">Demo session</h2>
+<ul>
+<li>for loops</li>
+<li>while loops</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org1045b7e">
+<h2 id="org1045b7e">Deliverables</h2>
+<div class="column" style="float:left; width:50%">
+
+<div id="org7179ff7" class="figure">
+<p><img src="./table.png" alt="table.png" width="300px" />
+</p>
+</div>
+
+<p>
+Calculate the GPA for the given grades above. Use the formula below
+</p>
+
+<p>
+\[GPA = \frac{\sum (\text{Grade Points} \times \text{Hours})}{\sum{\text{Hours}}}\]
+</p>
+
+<p>
+Satisfy the requirements below
+</p>
+<ul>
+<li>Use two <b>lists</b> to define Grade Points, and Hours (1 pt)</li>
+<li>Use two <b>for loops</b> for the summations shown in the formula (1 pt)</li>
+<li>Print the result using <b>fixed-point notation</b> and give <b>1 digit</b> after the decimal point. (1 pt)</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p>
+where
+</p>
+<ul>
+<li>A Letter Grade corresponds to a numerical value of a Grade Point:</li>
+
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Letter Grade</th>
+<th scope="col" class="org-right">Grade Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">AA</td>
+<td class="org-right">4.0</td>
+</tr>
+
+<tr>
+<td class="org-left">BA</td>
+<td class="org-right">3.5</td>
+</tr>
+
+<tr>
+<td class="org-left">BB</td>
+<td class="org-right">3.0</td>
+</tr>
+
+<tr>
+<td class="org-left">CB</td>
+<td class="org-right">2.5</td>
+</tr>
+
+<tr>
+<td class="org-left">CC</td>
+<td class="org-right">2.0</td>
+</tr>
+
+<tr>
+<td class="org-left">DC</td>
+<td class="org-right">1.5</td>
+</tr>
+
+<tr>
+<td class="org-left">DD</td>
+<td class="org-right">1.0</td>
+</tr>
+
+<tr>
+<td class="org-left">FF</td>
+<td class="org-right">0.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>

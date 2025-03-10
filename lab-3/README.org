@@ -1,0 +1,44 @@
+#+TITLE: ES118 Lab #3
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+SUBTITLE: GPA calculation
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+
+* Demo session
+- for loops
+- while loops
+  
+* Deliverables
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+ATTR_HTML: :width 300px
+[[./table.png]]
+
+Calculate the GPA for the given grades above. Use the formula below
+
+$$GPA = \frac{\sum (\text{Grade Points} \times \text{Hours})}{\sum{\text{Hours}}}$$
+
+Satisfy the requirements below
+- Use two *lists* to define Grade Points, and Hours (1 pt)
+- Use two *for loops* for the summations shown in the formula (1 pt)
+- Print the result using *fixed-point notation* and give *1 digit* after the decimal point. (1 pt)
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+where
++ A Letter Grade corresponds to a numerical value of a Grade Point:
+| Letter Grade | Grade Points |
+|--------------+--------------|
+| AA           |          4.0 |
+| BA           |          3.5 |
+| BB           |          3.0 |
+| CB           |          2.5 |
+| CC           |          2.0 |
+| DC           |          1.5 |
+| DD           |          1.0 |
+| FF           |          0.0 |
+#+REVEAL_HTML: </div>
