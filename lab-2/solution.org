@@ -1,0 +1,7 @@
+#+TITLE: ES118 Lab #2 Solution
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+STARTUP: overview
+#+LATEX_HEADER: \usepackage{amsmath}
+
+#+ATTR_HTML: :width 1200px
+[[./solution.png]]
