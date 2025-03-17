@@ -1,0 +1,100 @@
+#+TITLE: ES118 Lecture #8
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+SUBTITLE: user defined functions
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+
+* User defined functions
+#+BEGIN_SRC python
+  def myfunction(PARAMETERS):
+      CODE-BLOCK
+      return VARIABLES
+#+END_SRC
+
+#+ATTR_REVEAL: :frag (appear)
+A *function* does something, and generally *returns* (brings) a result as the output.
+#+ATTR_REVEAL: :frag (appear)
+- after {{{color(red,def)}}} keyword, a *function name* is given
+- function *parameters* could be given inside the parantheses
+- the code-block inside the function definition is executed *when the function is called*
+- {{{color(red,return)}}} keyword is a special statement to *pull the variable(s) out of the function*
+
+
+#+REVEAL: split
+For example, let's define a new function that computes
+
+$$g(x) = x^2$$
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1500px
+[[./function1.png]]
+
+#+REVEAL: split
+For example, let's define a new function that computes
+
+$$f(a, b) = a + b$$
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1600px
+[[./function2.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+{{{color(red, notice)}}} the *multivariable input*!
+
+#+REVEAL: split
+For example, let's define a new function that computes
+
+$$h(a, b, c) = a + be^c$$
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1600px
+[[./function3.png]]
+
+#+REVEAL: split
+For example, let's define a new function that computes the kinetic, and the potential energy of an object that has a mass (m), velocity (v), and height (h) from a reference point.
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1600px
+[[./function4.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+{{{color(red, notice)}}} the *multivariable input and output*!
+
+* Scope
+Scope is a concept which determines what variables are accesible depending on its region.
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1600px
+[[./scope.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+Scopes of
+#+ATTR_REVEAL: :frag (appear)
+- the *function parameters*
+- the *variables inside the functions*
+#+ATTR_REVEAL: :frag (appear)
+are different in this example.
+
+#+REVEAL: split
+Key takeaways about the previous example:
+#+ATTR_REVEAL: :frag (appear)
+- Parameter {{{color(red,a)}}} in {{{color(blue,add)}}} is *not the parameter* {{{color(red,a)}}} in {{{color(blue,calc)}}}, and they do *NOT affect each other*.
+- Same issue applies to the parameter {{{color(red,b)}}} and the variable {{{color(red,y)}}}
+- We can also call functions *defined before* as it can be seen in {{{color(blue,calc)}}}
+
+* Deliverables
+- function definitions of
+  + single-input single-output
+  + multi-input single-output
+  + multi-input multi-output
+- effect of scope
+
+* Classwork #4, assigned to 24 Mar 2025
+- What are the differences between a pseudocode and flowchart?
+- What are the reasons we use them?

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>ES118 Lecture #8</title>
+<meta name="author" content="Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../codestyle.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>ES118 Lecture #8</h2> <h3>user defined functions</h3> <h4>Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar</h4> <h4></h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org0c6e876">User defined functions</a></li>
+<li><a href="#/slide-org3ea62cf">Scope</a></li>
+<li><a href="#/slide-orgaa4e8e1">Deliverables</a></li>
+<li><a href="#/slide-org9b84010">Classwork #4, assigned to 24 Mar 2025</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-org0c6e876">
+<h2 id="org0c6e876">User defined functions</h2>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #F0DFAF; font-weight: bold;">def</span> <span style="color: #93E0E3;">myfunction</span>(PARAMETERS):
+    CODE-BLOCK
+    <span style="color: #F0DFAF; font-weight: bold;">return</span> VARIABLES
+</code></pre>
+</div>
+
+<p class="fragment (appear)">
+A <b>function</b> does something, and generally <b>returns</b> (brings) a result as the output.
+</p>
+<ul>
+<li class="fragment appear">after <font color="red">def</font> keyword, a <b>function name</b> is given</li>
+<li class="fragment appear">function <b>parameters</b> could be given inside the parantheses</li>
+<li class="fragment appear">the code-block inside the function definition is executed <b>when the function is called</b></li>
+<li class="fragment appear"><font color="red">return</font> keyword is a special statement to <b>pull the variable(s) out of the function</b></li>
+
+</ul>
+
+
+</section>
+<section id="slide-org0c6e876-split">
+<p>
+For example, let's define a new function that computes
+</p>
+
+<p>
+\[g(x) = x^2\]
+</p>
+
+
+<div id="orge0b24b4" class="figure">
+<p><img src="./function1.png" alt="function1.png" class="fragment (appear)" width="1500px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org0c6e876-split">
+<p>
+For example, let's define a new function that computes
+</p>
+
+<p>
+\[f(a, b) = a + b\]
+</p>
+
+
+<div id="org0b669a3" class="figure">
+<p><img src="./function2.png" alt="function2.png" class="fragment (appear)" width="1600px" />
+</p>
+</div>
+
+<p class="fragment (appear)">
+<font color="red"> notice</font> the <b>multivariable input</b>!
+</p>
+
+</section>
+<section id="slide-org0c6e876-split">
+<p>
+For example, let's define a new function that computes
+</p>
+
+<p>
+\[h(a, b, c) = a + be^c\]
+</p>
+
+
+<div id="org718e380" class="figure">
+<p><img src="./function3.png" alt="function3.png" class="fragment (appear)" width="1600px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org0c6e876-split">
+<p>
+For example, let's define a new function that computes the kinetic, and the potential energy of an object that has a mass (m), velocity (v), and height (h) from a reference point.
+</p>
+
+
+<div id="org58c841d" class="figure">
+<p><img src="./function4.png" alt="function4.png" class="fragment (appear)" width="1600px" />
+</p>
+</div>
+
+<p class="fragment (appear)">
+<font color="red"> notice</font> the <b>multivariable input and output</b>!
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org3ea62cf">
+<h2 id="org3ea62cf">Scope</h2>
+<p>
+Scope is a concept which determines what variables are accesible depending on its region.
+</p>
+
+
+<div id="orgafaba11" class="figure">
+<p><img src="./scope.png" alt="scope.png" class="fragment (appear)" width="1600px" />
+</p>
+</div>
+
+<p class="fragment (appear)">
+Scopes of
+</p>
+<ul>
+<li class="fragment appear">the <b>function parameters</b></li>
+<li class="fragment appear">the <b>variables inside the functions</b></li>
+
+</ul>
+<p class="fragment (appear)">
+are different in this example.
+</p>
+
+</section>
+<section id="slide-org3ea62cf-split">
+<p>
+Key takeaways about the previous example:
+</p>
+<ul>
+<li class="fragment appear">Parameter <font color="red">a</font> in <font color="blue">add</font> is <b>not the parameter</b> <font color="red">a</font> in <font color="blue">calc</font>, and they do <b>NOT affect each other</b>.</li>
+<li class="fragment appear">Same issue applies to the parameter <font color="red">b</font> and the variable <font color="red">y</font></li>
+<li class="fragment appear">We can also call functions <b>defined before</b> as it can be seen in <font color="blue">calc</font></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgaa4e8e1">
+<h2 id="orgaa4e8e1">Deliverables</h2>
+<ul>
+<li>function definitions of
+<ul>
+<li>single-input single-output</li>
+<li>multi-input single-output</li>
+<li>multi-input multi-output</li>
+
+</ul></li>
+<li>effect of scope</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org9b84010">
+<h2 id="org9b84010">Classwork #4, assigned to 24 Mar 2025</h2>
+<ul>
+<li>What are the differences between a pseudocode and flowchart?</li>
+<li>What are the reasons we use them?</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
