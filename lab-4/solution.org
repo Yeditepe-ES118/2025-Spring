@@ -1,0 +1,21 @@
+#+TITLE: ES118 Lab #4 Solution
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+STARTUP: overview
+#+LATEX_HEADER: \usepackage{amsmath}
+
+* BMI calculator
+#+ATTR_HTML: :width 1200px
+[[./solution1.png]]
+
+* Mass centroid
+Formula for the mass centroid on the x and y axes,
+$$x_c = \frac{\sum_{i = 1}^n x_i m_i}{\sum_{i = 1}^n m_i}$$
+$$y_c = \frac{\sum_{i = 1}^n y_i m_i}{\sum_{i = 1}^n m_i}$$
+
+The below figure shows a configuration of three particles,
+#+ATTR_HTML: :width 600px
+[[./particles_solution2.png]]
+
+#+ATTR_HTML: :width 1200px
+[[./solution2.png]]
+
