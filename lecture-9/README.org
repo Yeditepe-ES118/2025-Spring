@@ -1,0 +1,213 @@
+#+TITLE: ES118 Lecture #9
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+SUBTITLE: flowcharts and pseudocodes
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+
+* What is an algorithm?
+/Informal definition:/
+#+BEGIN_QUOTE
+/a set of rules for solving a problem in a finite number of steps/
+#+END_QUOTE
+/([[https://www.dictionary.com/browse/algorithm][https://www.dictionary.com/browse/algorithm]])/
+
+* Algorithm representations
+An algorithm can be represented with two methods
+- flowcharts
+- pseudocodes  
+** Flowchart
+#+ATTR_REVEAL: :frag (appear)
+- *independent* of the programming language
+- *illustrations*
+- ~if~, ~if-else~, ~elif~, ~for~, and ~while~ can be illustrated
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_~if~ flowchart_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./if_flowchart.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+_the code implementation_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./if_flowchart_code.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_~if-else~ flowchart_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./if_else_flowchart.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+_the code implementation_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./if_else_flowchart_code.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_~while~ flowchart_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./while_flowchart_1.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+_the code implementation_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./while_flowchart_code_1.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_~while~ flowchart_ (continued)
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./while_flowchart_2.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+_the code implementation_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./while_flowchart_code_2.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_~for~ flowchart_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./for_flowchart_1.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+_the code implementation_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./for_flowchart_code_1.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_~for~ flowchart_ (continued)
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./for_flowchart_2.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+_the code implementation_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./for_flowchart_code_2.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_A flowchart example for finding the factorial_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 700px
+[[./flowchart_example_1.png]]
+
+/Inspired by [[https://www.programiz.com/dsa/algorithm][https://www.programiz.com/dsa/algorithm]]/
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+_the code implementation_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 700px
+[[./flowchart_example_1_code.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_A flowchart example for finding whether a number prime or not_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 400px
+[[./flowchart_example_2.png]]
+
+Inspired by [[https://www.programiz.com/dsa/algorithm][https://www.programiz.com/dsa/algorithm]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+_the code implementation_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 700px
+[[./flowchart_example_2_code.png]]
+#+REVEAL_HTML: </div>
+
+** Pseudocode
+#+ATTR_REVEAL: :frag (appear)
+- We might be given a set of instructions in a *generic* format: A *pseudocode*
+- A pseudocode is *independent* from the programming language syntax
+- It is a *general representation* of an algorithm
+- It is similar to a flowchart, but in *text*
+- One advantage over flowchart is its *smaller size* on the page
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_The pseudocode for finding the factorial_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./pseudocode_example_1.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+_the code implementation_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 700px
+[[./flowchart_example_1_code.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_The pseudocode for finding whether a number prime or not_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./pseudocode_example_2.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+_the code implementation_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 700px
+[[./flowchart_example_2_code.png]]
+#+REVEAL_HTML: </div>
+
+* Deliverables
+- Motivation to algorithmic thinking
+- Construction and implementation of flowcharts and pseudocodes

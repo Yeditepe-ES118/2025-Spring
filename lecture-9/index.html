@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>ES118 Lecture #9</title>
+<meta name="author" content="Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../codestyle.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>ES118 Lecture #9</h2> <h3>flowcharts and pseudocodes</h3> <h4>Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar</h4> <h4></h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org1c3434a">What is an algorithm?</a></li>
+<li><a href="#/slide-org3d8371c">Algorithm representations</a></li>
+<li><a href="#/slide-org3dc41fc">Deliverables</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-org1c3434a">
+<h2 id="org1c3434a">What is an algorithm?</h2>
+<p>
+<i>Informal definition:</i>
+</p>
+<blockquote >
+<p>
+<i>a set of rules for solving a problem in a finite number of steps</i>
+</p>
+</blockquote>
+<p>
+<i>(<a href="https://www.dictionary.com/browse/algorithm">https://www.dictionary.com/browse/algorithm</a>)</i>
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org3d8371c">
+<h2 id="org3d8371c">Algorithm representations</h2>
+<p>
+An algorithm can be represented with two methods
+</p>
+<ul>
+<li>flowcharts</li>
+<li>pseudocodes</li>
+
+</ul>
+</section>
+<section id="slide-org48afb0b">
+<h3 id="org48afb0b">Flowchart</h3>
+<ul>
+<li class="fragment appear"><b>independent</b> of the programming language</li>
+<li class="fragment appear"><b>illustrations</b></li>
+<li class="fragment appear"><code>if</code>, <code>if-else</code>, <code>elif</code>, <code>for</code>, and <code>while</code> can be illustrated</li>
+
+</ul>
+</section>
+<section id="slide-org48afb0b-split">
+
+<div class="column" style="float:left; width:50%">
+<p>
+<span class="underline"><code>if</code> flowchart</span>
+</p>
+
+<div id="orgb25102f" class="figure">
+<p><img src="./if_flowchart.png" alt="if_flowchart.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p class="fragment (appear)">
+<span class="underline">the code implementation</span>
+</p>
+
+<div id="orgd996911" class="figure">
+<p><img src="./if_flowchart_code.png" alt="if_flowchart_code.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org48afb0b-split">
+
+<div class="column" style="float:left; width:50%">
+<p>
+<span class="underline"><code>if-else</code> flowchart</span>
+</p>
+
+<div id="orgee069c6" class="figure">
+<p><img src="./if_else_flowchart.png" alt="if_else_flowchart.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p class="fragment (appear)">
+<span class="underline">the code implementation</span>
+</p>
+
+<div id="org984abd4" class="figure">
+<p><img src="./if_else_flowchart_code.png" alt="if_else_flowchart_code.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org48afb0b-split">
+
+<div class="column" style="float:left; width:50%">
+<p>
+<span class="underline"><code>while</code> flowchart</span>
+</p>
+
+<div id="org516aa0c" class="figure">
+<p><img src="./while_flowchart_1.png" alt="while_flowchart_1.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p class="fragment (appear)">
+<span class="underline">the code implementation</span>
+</p>
+
+<div id="org3668e2c" class="figure">
+<p><img src="./while_flowchart_code_1.png" alt="while_flowchart_code_1.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org48afb0b-split">
+
+<div class="column" style="float:left; width:50%">
+<p>
+<span class="underline"><code>while</code> flowchart</span> (continued)
+</p>
+
+<div id="org90fc67d" class="figure">
+<p><img src="./while_flowchart_2.png" alt="while_flowchart_2.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p class="fragment (appear)">
+<span class="underline">the code implementation</span>
+</p>
+
+<div id="orgd497c3e" class="figure">
+<p><img src="./while_flowchart_code_2.png" alt="while_flowchart_code_2.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org48afb0b-split">
+
+<div class="column" style="float:left; width:50%">
+<p>
+<span class="underline"><code>for</code> flowchart</span>
+</p>
+
+<div id="orge2fd49e" class="figure">
+<p><img src="./for_flowchart_1.png" alt="for_flowchart_1.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p class="fragment (appear)">
+<span class="underline">the code implementation</span>
+</p>
+
+<div id="orgb652a5c" class="figure">
+<p><img src="./for_flowchart_code_1.png" alt="for_flowchart_code_1.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org48afb0b-split">
+
+<div class="column" style="float:left; width:50%">
+<p>
+<span class="underline"><code>for</code> flowchart</span> (continued)
+</p>
+
+<div id="orgeb9eda3" class="figure">
+<p><img src="./for_flowchart_2.png" alt="for_flowchart_2.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p class="fragment (appear)">
+<span class="underline">the code implementation</span>
+</p>
+
+<div id="org98cd23e" class="figure">
+<p><img src="./for_flowchart_code_2.png" alt="for_flowchart_code_2.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org48afb0b-split">
+
+<div class="column" style="float:left; width:50%">
+<p>
+<span class="underline">A flowchart example for finding the factorial</span>
+</p>
+
+<div id="org7ab0639" class="figure">
+<p><img src="./flowchart_example_1.png" alt="flowchart_example_1.png" class="fragment (appear)" width="700px" />
+</p>
+</div>
+
+<p>
+<i>Inspired by <a href="https://www.programiz.com/dsa/algorithm">https://www.programiz.com/dsa/algorithm</a></i>
+</p>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p class="fragment (appear)">
+<span class="underline">the code implementation</span>
+</p>
+
+<div id="org8848f3d" class="figure">
+<p><img src="./flowchart_example_1_code.png" alt="flowchart_example_1_code.png" class="fragment (appear)" width="700px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org48afb0b-split">
+
+<div class="column" style="float:left; width:50%">
+<p>
+<span class="underline">A flowchart example for finding whether a number prime or not</span>
+</p>
+
+<div id="org98b9ac7" class="figure">
+<p><img src="./flowchart_example_2.png" alt="flowchart_example_2.png" class="fragment (appear)" width="400px" />
+</p>
+</div>
+
+<p>
+Inspired by <a href="https://www.programiz.com/dsa/algorithm">https://www.programiz.com/dsa/algorithm</a>
+</p>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p class="fragment (appear)">
+<span class="underline">the code implementation</span>
+</p>
+
+<div id="org18c4a4f" class="figure">
+<p><img src="./flowchart_example_2_code.png" alt="flowchart_example_2_code.png" class="fragment (appear)" width="700px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-orge0974b7">
+<h3 id="orge0974b7">Pseudocode</h3>
+<ul>
+<li class="fragment appear">We might be given a set of instructions in a <b>generic</b> format: A <b>pseudocode</b></li>
+<li class="fragment appear">A pseudocode is <b>independent</b> from the programming language syntax</li>
+<li class="fragment appear">It is a <b>general representation</b> of an algorithm</li>
+<li class="fragment appear">It is similar to a flowchart, but in <b>text</b></li>
+<li class="fragment appear">One advantage over flowchart is its <b>smaller size</b> on the page</li>
+
+</ul>
+
+</section>
+<section id="slide-orge0974b7-split">
+
+<div class="column" style="float:left; width:50%">
+<p>
+<span class="underline">The pseudocode for finding the factorial</span>
+</p>
+
+<div id="orgb4a7fe5" class="figure">
+<p><img src="./pseudocode_example_1.png" alt="pseudocode_example_1.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p class="fragment (appear)">
+<span class="underline">the code implementation</span>
+</p>
+
+<div id="org8f506c5" class="figure">
+<p><img src="./flowchart_example_1_code.png" alt="flowchart_example_1_code.png" class="fragment (appear)" width="700px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-orge0974b7-split">
+
+<div class="column" style="float:left; width:50%">
+<p>
+<span class="underline">The pseudocode for finding whether a number prime or not</span>
+</p>
+
+<div id="orga052da1" class="figure">
+<p><img src="./pseudocode_example_2.png" alt="pseudocode_example_2.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p class="fragment (appear)">
+<span class="underline">the code implementation</span>
+</p>
+
+<div id="org306c976" class="figure">
+<p><img src="./flowchart_example_2_code.png" alt="flowchart_example_2_code.png" class="fragment (appear)" width="700px" />
+</p>
+</div>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org3dc41fc">
+<h2 id="org3dc41fc">Deliverables</h2>
+<ul>
+<li>Motivation to algorithmic thinking</li>
+<li>Construction and implementation of flowcharts and pseudocodes</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
