@@ -12,20 +12,24 @@
 
 * Version control
 ** What is it? Why use it?
+#+ATTR_REVEAL: :frag (appear)
 - keeping track of files
 - rolling-back to a version in the history
 - managing software feature development
 - deployment of the software  
 - example: linux kernel development  
 ** Benefits
+#+ATTR_REVEAL: :frag (appear)
 - collaborative development
 - eliminating cluttering
 - independent development
 * Git vs Github
 ** Git
+#+ATTR_REVEAL: :frag (appear)
 - version control software
 - local tool: https://git-scm.com/downloads
 ** Github
+#+ATTR_REVEAL: :frag (appear)
 - remote hosting platform for Git
 - adds collaboration tools
   + issue tracking
@@ -33,18 +37,21 @@
   + classroom
 * Repositories
 ** local vs remote
-let's create
-- a local repo (test-local)
-- a remote repo (test-remote)
+#+ATTR_REVEAL: :frag (appear)  
+- a local repo resides under your computer
+- a remote repo resides on Github  
 ** What's in a Git repo?
+#+ATTR_REVEAL: :frag (appear)  
 - ~.git~ folder
 - staging area
 - history    
 * The trees of Git
+#+ATTR_REVEAL: :frag (appear)
 - working directory
 - staging area (index)
 - repository (committed history)    
 * Commits
+#+ATTR_REVEAL: :frag (appear)
 - snapshots of your changes, with messages
 - commit history, project timeline  
 * Branches
@@ -56,7 +63,7 @@ let's create
 ** How Git brings branches together
 * Remotes
 ** ~origin~, cloning repo
-** push, pull
+** push, fetch
 * Essential Git Commands
 ** setup
 - ~git config --global user.name~ {{{color(green,"Your Name")}}}
@@ -88,10 +95,15 @@ let's create
 | ~git checkout <name>~ | switch branches                   |
 | ~git merge <name>~    | merge another branch into current |
 ** working with remotes (Github)
-| command                       | use case               |
-|-------------------------------+------------------------|
-| ~git remote add origin <url>~ | link to GitHub         |
-| ~git push -u origin main~     | push first time        |
-| ~git push~                    | push changes           |
-| ~git pull~                    | get latest from remote |
+| command                       | use case                     |
+|-------------------------------+------------------------------|
+| ~git remote add origin <url>~ | link to GitHub (first setup) |
+| ~git push -u origin main~     | push first time              |
+| ~git push~                    | push changes                 |
+| ~git fetch~                   | get latest from remote       |
 
+* Deliverables
+- basic concepts of version control
+- differentiation between Git and Github
+- organization of a repo
+- useful Git commands      
