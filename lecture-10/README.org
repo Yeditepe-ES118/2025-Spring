@@ -1,0 +1,97 @@
+#+TITLE: ES118 Lecture #10
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+SUBTITLE: version control
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+
+* Version control
+** What is it? Why use it?
+- keeping track of files
+- rolling-back to a version in the history
+- managing software feature development
+- deployment of the software  
+- example: linux kernel development  
+** Benefits
+- collaborative development
+- eliminating cluttering
+- independent development
+* Git vs Github
+** Git
+- version control software
+- local tool: https://git-scm.com/downloads
+** Github
+- remote hosting platform for Git
+- adds collaboration tools
+  + issue tracking
+  + organizations
+  + classroom
+* Repositories
+** local vs remote
+let's create
+- a local repo (test-local)
+- a remote repo (test-remote)
+** What's in a Git repo?
+- ~.git~ folder
+- staging area
+- history    
+* The trees of Git
+- working directory
+- staging area (index)
+- repository (committed history)    
+* Commits
+- snapshots of your changes, with messages
+- commit history, project timeline  
+* Branches
+** What are branches?
+** ~main~ or ~master~ or ~trunk~ as the default
+** feature branches
+- isolation for work in progress
+* Merging
+** How Git brings branches together
+* Remotes
+** ~origin~, cloning repo
+** push, pull
+* Essential Git Commands
+** setup
+- ~git config --global user.name~ {{{color(green,"Your Name")}}}
+- ~git config --global user.email~ {{{color(green,"you@example.com")}}}
+** starting a project
+| command           | use case         |
+|-------------------+------------------|
+| ~git init~        | start a new repo |
+| ~git clone <url>~ | copy a repo      |
+
+** workflow
+| command                   | use case              |
+|---------------------------+-----------------------|
+| ~git status~              | see what's going on   |
+| ~git add <file>~          | stage changes         |
+| ~git commit -m "message"~ | commit staged changes |
+
+** working with history
+| command    | use case           |
+|------------+--------------------|
+| ~git log~  | see commit history |
+| ~git diff~ | see changes        |
+
+** branching & merging
+| command               | use case                          |
+|-----------------------+-----------------------------------|
+| ~git branch~          | list branches                     |
+| ~git branch <name>~   | create new branch                 |
+| ~git checkout <name>~ | switch branches                   |
+| ~git merge <name>~    | merge another branch into current |
+** working with remotes (Github)
+| command                       | use case               |
+|-------------------------------+------------------------|
+| ~git remote add origin <url>~ | link to GitHub         |
+| ~git push -u origin main~     | push first time        |
+| ~git push~                    | push changes           |
+| ~git pull~                    | get latest from remote |
+
