@@ -1,0 +1,165 @@
+#+TITLE: ES118 Lab #5
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+SUBTITLE: Git and Github in practice
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+
+* Deliverables
+Do the steps in the given instructions
+
+* Instructions
+** Sign up
+#+ATTR_HTML: :width 1200px
+[[./sign-up.png]]
+
+** Git Bash download
+#+ATTR_HTML: :width 1200px
+[[./git-scm.png]]
+
+https://git-scm.com/downloads
+
+** Open Git Bash
+#+ATTR_HTML: :width 1200px
+[[./open-git-bash.png]]
+
+** Git Bash window
+#+ATTR_HTML: :width 1200px
+[[./git-bash.png]]
+
+** first time configuration
+#+ATTR_HTML: :width 1200px
+[[./config.png]]
+
+** ~pwd~ and ~ls~ commands
+#+ATTR_HTML: :width 1200px
+[[./pwd-ls.png]]
+
+** ~mkdir~ and ~cd~ commands
+#+ATTR_HTML: :width 1200px
+[[./mkdir-cd.png]]
+
+** initialize a local repo
+#+ATTR_HTML: :width 1200px
+[[./git-init.png]]
+
+** check the status of the repo
+#+ATTR_HTML: :width 1200px
+[[./git-status.png]]
+
+** open Spyder and navigate to ~test-repo~ folder
+#+ATTR_HTML: :width 1200px
+[[./spyder-navigate.png]]
+
+** create a file called ~mycode.py~
+#+ATTR_HTML: :width 1200px
+[[./spyder-create.png]]
+
+** check the status of the repo
+#+ATTR_HTML: :width 1200px
+[[./git-status-2.png]]
+
+** stage the file
+#+ATTR_HTML: :width 1200px
+[[./git-stage.png]]
+
+** commit and check the log
+#+ATTR_HTML: :width 1200px
+[[./git-commit-log.png]]
+
+** check branches and create a new branch
+#+ATTR_HTML: :width 1200px
+[[./git-branch.png]]
+
+** add a feature in the code
+#+ATTR_HTML: :width 1200px
+[[./add-feature.png]]
+
+** stage then commit the feature
+#+ATTR_HTML: :width 1200px
+[[./git-stage-commit.png]]
+
+** merge the feature branch to the master
+#+ATTR_HTML: :width 1200px
+[[./git-merge.png]]
+
+** create a remote repo on Github
+#+ATTR_HTML: :width 1200px
+[[./github-create-repo.png]]
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 1200px
+[[./github-create-repo-2.png]]
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 1200px
+[[./github-create-repo-3.png]]
+
+** add the remote repo using Git
+#+ATTR_HTML: :width 1200px
+[[./git-remote-add.png]]
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 1200px
+[[./git-remote-add-popup.png]]
+
+** push the local repo to Github
+#+ATTR_HTML: :width 1200px
+[[./git-push.png]]
+
+** check Github
+#+ATTR_HTML: :width 1200px
+[[./check-github.png]]
+
+** create a license file
+#+ATTR_HTML: :width 1200px
+[[./github-license.png]]
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 1200px
+[[./github-license-2.png]]
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 1200px
+[[./github-license-3.png]]
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 1200px
+[[./github-license-4.png]]
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 1200px
+[[./github-license-5.png]]
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 1200px
+[[./github-license-6.png]]
+
+** fetch the remote files
+#+ATTR_HTML: :width 1200px
+[[./git-fetch.png]]
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 1200px
+[[./git-fetch-2.png]]
+
+** merge the remote master (origin/master) to the local master
+#+ATTR_HTML: :width 1200px
+[[./git-merge-origin-master.png]]
+
+** finally check the contents of the repo
+#+ATTR_HTML: :width 1200px
+[[./final-check.png]]

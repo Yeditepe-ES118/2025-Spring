@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>ES118 Lab #5</title>
+<meta name="author" content="Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../codestyle.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>ES118 Lab #5</h2> <h3>Git and Github in practice</h3> <h4>Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar</h4> <h4></h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org7bc0b92">Deliverables</a></li>
+<li><a href="#/slide-org2d00cc8">Instructions</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-org7bc0b92">
+<h2 id="org7bc0b92">Deliverables</h2>
+<p>
+Do the steps in the given instructions
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org2d00cc8">
+<h2 id="org2d00cc8">Instructions</h2>
+<div class="outline-text-2" id="text-org2d00cc8">
+</div>
+</section>
+<section id="slide-org67b3e4e">
+<h3 id="org67b3e4e">Sign up</h3>
+
+<div id="org015af41" class="figure">
+<p><img src="./sign-up.png" alt="sign-up.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgb9aa9b7">
+<h3 id="orgb9aa9b7">Git Bash download</h3>
+
+<div id="org620a7bb" class="figure">
+<p><img src="./git-scm.png" alt="git-scm.png" width="1200px" />
+</p>
+</div>
+
+<p>
+<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>
+</p>
+
+</section>
+<section id="slide-orgec8a84e">
+<h3 id="orgec8a84e">Open Git Bash</h3>
+
+<div id="orgc8711eb" class="figure">
+<p><img src="./open-git-bash.png" alt="open-git-bash.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org567ede9">
+<h3 id="org567ede9">Git Bash window</h3>
+
+<div id="org2b538c1" class="figure">
+<p><img src="./git-bash.png" alt="git-bash.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org90785c6">
+<h3 id="org90785c6">first time configuration</h3>
+
+<div id="org8f099fd" class="figure">
+<p><img src="./config.png" alt="config.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org80d6cea">
+<h3 id="org80d6cea"><code>pwd</code> and <code>ls</code> commands</h3>
+
+<div id="org27271bc" class="figure">
+<p><img src="./pwd-ls.png" alt="pwd-ls.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgd2ebb49">
+<h3 id="orgd2ebb49"><code>mkdir</code> and <code>cd</code> commands</h3>
+
+<div id="orge1cf0c8" class="figure">
+<p><img src="./mkdir-cd.png" alt="mkdir-cd.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgc095111">
+<h3 id="orgc095111">initialize a local repo</h3>
+
+<div id="org9c1d5e8" class="figure">
+<p><img src="./git-init.png" alt="git-init.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org651d88c">
+<h3 id="org651d88c">check the status of the repo</h3>
+
+<div id="orgda8a381" class="figure">
+<p><img src="./git-status.png" alt="git-status.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgc25d8e1">
+<h3 id="orgc25d8e1">open Spyder and navigate to <code>test-repo</code> folder</h3>
+
+<div id="orgbf9812e" class="figure">
+<p><img src="./spyder-navigate.png" alt="spyder-navigate.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org2cf1f0b">
+<h3 id="org2cf1f0b">create a file called <code>mycode.py</code></h3>
+
+<div id="orgc28ad5b" class="figure">
+<p><img src="./spyder-create.png" alt="spyder-create.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgbf7e297">
+<h3 id="orgbf7e297">check the status of the repo</h3>
+
+<div id="org386bebc" class="figure">
+<p><img src="./git-status-2.png" alt="git-status-2.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org9693cd1">
+<h3 id="org9693cd1">stage the file</h3>
+
+<div id="orgfea9938" class="figure">
+<p><img src="./git-stage.png" alt="git-stage.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org71848f6">
+<h3 id="org71848f6">commit and check the log</h3>
+
+<div id="org9d539ea" class="figure">
+<p><img src="./git-commit-log.png" alt="git-commit-log.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org20d9335">
+<h3 id="org20d9335">check branches and create a new branch</h3>
+
+<div id="orgb7233db" class="figure">
+<p><img src="./git-branch.png" alt="git-branch.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org33eee25">
+<h3 id="org33eee25">add a feature in the code</h3>
+
+<div id="org471a3f6" class="figure">
+<p><img src="./add-feature.png" alt="add-feature.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org900cd22">
+<h3 id="org900cd22">stage then commit the feature</h3>
+
+<div id="org0a32dde" class="figure">
+<p><img src="./git-stage-commit.png" alt="git-stage-commit.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgfd1046f">
+<h3 id="orgfd1046f">merge the feature branch to the master</h3>
+
+<div id="orgc01f3a5" class="figure">
+<p><img src="./git-merge.png" alt="git-merge.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org3a562b3">
+<h3 id="org3a562b3">create a remote repo on Github</h3>
+
+<div id="org233e7a1" class="figure">
+<p><img src="./github-create-repo.png" alt="github-create-repo.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org3a562b3-split">
+
+
+<div id="org3a286ed" class="figure">
+<p><img src="./github-create-repo-2.png" alt="github-create-repo-2.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org3a562b3-split">
+
+
+<div id="orge9db73c" class="figure">
+<p><img src="./github-create-repo-3.png" alt="github-create-repo-3.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgcac874f">
+<h3 id="orgcac874f">add the remote repo using Git</h3>
+
+<div id="org2bdf998" class="figure">
+<p><img src="./git-remote-add.png" alt="git-remote-add.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgcac874f-split">
+
+
+<div id="org3d7b764" class="figure">
+<p><img src="./git-remote-add-popup.png" alt="git-remote-add-popup.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgf8d9dd9">
+<h3 id="orgf8d9dd9">push the local repo to Github</h3>
+
+<div id="orgf0b6e3e" class="figure">
+<p><img src="./git-push.png" alt="git-push.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org53ca746">
+<h3 id="org53ca746">check Github</h3>
+
+<div id="org0e8e4cd" class="figure">
+<p><img src="./check-github.png" alt="check-github.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org436b110">
+<h3 id="org436b110">create a license file</h3>
+
+<div id="org887ca6c" class="figure">
+<p><img src="./github-license.png" alt="github-license.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org436b110-split">
+
+
+<div id="org8567b18" class="figure">
+<p><img src="./github-license-2.png" alt="github-license-2.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org436b110-split">
+
+
+<div id="org3a3fdf2" class="figure">
+<p><img src="./github-license-3.png" alt="github-license-3.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org436b110-split">
+
+
+<div id="org8749d93" class="figure">
+<p><img src="./github-license-4.png" alt="github-license-4.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org436b110-split">
+
+
+<div id="org56141e5" class="figure">
+<p><img src="./github-license-5.png" alt="github-license-5.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org436b110-split">
+
+
+<div id="org91d6328" class="figure">
+<p><img src="./github-license-6.png" alt="github-license-6.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org1fbc557">
+<h3 id="org1fbc557">fetch the remote files</h3>
+
+<div id="org8b009bc" class="figure">
+<p><img src="./git-fetch.png" alt="git-fetch.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org1fbc557-split">
+
+
+<div id="orgf0ed180" class="figure">
+<p><img src="./git-fetch-2.png" alt="git-fetch-2.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org72c80f3">
+<h3 id="org72c80f3">merge the remote master (origin/master) to the local master</h3>
+
+<div id="org55ef7f2" class="figure">
+<p><img src="./git-merge-origin-master.png" alt="git-merge-origin-master.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org7c1f981">
+<h3 id="org7c1f981">finally check the contents of the repo</h3>
+
+<div id="org32268fc" class="figure">
+<p><img src="./final-check.png" alt="final-check.png" width="1200px" />
+</p>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
