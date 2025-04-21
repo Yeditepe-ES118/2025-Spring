@@ -1,0 +1,199 @@
+#+TITLE: ES118 Lecture #11
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+SUBTITLE: arrays
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+
+* Arrays
+- An array can store multiple numerical values
+- Algebraic operations such as $$\vec A = \mathbf X  \vec b$$ can be defined using arrays
+- Data analytics can be done using arrays
+  
+* NumPy
+NumPy is a library for the Python programming language, adding support for *large, multi-dimensional arrays and matrices*, along with *a large collection of high-level mathematical functions* to *operate* on these arrays.
+
+* Remark: vectors and matrices
+_row vector_
+\begin{equation}
+\vec r =
+\begin{bmatrix}
+1 & 2 & 3 & 4
+\end{bmatrix}
+\end{equation}
+_column vector_
+\begin{equation}
+\vec c =
+\begin{bmatrix}
+1 \\ 2 \\ 3 \\ 4
+\end{bmatrix}
+\end{equation}
+_matrix_
+\begin{equation}
+\mathbf M =
+\begin{bmatrix}
+1 & 2 \\ 3 & 4
+\end{bmatrix}
+\end{equation}
+
+* Creating arrays
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_1-D array definition_
+Using 1-D arrays it is possible to define row and column vectors
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\vec x =
+\begin{bmatrix}
+1 & 2 & 3 & 4
+\end{bmatrix}
+\end{equation}
+#+ATTR_REVEAL: :frag (appear)
+or
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\vec x =
+\begin{bmatrix}
+1 \\ 2 \\ 3 \\ 4
+\end{bmatrix}
+\end{equation}
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./1d_array_creation.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_2-D array definition_
+Using 2-D arrays it is *also* possible to define row and column vectors
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\vec r =
+\begin{bmatrix}
+1 & 2 & 3 & 4
+\end{bmatrix}
+\end{equation}
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./2d_array_creation_r.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_2-D array definition (cont.)_
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\vec c =
+\begin{bmatrix}
+1 \\ 2 \\ 3 \\ 4
+\end{bmatrix}
+\end{equation}
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./2d_array_creation_c.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_2-D array definition_
+Using 2-D arrays it is *also* possible to define matrices
+
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\mathbf M =
+\begin{bmatrix}
+1 & 2 \\ 3 & 4
+\end{bmatrix}
+\end{equation}
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./2d_array_creation_m.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+- ~np.zeros()~
+#+ATTR_REVEAL: :frag (appear)  
+Creates an array full of zeros.
+#+ATTR_REVEAL: :frag (appear)
+~np.zeros(m)~ (1-D case)
+#+ATTR_REVEAL: :frag (appear)
+~np.zeros((m,n))~ (2-D case)
+
+#+ATTR_REVEAL: :frag (appear)
+- ~np.ones()~
+#+ATTR_REVEAL: :frag (appear)  
+Creates an array full of ones.
+#+ATTR_REVEAL: :frag (appear)
+~np.ones(m)~ (1-D case)
+#+ATTR_REVEAL: :frag (appear)
+~np.ones((m,n))~ (2-D case)
+
+#+ATTR_REVEAL: :frag (appear)
+- ~np.eye()~
+#+ATTR_REVEAL: :frag (appear)  
+Creates an array for the diagonal consists of ones (identity matrix)
+#+ATTR_REVEAL: :frag (appear)
+~np.eye(m)~ (2-D square matrix case)
+#+ATTR_REVEAL: :frag (appear)
+~np.eys(m,n)~ (2-D case)
+
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 600px
+[[./array_creation_functions11.png]]
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 600px
+[[./array_creation_functions22.png]]
+
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+- ~np.arange()~
+#+ATTR_REVEAL: :frag (appear)
+~np.arange(start, end, increment)~ creates arrays with fixed increments
+#+ATTR_REVEAL: :frag (appear)
+- ~np.linspace()~
+#+ATTR_REVEAL: :frag (appear)  
+~np.linspace(left_boundary, right_boundary, number_of_elements)~ creates evenly spaced numbers over a specified interval
+#+ATTR_REVEAL: :frag (appear)
+- ~np.logspace()~
+#+ATTR_REVEAL: :frag (appear)
+~np.logspace(start, stop, number_of_elements)~ creates a logarithmically spaced vector in $\Big[10^{\text{[start]}}, 10^{\text{[stop]}}\Big]$
+
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./array_creation_functions33.png]]
+
+#+REVEAL_HTML: </div>
+
+* Algebraic operations    
+

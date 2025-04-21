@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>ES118 Lecture #11</title>
+<meta name="author" content="Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../codestyle.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>ES118 Lecture #11</h2> <h3>arrays</h3> <h4>Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar</h4> <h4></h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org3dbd1c2">Arrays</a></li>
+<li><a href="#/slide-org987ac16">NumPy</a></li>
+<li><a href="#/slide-orgebe55a0">Remark: vectors and matrices</a></li>
+<li><a href="#/slide-org172017f">Creating arrays</a></li>
+<li><a href="#/slide-orge914028">Algebraic operations</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-org3dbd1c2">
+<h2 id="org3dbd1c2">Arrays</h2>
+<ul>
+<li>An array can store multiple numerical values</li>
+<li>Algebraic operations such as \[\vec A = \mathbf X  \vec b\] can be defined using arrays</li>
+<li>Data analytics can be done using arrays</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org987ac16">
+<h2 id="org987ac16">NumPy</h2>
+<p>
+NumPy is a library for the Python programming language, adding support for <b>large, multi-dimensional arrays and matrices</b>, along with <b>a large collection of high-level mathematical functions</b> to <b>operate</b> on these arrays.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgebe55a0">
+<h2 id="orgebe55a0">Remark: vectors and matrices</h2>
+<p>
+<span class="underline">row vector</span>
+</p>
+<div>
+\begin{equation}
+\vec r =
+\begin{bmatrix}
+1 & 2 & 3 & 4
+\end{bmatrix}
+\end{equation}
+
+</div>
+<p>
+<span class="underline">column vector</span>
+</p>
+<div>
+\begin{equation}
+\vec c =
+\begin{bmatrix}
+1 \\ 2 \\ 3 \\ 4
+\end{bmatrix}
+\end{equation}
+
+</div>
+<p>
+<span class="underline">matrix</span>
+</p>
+<div>
+\begin{equation}
+\mathbf M =
+\begin{bmatrix}
+1 & 2 \\ 3 & 4
+\end{bmatrix}
+\end{equation}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org172017f">
+<h2 id="org172017f">Creating arrays</h2>
+<div class="column" style="float:left; width:50%">
+<p>
+<span class="underline">1-D array definition</span>
+Using 1-D arrays it is possible to define row and column vectors
+</p>
+<div class="fragment (appear)">
+\begin{equation}
+\vec x =
+\begin{bmatrix}
+1 & 2 & 3 & 4
+\end{bmatrix}
+\end{equation}
+
+</div>
+<p class="fragment (appear)">
+or
+</p>
+<div class="fragment (appear)">
+\begin{equation}
+\vec x =
+\begin{bmatrix}
+1 \\ 2 \\ 3 \\ 4
+\end{bmatrix}
+\end{equation}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+
+<div id="org92d03b6" class="figure">
+<p><img src="./1d_array_creation.png" alt="1d_array_creation.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org172017f-split">
+
+<div class="column" style="float:left; width:50%">
+<p>
+<span class="underline">2-D array definition</span>
+Using 2-D arrays it is <b>also</b> possible to define row and column vectors
+</p>
+<div class="fragment (appear)">
+\begin{equation}
+\vec r =
+\begin{bmatrix}
+1 & 2 & 3 & 4
+\end{bmatrix}
+\end{equation}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+
+<div id="orge57ba6e" class="figure">
+<p><img src="./2d_array_creation_r.png" alt="2d_array_creation_r.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org172017f-split">
+
+<div class="column" style="float:left; width:50%">
+<p>
+<span class="underline">2-D array definition (cont.)</span>
+</p>
+<div class="fragment (appear)">
+\begin{equation}
+\vec c =
+\begin{bmatrix}
+1 \\ 2 \\ 3 \\ 4
+\end{bmatrix}
+\end{equation}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+
+<div id="org6986e0e" class="figure">
+<p><img src="./2d_array_creation_c.png" alt="2d_array_creation_c.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org172017f-split">
+
+<div class="column" style="float:left; width:50%">
+<p>
+<span class="underline">2-D array definition</span>
+Using 2-D arrays it is <b>also</b> possible to define matrices
+</p>
+
+<div class="fragment (appear)">
+\begin{equation}
+\mathbf M =
+\begin{bmatrix}
+1 & 2 \\ 3 & 4
+\end{bmatrix}
+\end{equation}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+
+<div id="org93bdad5" class="figure">
+<p><img src="./2d_array_creation_m.png" alt="2d_array_creation_m.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org172017f-split">
+<div class="column" style="float:left; width:50%">
+<ul>
+<li class="fragment appear"><code>np.zeros()</code></li>
+
+</ul>
+<p class="fragment (appear)">
+Creates an array full of zeros.
+</p>
+<p class="fragment (appear)">
+<code>np.zeros(m)</code> (1-D case)
+</p>
+<p class="fragment (appear)">
+<code>np.zeros((m,n))</code> (2-D case)
+</p>
+
+<ul>
+<li class="fragment appear"><code>np.ones()</code></li>
+
+</ul>
+<p class="fragment (appear)">
+Creates an array full of ones.
+</p>
+<p class="fragment (appear)">
+<code>np.ones(m)</code> (1-D case)
+</p>
+<p class="fragment (appear)">
+<code>np.ones((m,n))</code> (2-D case)
+</p>
+
+<ul>
+<li class="fragment appear"><code>np.eye()</code></li>
+
+</ul>
+<p class="fragment (appear)">
+Creates an array for the diagonal consists of ones (identity matrix)
+</p>
+<p class="fragment (appear)">
+<code>np.eye(m)</code> (2-D square matrix case)
+</p>
+<p class="fragment (appear)">
+<code>np.eys(m,n)</code> (2-D case)
+</p>
+
+</div>
+
+<div class="column" style="float:right; width:50%">
+
+<div id="orgf065731" class="figure">
+<p><img src="./array_creation_functions11.png" alt="array_creation_functions11.png" class="fragment (appear)" width="600px" />
+</p>
+</div>
+
+<div id="org4c47c56" class="figure">
+<p><img src="./array_creation_functions22.png" alt="array_creation_functions22.png" class="fragment (appear)" width="600px" />
+</p>
+</div>
+
+</div>
+
+</section>
+<section id="slide-org172017f-split">
+
+<div class="column" style="float:left; width:50%">
+<ul>
+<li class="fragment appear"><code>np.arange()</code></li>
+
+</ul>
+<p class="fragment (appear)">
+<code>np.arange(start, end, increment)</code> creates arrays with fixed increments
+</p>
+<ul>
+<li class="fragment appear"><code>np.linspace()</code></li>
+
+</ul>
+<p class="fragment (appear)">
+<code>np.linspace(left_boundary, right_boundary, number_of_elements)</code> creates evenly spaced numbers over a specified interval
+</p>
+<ul>
+<li class="fragment appear"><code>np.logspace()</code></li>
+
+</ul>
+<p class="fragment (appear)">
+<code>np.logspace(start, stop, number_of_elements)</code> creates a logarithmically spaced vector in \(\Big[10^{\text{[start]}}, 10^{\text{[stop]}}\Big]\)
+</p>
+
+</div>
+
+<div class="column" style="float:right; width:50%">
+
+<div id="org990244e" class="figure">
+<p><img src="./array_creation_functions33.png" alt="array_creation_functions33.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orge914028">
+<h2 id="orge914028">Algebraic operations</h2>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
