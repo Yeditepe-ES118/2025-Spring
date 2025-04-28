@@ -131,7 +131,6 @@ Using 2-D arrays it is *also* possible to define matrices
 
 #+REVEAL: split
 #+REVEAL_HTML: <div class="column" style="float:left; width:50%">
-#+ATTR_REVEAL: :frag (appear)
 - ~np.zeros()~
 #+ATTR_REVEAL: :frag (appear)  
 Creates an array full of zeros.
@@ -156,16 +155,16 @@ Creates an array for the diagonal consists of ones (identity matrix)
 #+ATTR_REVEAL: :frag (appear)
 ~np.eye(m)~ (2-D square matrix case)
 #+ATTR_REVEAL: :frag (appear)
-~np.eys(m,n)~ (2-D case)
+~np.eye(m,n)~ (2-D case)
 
 #+REVEAL_HTML: </div>
 
 #+REVEAL_HTML: <div class="column" style="float:right; width:50%">
 #+ATTR_REVEAL: :frag (appear)
-#+ATTR_HTML: :width 600px
+#+ATTR_HTML: :width 800px
 [[./array_creation_functions11.png]]
 #+ATTR_REVEAL: :frag (appear)
-#+ATTR_HTML: :width 600px
+#+ATTR_HTML: :width 800px
 [[./array_creation_functions22.png]]
 
 #+REVEAL_HTML: </div>
@@ -173,7 +172,6 @@ Creates an array for the diagonal consists of ones (identity matrix)
 #+REVEAL: split
 
 #+REVEAL_HTML: <div class="column" style="float:left; width:50%">
-#+ATTR_REVEAL: :frag (appear)
 - ~np.arange()~
 #+ATTR_REVEAL: :frag (appear)
 ~np.arange(start, end, increment)~ creates arrays with fixed increments
@@ -195,5 +193,414 @@ Creates an array for the diagonal consists of ones (identity matrix)
 
 #+REVEAL_HTML: </div>
 
-* Algebraic operations    
+* Algebraic operations
+** addition & subtraction
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+\begin{equation}
+\vec v =
+\begin{bmatrix}
+8.3 & 7.6 & 4 & 2
+\end{bmatrix}
+\end{equation}
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\vec w =
+\begin{bmatrix}
+5.2 & 4.3 & 5.1 & 2.7
+\end{bmatrix}
+\end{equation}
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\vec y_1 = \vec v + \vec w
+\end{equation}
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\vec y_2 = \vec v - \vec w
+\end{equation}
+#+ATTR_REVEAL: :frag (appear)
+Look at the values of $\vec y_1$ and $\vec y_2$ on the right!
+#+ATTR_REVEAL: :frag (appear)
+_Note!!:_ although mathematically the vectors in this example are shown as row vectors, they can be defined as 1-D or 2-D with NumPy, does not matter.
+#+REVEAL_HTML: </div>
 
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./add_sub_vec.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+\begin{equation}
+\mathbf A =
+\begin{bmatrix}
+7 & 5 \\
+5 & 3
+\end{bmatrix}
+\end{equation}
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\mathbf B =
+\begin{bmatrix}
+2 & 2 \\
+2 & 2
+\end{bmatrix}
+\end{equation}
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\mathbf C_1 = \mathbf A + \mathbf B
+\end{equation}
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\mathbf C_2 = \mathbf A - \mathbf B
+\end{equation}
+#+ATTR_REVEAL: :frag (appear)
+Look at the values of $\mathbf C_1$ and $\mathbf C_2$ on the right!
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 400px
+[[./add_sub_mat.png]]
+#+REVEAL_HTML: </div>
+
+
+** vector-vector multiplication
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+$$x = \vec v \vec w$$
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+x = 
+\begin{bmatrix}
+8.3 & 7.6 & 4 & 2
+\end{bmatrix}
+\begin{bmatrix}
+5.2 \\ 4.3 \\ 5.1 \\ 2.7
+\end{bmatrix}
+\end{equation}
+#+ATTR_REVEAL: :frag (appear)
+_Note!!:_ we can use three operators for multiplication
+#+ATTR_REVEAL: :frag (appear)
+- ~np.matmul()~
+- ~np.dot()~  
+- ~@~
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./vecvec_mult.png]]
+#+REVEAL_HTML: </div>
+
+** matrix-vector multiplication
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+$$\vec b = \mathbf A \vec w$$
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\mathbf A = 
+\begin{bmatrix}
+0 & 2 & 0 & 0 \\
+3 & 0 & 2 & 0 \\
+0 & 3 & 0 & 2 \\
+0 & 0 & 3 & 0
+\end{bmatrix}
+\end{equation}
+
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\vec w = 
+\begin{bmatrix}
+0 \\ 1 \\ 0 \\ 0
+\end{bmatrix}
+\end{equation}
+
+#+ATTR_REVEAL: :frag (appear)
+_Note!!:_ we can use the same three multiplication operators as shown before
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./matvec_mult.png]]
+#+REVEAL_HTML: </div>
+
+** matrix-matrix multiplication
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+$$\mathbf C = \mathbf A \mathbf B$$
+where
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\mathbf A = 
+\begin{bmatrix}
+0 & 2 & 0 & 0 \\
+3 & 0 & 2 & 0 \\
+0 & 3 & 0 & 2 \\
+0 & 0 & 3 & 0
+\end{bmatrix}
+\end{equation}
+
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\mathbf B = 
+\begin{bmatrix}
+0 & 4 & 0 & 0 \\
+6 & 0 & 4 & 0 \\
+0 & 6 & 0 & 4 \\
+0 & 0 & 6 & 0
+\end{bmatrix}
+\end{equation}
+
+#+ATTR_REVEAL: :frag (appear)
+_Note!!:_ we can use the same three multiplication operators as shown before
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 600px
+[[./matmat_mult.png]]
+#+REVEAL_HTML: </div>
+
+** scalar-array multiplication
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+\begin{equation}
+c\mathbf A = 
+\begin{bmatrix}
+cA_{[0,0]} & cA_{[0,1]} & cA_{[0,2]} & cA_{[0,3]} \\
+cA_{[1,0]} & cA_{[1,1]} & cA_{[1,2]} & cA_{[1,3]} \\
+cA_{[2,0]} & cA_{[2,1]} & cA_{[2,2]} & cA_{[2,3]} \\
+cA_{[3,0]} & cA_{[3,1]} & cA_{[3,2]} & cA_{[3,3]}
+\end{bmatrix}
+\end{equation}
+
+#+ATTR_REVEAL: :frag (appear)
+_Note!!:_
+- the constant $c$ is multiplied with each element of $\mathbf A$
+- this rule is also valid for vectors
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./constmat_mult.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_Example computation:_
+$$\vec d_{(3,)} = \vec x_{(3,)} \mathbf M_{(3,4)} \mathbf L_{(4,3)} + \vec c_{(3,)}$$
+#+ATTR_REVEAL: :frag (appear)
+(see the NumPy dimensions in the parantheses, they must match!!)
+#+ATTR_REVEAL: :frag (appear)
+where
+#+ATTR_REVEAL: :frag (appear)
+$$\vec x = \begin{bmatrix}1 & 0 & 0\end{bmatrix}$$
+#+ATTR_REVEAL: :frag (appear)
+$$\vec c = \begin{bmatrix}4 & 4 & 4\end{bmatrix}$$
+#+ATTR_REVEAL: :frag (appear)
+$$\mathbf M = \begin{bmatrix}3 & 0 & 0 & 0\\0 & 3 & 0 & 0\\0 & 0 & 3 & 0 \end{bmatrix} \mathbf L = \begin{bmatrix}1 & 0 & 0 \\0 & 1 & 0 \\0 & 0 & 1 \\0 & 0 & 0 \end{bmatrix}$$
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 900px
+[[./example1a.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+or we can use ~@~ operator:
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 700px
+[[./example1b.png]]
+#+REVEAL_HTML: </div>
+
+** inversion of a matrix
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_Example:_
+$$\mathbf A \vec x = \vec b$$
+#+ATTR_REVEAL: :frag (appear)
+$\mathbf A$ and $\vec b$ are known. We need to find $\vec x$.
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+A = 
+\begin{bmatrix}
+2 & 2 & 0 & 0 \\
+3 & 2 & 2 & 0 \\
+0 & 3 & 2 & 2 \\
+0 & 0 & 3 & 2
+\end{bmatrix}
+\vec b = \begin{bmatrix}1 \\ 0 \\ 0 \\ 0\end{bmatrix}
+\end{equation}
+#+ATTR_REVEAL: :frag (appear)
+$$\mathbf A^{-1} \mathbf A \vec x = \mathbf A^{-1} \vec b$$
+#+ATTR_REVEAL: :frag (appear)
+$$\mathbf A^{-1} \mathbf A = \mathbf I \ \text{(identity matrix)}$$
+#+ATTR_REVEAL: :frag (appear)
+$$\vec x = \mathbf A^{-1} \vec b$$
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+First compute $\mathbf A^{-1}$ using ~np.linalg.inv(A)~ then compute $\vec x$.
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 900px
+[[./example2.png]]
+#+REVEAL_HTML: </div>
+
+* Indexing & slicing
+#+ATTR_REVEAL: :frag (appear)
+- It is a way of selecting elements in an array
+- Indices starts from 0
+- We can slice an array using the syntax below in square brackets
+  * vectors: v[{{{color(green,start)}}}:{{{color(red,stop)}}}:{{{color(orange,increment)}}}]
+  * matrices: M[{{{color(green,start)}}}:{{{color(red,stop)}}}:{{{color(orange,increment)}}},{{{color(green,start)}}}:{{{color(red,stop)}}}:{{{color(orange,increment)}}}]
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1100px
+[[./indexing1.png]]
+
+#+REVEAL: split
+
+We can also use fancy slicing as depicted below,
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 1300px
+[[./indexing2.png]]
+
+* Array manipulation
+1. Reshaping
+2. Joining
+3. Deleting         
+4. Transpose
+
+** Reshaping
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+~np.reshape(array, new_shape, order)~
+#+ATTR_REVEAL: :frag (appear)
+- changes the shape of an array
+- ~order~ can take
+  * ~'C'~: row ordering
+  * ~'F'~: column ordering    
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+_~order='C'~:_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 900px
+[[./reshape_order_c.png]]
+#+ATTR_REVEAL: :frag (appear)
+_~order='F'~:_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 700px
+[[./reshape_order_f.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+_Reshape the given ~(4,)~ 1-D array to an ~(2,2)~ 2-D array:_
+
+~v = [5, 6, 7, 4]~ $_{(4,)}$
+#+ATTR_REVEAL: :frag (appear)
+=> ~v = [[5, 6], [7, 4]]~ $_{(2,2)}$
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 900px
+[[./reshape_example.png]]
+
+** Joining
+- ~np.concatenate((array1, array2), axis)~
+  + arrays must have the same shape!
+  + joins two arrays on the given ~axis~
+    * ~axis = 0~ first axis of the array
+    * ~axis = 1~ second axis of the array (if any)
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+_Join the given 1-D arrays:_
+#+ATTR_REVEAL: :frag (appear)
+~v = [5, 6, 7, 4]~ $_{(4,)}$
+#+ATTR_REVEAL: :frag (appear)
+~w = [9, 3, 2, 3]~ $_{(4,)}$
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 900px
+[[./concatenate1a.png]]
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 900px
+[[./concatenate1b.png]]
+#+ATTR_REVEAL: :frag (appear)
+Error occurs because there is only one axis!!
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_Join the given 2-D arrays on both axes:_
+#+ATTR_REVEAL: :frag (appear)
+~v = [[5, 6, 7, 4]]~ $_{(1,4)}$
+#+ATTR_REVEAL: :frag (appear)
+~w = [[9, 3, 2, 3]]~ $_{(1,4)}$
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 900px
+[[./concatenate2.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_Join the given 2-D arrays on both axes:_
+#+ATTR_REVEAL: :frag (appear)
+~A = [[5, 6],[7, 4]]~ $_{(2,2)}$
+#+ATTR_REVEAL: :frag (appear)
+~B = [[9, 3], [2, 3]]~ $_{(2,2)}$
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 700px
+[[./concatenate3.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+Another method of joining is stacking the arrays:
+- ~np.vstack(array1, array2)~: stacks two arrays *row wise*
+- ~np.hstack(array1, array2)~: stacks two arrays *column wise*
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_1-D array stacks:_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 700px
+[[./1D_stacks.png]]
+
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+_2-D array stacks:_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 700px
+[[./2D_stacks.png]]
+#+REVEAL_HTML: </div>
+#+REVEAL: split
+
+_2-D array stacks cont.:_
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 400px
+[[./2D_stacks2.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 600px
+[[./2D_stacks3.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+_Note:_ we cannot use ~vstack~ because dimensions (4,1) and (4,4) mismatch!!
+#+REVEAL_HTML: </div>
+
+** Deleting
