@@ -36,21 +36,22 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-org3afbb07">Arrays</a></li>
-<li><a href="#/slide-orgef9c516">NumPy</a></li>
-<li><a href="#/slide-org89eac0b">Remark: vectors and matrices</a></li>
-<li><a href="#/slide-orgf39b247">Creating arrays</a></li>
-<li><a href="#/slide-org68674e4">Algebraic operations</a></li>
-<li><a href="#/slide-org77cc1d2">Indexing &amp; slicing</a></li>
-<li><a href="#/slide-org456eb02">Array manipulation</a></li>
+<li><a href="#/slide-org7803c6e">Arrays</a></li>
+<li><a href="#/slide-orgc2531f7">NumPy</a></li>
+<li><a href="#/slide-orge80934f">Remark: vectors and matrices</a></li>
+<li><a href="#/slide-orgfd284b4">Creating arrays</a></li>
+<li><a href="#/slide-org90da04c">Algebraic operations</a></li>
+<li><a href="#/slide-org96adb51">Indexing &amp; slicing</a></li>
+<li><a href="#/slide-org856a104">Array manipulation</a></li>
+<li><a href="#/slide-org2505934">Statistics</a></li>
 </ul>
 </div>
 </div>
 </section>
 
 <section>
-<section id="slide-org3afbb07">
-<h2 id="org3afbb07">Arrays</h2>
+<section id="slide-org7803c6e">
+<h2 id="org7803c6e">Arrays</h2>
 <ul>
 <li>An array can store multiple numerical values</li>
 <li>Algebraic operations such as \[\vec A = \mathbf X  \vec b\] can be defined using arrays</li>
@@ -61,8 +62,8 @@
 </section>
 </section>
 <section>
-<section id="slide-orgef9c516">
-<h2 id="orgef9c516">NumPy</h2>
+<section id="slide-orgc2531f7">
+<h2 id="orgc2531f7">NumPy</h2>
 <p>
 NumPy is a library for the Python programming language, adding support for <b>large, multi-dimensional arrays and matrices</b>, along with <b>a large collection of high-level mathematical functions</b> to <b>operate</b> on these arrays.
 </p>
@@ -70,8 +71,8 @@ NumPy is a library for the Python programming language, adding support for <b>la
 </section>
 </section>
 <section>
-<section id="slide-org89eac0b">
-<h2 id="org89eac0b">Remark: vectors and matrices</h2>
+<section id="slide-orge80934f">
+<h2 id="orge80934f">Remark: vectors and matrices</h2>
 <p>
 <span class="underline">row vector</span>
 </p>
@@ -112,8 +113,8 @@ NumPy is a library for the Python programming language, adding support for <b>la
 </section>
 </section>
 <section>
-<section id="slide-orgf39b247">
-<h2 id="orgf39b247">Creating arrays</h2>
+<section id="slide-orgfd284b4">
+<h2 id="orgfd284b4">Creating arrays</h2>
 <div class="column" style="float:left; width:50%">
 <p>
 <span class="underline">1-D array definition</span>
@@ -144,14 +145,14 @@ or
 
 <div class="column" style="float:right; width:50%">
 
-<div id="org44b6ca9" class="figure">
+<div id="orgb953357" class="figure">
 <p><img src="./1d_array_creation.png" alt="1d_array_creation.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
 </div>
 
 </section>
-<section id="slide-orgf39b247-split">
+<section id="slide-orgfd284b4-split">
 
 <div class="column" style="float:left; width:50%">
 <p>
@@ -171,14 +172,14 @@ Using 2-D arrays it is <b>also</b> possible to define row and column vectors
 
 <div class="column" style="float:right; width:50%">
 
-<div id="org9e4b135" class="figure">
+<div id="orgf1b3ad4" class="figure">
 <p><img src="./2d_array_creation_r.png" alt="2d_array_creation_r.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
 </div>
 
 </section>
-<section id="slide-orgf39b247-split">
+<section id="slide-orgfd284b4-split">
 
 <div class="column" style="float:left; width:50%">
 <p>
@@ -197,14 +198,14 @@ Using 2-D arrays it is <b>also</b> possible to define row and column vectors
 
 <div class="column" style="float:right; width:50%">
 
-<div id="org501ef17" class="figure">
+<div id="org945549d" class="figure">
 <p><img src="./2d_array_creation_c.png" alt="2d_array_creation_c.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
 </div>
 
 </section>
-<section id="slide-orgf39b247-split">
+<section id="slide-orgfd284b4-split">
 
 <div class="column" style="float:left; width:50%">
 <p>
@@ -225,14 +226,14 @@ Using 2-D arrays it is <b>also</b> possible to define matrices
 
 <div class="column" style="float:right; width:50%">
 
-<div id="orgb221b89" class="figure">
+<div id="org446af8d" class="figure">
 <p><img src="./2d_array_creation_m.png" alt="2d_array_creation_m.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
 </div>
 
 </section>
-<section id="slide-orgf39b247-split">
+<section id="slide-orgfd284b4-split">
 <div class="column" style="float:left; width:50%">
 <ul>
 <li><code>np.zeros()</code></li>
@@ -280,12 +281,12 @@ Creates an array for the diagonal consists of ones (identity matrix)
 
 <div class="column" style="float:right; width:50%">
 
-<div id="org1bb25ae" class="figure">
+<div id="orgfdc1ec4" class="figure">
 <p><img src="./array_creation_functions11.png" alt="array_creation_functions11.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
 
-<div id="orgfac4149" class="figure">
+<div id="org9ac015c" class="figure">
 <p><img src="./array_creation_functions22.png" alt="array_creation_functions22.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
@@ -293,7 +294,75 @@ Creates an array for the diagonal consists of ones (identity matrix)
 </div>
 
 </section>
-<section id="slide-orgf39b247-split">
+<section id="slide-orgfd284b4-split">
+
+<div class="column" style="float:left; width:50%">
+<p>
+<code>np.diag(array, k)</code> creates a diagonal array which puts the <code>array</code> on the <code>k</code> \(^{\text{th}}\) diagonal,
+</p>
+<div class="fragment (appear)">
+\begin{equation}
+\mathbf D_1 = 
+\begin{bmatrix}
+100 & 0 & 0 \\
+0 & 300 & 0 \\
+0 & 0 & 500 
+\end{bmatrix}
+\end{equation}
+
+</div>
+
+<div class="fragment (appear)">
+\begin{equation}
+\mathbf D_2 = 
+\begin{bmatrix}
+0 & 100 & 0 & 0 \\
+0 & 0 & 300 & 0 \\
+0 & 0 & 0 & 500 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+\end{equation}
+
+</div>
+
+<div class="fragment (appear)">
+\begin{equation}
+\mathbf D_3 = 
+\begin{bmatrix}
+0 & 0 & 0 & 0 \\
+100 & 0 & 0 & 0\\
+0 & 300 & 0 & 0\\
+0 & 0 & 500 & 0
+\end{bmatrix}
+\end{equation}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+
+<div id="orgdbd4c2e" class="figure">
+<p><img src="./D1_matrix.png" alt="D1_matrix.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+
+
+<div id="orga8e973e" class="figure">
+<p><img src="./D2_matrix.png" alt="D2_matrix.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+
+
+<div id="org62abed0" class="figure">
+<p><img src="./D3_matrix.png" alt="D3_matrix.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+
+</div>
+
+
+</section>
+<section id="slide-orgfd284b4-split">
 
 <div class="column" style="float:left; width:50%">
 <ul>
@@ -322,8 +391,8 @@ Creates an array for the diagonal consists of ones (identity matrix)
 
 <div class="column" style="float:right; width:50%">
 
-<div id="org83972d7" class="figure">
-<p><img src="./array_creation_functions33.png" alt="array_creation_functions33.png" class="fragment (appear)" width="800px" />
+<div id="org68964fb" class="figure">
+<p><img src="./array_creation_functions33.png" alt="array_creation_functions33.png" class="fragment (appear)" width="900px" />
 </p>
 </div>
 
@@ -332,13 +401,13 @@ Creates an array for the diagonal consists of ones (identity matrix)
 </section>
 </section>
 <section>
-<section id="slide-org68674e4">
-<h2 id="org68674e4">Algebraic operations</h2>
-<div class="outline-text-2" id="text-org68674e4">
+<section id="slide-org90da04c">
+<h2 id="org90da04c">Algebraic operations</h2>
+<div class="outline-text-2" id="text-org90da04c">
 </div>
 </section>
-<section id="slide-org9dc4b19">
-<h3 id="org9dc4b19">addition &amp; subtraction</h3>
+<section id="slide-orge41e4bb">
+<h3 id="orge41e4bb">addition &amp; subtraction</h3>
 <div class="column" style="float:left; width:50%">
 <div>
 \begin{equation}
@@ -380,14 +449,14 @@ Look at the values of \(\vec y_1\) and \(\vec y_2\) on the right!
 
 <div class="column" style="float:right; width:50%">
 
-<div id="org2a59488" class="figure">
+<div id="org5c73da9" class="figure">
 <p><img src="./add_sub_vec.png" alt="add_sub_vec.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
 </div>
 
 </section>
-<section id="slide-org9dc4b19-split">
+<section id="slide-orge41e4bb-split">
 
 <div class="column" style="float:left; width:50%">
 <div>
@@ -429,7 +498,7 @@ Look at the values of \(\mathbf C_1\) and \(\mathbf C_2\) on the right!
 
 <div class="column" style="float:right; width:50%">
 
-<div id="orgefc56f8" class="figure">
+<div id="orgbedd83a" class="figure">
 <p><img src="./add_sub_mat.png" alt="add_sub_mat.png" class="fragment (appear)" width="400px" />
 </p>
 </div>
@@ -437,8 +506,8 @@ Look at the values of \(\mathbf C_1\) and \(\mathbf C_2\) on the right!
 
 
 </section>
-<section id="slide-org09499b9">
-<h3 id="org09499b9">vector-vector multiplication</h3>
+<section id="slide-org2561084">
+<h3 id="org2561084">vector-vector multiplication</h3>
 <div class="column" style="float:left; width:50%">
 <p>
 \[x = \vec v \vec w\]
@@ -468,15 +537,15 @@ x =
 
 <div class="column" style="float:right; width:50%">
 
-<div id="orged06f1d" class="figure">
+<div id="orgfb88548" class="figure">
 <p><img src="./vecvec_mult.png" alt="vecvec_mult.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
 </div>
 
 </section>
-<section id="slide-org4d3ffa2">
-<h3 id="org4d3ffa2">matrix-vector multiplication</h3>
+<section id="slide-orgc1dac75">
+<h3 id="orgc1dac75">matrix-vector multiplication</h3>
 <div class="column" style="float:left; width:50%">
 <p>
 \[\vec b = \mathbf A \vec w\]
@@ -511,15 +580,15 @@ x =
 
 <div class="column" style="float:right; width:50%">
 
-<div id="orgfcf8ef5" class="figure">
+<div id="org264343c" class="figure">
 <p><img src="./matvec_mult.png" alt="matvec_mult.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
 </div>
 
 </section>
-<section id="slide-org9a054e4">
-<h3 id="org9a054e4">matrix-matrix multiplication</h3>
+<section id="slide-org4596048">
+<h3 id="org4596048">matrix-matrix multiplication</h3>
 <div class="column" style="float:left; width:50%">
 <p>
 \[\mathbf C = \mathbf A \mathbf B\]
@@ -558,15 +627,15 @@ where
 
 <div class="column" style="float:right; width:50%">
 
-<div id="orgb21f8ac" class="figure">
+<div id="org50eff32" class="figure">
 <p><img src="./matmat_mult.png" alt="matmat_mult.png" class="fragment (appear)" width="600px" />
 </p>
 </div>
 </div>
 
 </section>
-<section id="slide-orge800e75">
-<h3 id="orge800e75">scalar-array multiplication</h3>
+<section id="slide-org78694aa">
+<h3 id="org78694aa">scalar-array multiplication</h3>
 <div class="column" style="float:left; width:50%">
 <div>
 \begin{equation}
@@ -585,22 +654,22 @@ cA_{[3,0]} & cA_{[3,1]} & cA_{[3,2]} & cA_{[3,3]}
 <span class="underline">Note!!:</span>
 </p>
 <ul>
-<li>the constant \(c\) is multiplied with each element of \(\mathbf A\)</li>
-<li>this rule is also valid for vectors</li>
+<li class="fragment appear">the constant \(c\) is multiplied with each element of \(\mathbf A\)</li>
+<li class="fragment appear">this rule is also valid for vectors</li>
 
 </ul>
 </div>
 
 <div class="column" style="float:right; width:50%">
 
-<div id="orga89e61e" class="figure">
+<div id="org30a17fa" class="figure">
 <p><img src="./constmat_mult.png" alt="constmat_mult.png" class="fragment (appear)" width="800px" />
 </p>
 </div>
 </div>
 
 </section>
-<section id="slide-orge800e75-split">
+<section id="slide-org78694aa-split">
 
 <div class="column" style="float:left; width:50%">
 <p>
@@ -626,7 +695,7 @@ where
 
 <div class="column" style="float:right; width:50%">
 
-<div id="org439ac2c" class="figure">
+<div id="org5b6c0f7" class="figure">
 <p><img src="./example1a.png" alt="example1a.png" class="fragment (appear)" width="900px" />
 </p>
 </div>
@@ -636,15 +705,15 @@ or we can use <code>@</code> operator:
 </p>
 
 
-<div id="org45b82c9" class="figure">
+<div id="org0de146f" class="figure">
 <p><img src="./example1b.png" alt="example1b.png" class="fragment (appear)" width="700px" />
 </p>
 </div>
 </div>
 
 </section>
-<section id="slide-org00c72f8">
-<h3 id="org00c72f8">inversion of a matrix</h3>
+<section id="slide-orgd691ac1">
+<h3 id="orgd691ac1">inverting a matrix</h3>
 <div class="column" style="float:left; width:50%">
 <p>
 <span class="underline">Example:</span>
@@ -670,7 +739,10 @@ A =
 \[\mathbf A^{-1} \mathbf A \vec x = \mathbf A^{-1} \vec b\]
 </p>
 <p class="fragment (appear)">
-\[\mathbf A^{-1} \mathbf A = \mathbf I \ \text{(identity matrix)}\]
+\(\mathbf A^{-1}\) is the <b>inverse</b> of \(\mathbf A\)
+</p>
+<p class="fragment (appear)">
+We know \(\mathbf A^{-1} \mathbf A = \mathbf I \ \text{(identity matrix)}\)
 </p>
 <p class="fragment (appear)">
 \[\vec x = \mathbf A^{-1} \vec b\]
@@ -682,7 +754,7 @@ A =
 First compute \(\mathbf A^{-1}\) using <code>np.linalg.inv(A)</code> then compute \(\vec x\).
 </p>
 
-<div id="org228cb9b" class="figure">
+<div id="org9f5668d" class="figure">
 <p><img src="./example2.png" alt="example2.png" class="fragment (appear)" width="900px" />
 </p>
 </div>
@@ -691,8 +763,8 @@ First compute \(\mathbf A^{-1}\) using <code>np.linalg.inv(A)</code> then comput
 </section>
 </section>
 <section>
-<section id="slide-org77cc1d2">
-<h2 id="org77cc1d2">Indexing &amp; slicing</h2>
+<section id="slide-org96adb51">
+<h2 id="org96adb51">Indexing &amp; slicing</h2>
 <ul>
 <li class="fragment appear">It is a way of selecting elements in an array</li>
 <li class="fragment appear">Indices starts from 0</li>
@@ -705,20 +777,20 @@ First compute \(\mathbf A^{-1}\) using <code>np.linalg.inv(A)</code> then comput
 
 </ul>
 
-<div id="orga4932c6" class="figure">
+<div id="org3bc66d2" class="figure">
 <p><img src="./indexing1.png" alt="indexing1.png" class="fragment (appear)" width="1100px" />
 </p>
 </div>
 
 </section>
-<section id="slide-org77cc1d2-split">
+<section id="slide-org96adb51-split">
 
 <p>
 We can also use fancy slicing as depicted below,
 </p>
 
 
-<div id="orgabc517c" class="figure">
+<div id="org9ab7aba" class="figure">
 <p><img src="./indexing2.png" alt="indexing2.png" class="fragment (appear)" width="1300px" />
 </p>
 </div>
@@ -726,19 +798,21 @@ We can also use fancy slicing as depicted below,
 </section>
 </section>
 <section>
-<section id="slide-org456eb02">
-<h2 id="org456eb02">Array manipulation</h2>
+<section id="slide-org856a104">
+<h2 id="org856a104">Array manipulation</h2>
 <ol>
 <li>Reshaping</li>
 <li>Joining</li>
 <li>Deleting</li>
+<li>Changing elements</li>
 <li>Transpose</li>
 
 </ol>
 
+
 </section>
-<section id="slide-orge15a7ed">
-<h3 id="orge15a7ed">Reshaping</h3>
+<section id="slide-org625cb06">
+<h3 id="org625cb06">Reshaping</h3>
 <div class="column" style="float:left; width:50%">
 <p>
 <code>np.reshape(array, new_shape, order)</code>
@@ -760,7 +834,7 @@ We can also use fancy slicing as depicted below,
 <span class="underline"><code>order='C'</code>:</span>
 </p>
 
-<div id="org26719dd" class="figure">
+<div id="org4db23c2" class="figure">
 <p><img src="./reshape_order_c.png" alt="reshape_order_c.png" class="fragment (appear)" width="900px" />
 </p>
 </div>
@@ -768,14 +842,14 @@ We can also use fancy slicing as depicted below,
 <span class="underline"><code>order='F'</code>:</span>
 </p>
 
-<div id="org1838b6e" class="figure">
+<div id="orgaf962f5" class="figure">
 <p><img src="./reshape_order_f.png" alt="reshape_order_f.png" class="fragment (appear)" width="700px" />
 </p>
 </div>
 </div>
 
 </section>
-<section id="slide-orge15a7ed-split">
+<section id="slide-org625cb06-split">
 
 <p>
 <span class="underline">Reshape the given <code>(4,)</code> 1-D array to an <code>(2,2)</code> 2-D array:</span>
@@ -789,14 +863,14 @@ We can also use fancy slicing as depicted below,
 </p>
 
 
-<div id="orgcaa8bb9" class="figure">
+<div id="orga08a23b" class="figure">
 <p><img src="./reshape_example.png" alt="reshape_example.png" class="fragment (appear)" width="900px" />
 </p>
 </div>
 
 </section>
-<section id="slide-orga02c3fe">
-<h3 id="orga02c3fe">Joining</h3>
+<section id="slide-org41be548">
+<h3 id="org41be548">Joining</h3>
 <ul>
 <li><code>np.concatenate((array1, array2), axis)</code>
 <ul>
@@ -824,12 +898,12 @@ We can also use fancy slicing as depicted below,
 </div>
 <div class="column" style="float:right; width:50%">
 
-<div id="org25fbf06" class="figure">
+<div id="orgbe52ebf" class="figure">
 <p><img src="./concatenate1a.png" alt="concatenate1a.png" class="fragment (appear)" width="900px" />
 </p>
 </div>
 
-<div id="org73fcce5" class="figure">
+<div id="org02ce550" class="figure">
 <p><img src="./concatenate1b.png" alt="concatenate1b.png" class="fragment (appear)" width="900px" />
 </p>
 </div>
@@ -839,7 +913,7 @@ Error occurs because there is only one axis!!
 </div>
 
 </section>
-<section id="slide-orga02c3fe-split">
+<section id="slide-org41be548-split">
 
 <div class="column" style="float:left; width:50%">
 <p>
@@ -855,14 +929,14 @@ Error occurs because there is only one axis!!
 
 <div class="column" style="float:right; width:50%">
 
-<div id="org625c010" class="figure">
+<div id="org0e75f2a" class="figure">
 <p><img src="./concatenate2.png" alt="concatenate2.png" class="fragment (appear)" width="900px" />
 </p>
 </div>
 </div>
 
 </section>
-<section id="slide-orga02c3fe-split">
+<section id="slide-org41be548-split">
 
 <div class="column" style="float:left; width:50%">
 <p>
@@ -878,14 +952,14 @@ Error occurs because there is only one axis!!
 
 <div class="column" style="float:right; width:50%">
 
-<div id="org112d516" class="figure">
+<div id="orge9e3a8a" class="figure">
 <p><img src="./concatenate3.png" alt="concatenate3.png" class="fragment (appear)" width="700px" />
 </p>
 </div>
 </div>
 
 </section>
-<section id="slide-orga02c3fe-split">
+<section id="slide-org41be548-split">
 <p>
 Another method of joining is stacking the arrays:
 </p>
@@ -900,7 +974,7 @@ Another method of joining is stacking the arrays:
 <span class="underline">1-D array stacks:</span>
 </p>
 
-<div id="org4c3b417" class="figure">
+<div id="orgc78b764" class="figure">
 <p><img src="./1D_stacks.png" alt="1D_stacks.png" class="fragment (appear)" width="700px" />
 </p>
 </div>
@@ -912,20 +986,20 @@ Another method of joining is stacking the arrays:
 <span class="underline">2-D array stacks:</span>
 </p>
 
-<div id="orgfcf04aa" class="figure">
+<div id="orgaf8a384" class="figure">
 <p><img src="./2D_stacks.png" alt="2D_stacks.png" class="fragment (appear)" width="700px" />
 </p>
 </div>
 </div>
 </section>
-<section id="slide-orga02c3fe-split">
+<section id="slide-org41be548-split">
 
 <p>
 <span class="underline">2-D array stacks cont.:</span>
 </p>
 <div class="column" style="float:left; width:50%">
 
-<div id="orgb382fc7" class="figure">
+<div id="orgbfcf80b" class="figure">
 <p><img src="./2D_stacks2.png" alt="2D_stacks2.png" class="fragment (appear)" width="400px" />
 </p>
 </div>
@@ -933,7 +1007,7 @@ Another method of joining is stacking the arrays:
 
 <div class="column" style="float:right; width:50%">
 
-<div id="orgd56c6a9" class="figure">
+<div id="org0bf2fc4" class="figure">
 <p><img src="./2D_stacks3.png" alt="2D_stacks3.png" class="fragment (appear)" width="600px" />
 </p>
 </div>
@@ -944,8 +1018,352 @@ Another method of joining is stacking the arrays:
 </div>
 
 </section>
-<section id="slide-orgc922c4c">
-<h3 id="orgc922c4c">Deleting</h3>
+<section id="slide-orgb4f0106">
+<h3 id="orgb4f0106">Deleting</h3>
+<p>
+Let \(\mathbf A\) be an (8,8) matrix.
+</p>
+
+<div id="orga4f43a2" class="figure">
+<p><img src="./A_matrix.png" alt="A_matrix.png" class="fragment (appear)" width="700px" />
+</p>
+</div>
+
+<div class="column" style="float:left; width:50%">
+<p class="fragment (appear)">
+To delete a single row use
+</p>
+<p class="fragment (appear)">
+<code>np.delete(array, index, axis =</code> <font color="red"> 0</font> <code>)</code>:
+</p>
+
+
+<div id="orgc89ddf4" class="figure">
+<p><img src="./delete_single_row.png" alt="delete_single_row.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p class="fragment (appear)">
+To delete a single column use
+</p>
+<p class="fragment (appear)">
+<code>np.delete(array, index, axis =</code> <font color="red"> 1</font> <code>)</code>
+</p>
+
+
+<div id="org70e0ea6" class="figure">
+<p><img src="./delete_single_col.png" alt="delete_single_col.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-orgb4f0106-split">
+
+<div class="column" style="float:left; width:50%">
+<p>
+To delete a multiple rows use
+</p>
+<p class="fragment (appear)">
+<code>np.delete(array,</code> <font color="green">indices</font> <code>, axis =</code> <font color="red"> 0</font> <code>)</code>:
+</p>
+
+
+<div id="org82fff0e" class="figure">
+<p><img src="./delete_multi_row.png" alt="delete_multi_row.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p class="fragment (appear)">
+To delete a single column use
+</p>
+
+<p class="fragment (appear)">
+<code>np.delete(array,</code> <font color="green">indices</font> <code>, axis =</code> <font color="red"> 1</font> <code>)</code>:
+</p>
+
+
+<div id="orgd9d679a" class="figure">
+<p><img src="./delete_multi_col.png" alt="delete_multi_col.png" class="fragment (appear)" width="800px" />
+</p>
+</div>
+</div>
+
+<p class="fragment (appear)">
+where <font color="green">indices</font> can be tuples, lists or np.array() object.
+</p>
+
+</section>
+<section id="slide-org81f05cc">
+<h3 id="org81f05cc">Changing elements</h3>
+<p>
+The elements of an array can be changed in three ways
+</p>
+<ul>
+<li class="fragment appear">indexing a single element: <code>B[2,3]</code></li>
+<li class="fragment appear">indexing multiple elements using slicing: <code>B[:,1]</code></li>
+<li class="fragment appear">indexing arbitrarly located elements:
+<ul>
+<li class="fragment appear"><code>B[np.arange(1,4), np.arange(0,3)]</code></li>
+<li class="fragment appear"><code>B[np.array([1,2,3]), np.array([0,1,2])]</code></li>
+<li class="fragment appear"><code>B[(1,2,3), (0,1,2)]</code></li>
+
+</ul></li>
+
+</ul>
+<p class="fragment (appear)">
+Let \(\mathbf B\) a zero (4,4) matrix
+</p>
+
+<div id="orgc08e86d" class="figure">
+<p><img src="./B_matrix.png" alt="B_matrix.png" class="fragment (appear)" width="600px" />
+</p>
+</div>
+
+<p class="fragment (appear)">
+and let's change the elements using the above methods.
+</p>
+
+</section>
+<section id="slide-org81f05cc-split">
+
+<div class="column" style="float:left; width:50%">
+
+<div id="org9cb7813" class="figure">
+<p><img src="./single_element_change.png" alt="single_element_change.png" width="900px" />
+</p>
+</div>
+
+
+<div id="org0ddba36" class="figure">
+<p><img src="./multi_element_row_change.png" alt="multi_element_row_change.png" class="fragment (appear)" width="900px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width:50%">
+
+<div id="org530b9ac" class="figure">
+<p><img src="./multi_element_col_change.png" alt="multi_element_col_change.png" class="fragment (appear)" width="900px" />
+</p>
+</div>
+
+
+<div id="org8da860f" class="figure">
+<p><img src="./multi_element_arbitrary_change.png" alt="multi_element_arbitrary_change.png" class="fragment (appear)" width="900px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org7f22541">
+<h3 id="org7f22541">Transpose</h3>
+<p>
+Let \(\mathbf C\) be a (3,6) matrix
+</p>
+
+<div id="org46a174c" class="figure">
+<p><img src="./C_matrix.png" alt="C_matrix.png" class="fragment (appear)" width="600px" />
+</p>
+</div>
+
+<p class="fragment (appear)">
+Use <code>C.T</code> to find \(\mathbf C^T\) which is the transpose of \(\mathbf C\) and a (6,3) matrix
+</p>
+
+
+<div id="org0af71f5" class="figure">
+<p><img src="./C_T_matrix.png" alt="C_T_matrix.png" class="fragment (appear)" width="600px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org2505934">
+<h2 id="org2505934">Statistics</h2>
+<p>
+Given a vector,
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #83a598;">vec</span> = np.array([1,2,3,4,5])
+</code></pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">function</th>
+<th scope="col" class="org-right">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">np.mean(vec)</td>
+<td class="org-right">3.0</td>
+</tr>
+
+<tr>
+<td class="org-left">np.min(vec)</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">np.max(vec)</td>
+<td class="org-right">5</td>
+</tr>
+
+<tr>
+<td class="org-left">np.sum(vec)</td>
+<td class="org-right">15</td>
+</tr>
+
+<tr>
+<td class="org-left">np.prod(vec)</td>
+<td class="org-right">120</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-org2505934-split">
+
+<p>
+Given a matrix,
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #83a598;">mat</span> = np.array([[1, 2],
+                [3, 4],
+                [5, 6]])
+</code></pre>
+</div>
+
+<div class="column" style="float:left; width:50%">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">function</th>
+<th scope="col" class="org-left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">np.mean(mat)</td>
+<td class="org-left">3.5</td>
+</tr>
+
+<tr>
+<td class="org-left">np.mean(mat, axis=0)</td>
+<td class="org-left">[3., 4.]</td>
+</tr>
+
+<tr>
+<td class="org-left">np.mean(mat, axis=1)</td>
+<td class="org-left">[1.5, 3.5, 5.5]</td>
+</tr>
+
+<tr>
+<td class="org-left">np.min(mat)</td>
+<td class="org-left">1</td>
+</tr>
+
+<tr>
+<td class="org-left">np.min(mat, axis=0)</td>
+<td class="org-left">[1, 2]</td>
+</tr>
+
+<tr>
+<td class="org-left">np.min(mat, axis=1)</td>
+<td class="org-left">[1, 3, 5]</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="column" style="float:right; width:50%">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">function (cont.)</th>
+<th scope="col" class="org-left">result (cont.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">np.max(mat)</td>
+<td class="org-left">6</td>
+</tr>
+
+<tr>
+<td class="org-left">np.max(mat, axis=0)</td>
+<td class="org-left">[5, 6]</td>
+</tr>
+
+<tr>
+<td class="org-left">np.max(mat, axis=1)</td>
+<td class="org-left">[2, 4, 6]</td>
+</tr>
+
+<tr>
+<td class="org-left">np.sum(mat)</td>
+<td class="org-left">21</td>
+</tr>
+
+<tr>
+<td class="org-left">np.sum(mat, axis=0)</td>
+<td class="org-left">[ 9, 12]</td>
+</tr>
+
+<tr>
+<td class="org-left">np.sum(mat, axis=1)</td>
+<td class="org-left">[ 3,  7, 11]</td>
+</tr>
+
+<tr>
+<td class="org-left">np.prod(mat)</td>
+<td class="org-left">720</td>
+</tr>
+
+<tr>
+<td class="org-left">np.prod(mat, axis=0)</td>
+<td class="org-left">[15, 48]</td>
+</tr>
+
+<tr>
+<td class="org-left">np.prod(mat, axis=1)</td>
+<td class="org-left">[ 2, 12, 30]</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 </section>
 </div>

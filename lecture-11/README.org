@@ -172,6 +172,59 @@ Creates an array for the diagonal consists of ones (identity matrix)
 #+REVEAL: split
 
 #+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+~np.diag(array, k)~ creates a diagonal array which puts the ~array~ on the ~k~ $^{\text{th}}$ diagonal,
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\mathbf D_1 = 
+\begin{bmatrix}
+100 & 0 & 0 \\
+0 & 300 & 0 \\
+0 & 0 & 500 
+\end{bmatrix}
+\end{equation}
+
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\mathbf D_2 = 
+\begin{bmatrix}
+0 & 100 & 0 & 0 \\
+0 & 0 & 300 & 0 \\
+0 & 0 & 0 & 500 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+\end{equation}
+
+#+ATTR_REVEAL: :frag (appear)
+\begin{equation}
+\mathbf D_3 = 
+\begin{bmatrix}
+0 & 0 & 0 & 0 \\
+100 & 0 & 0 & 0\\
+0 & 300 & 0 & 0\\
+0 & 0 & 500 & 0
+\end{bmatrix}
+\end{equation}
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./D1_matrix.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./D2_matrix.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./D3_matrix.png]]
+
+#+REVEAL_HTML: </div>
+
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
 - ~np.arange()~
 #+ATTR_REVEAL: :frag (appear)
 ~np.arange(start, end, increment)~ creates arrays with fixed increments
@@ -188,7 +241,7 @@ Creates an array for the diagonal consists of ones (identity matrix)
 
 #+REVEAL_HTML: <div class="column" style="float:right; width:50%">
 #+ATTR_REVEAL: :frag (appear)
-#+ATTR_HTML: :width 800px
+#+ATTR_HTML: :width 900px
 [[./array_creation_functions33.png]]
 
 #+REVEAL_HTML: </div>
@@ -375,6 +428,7 @@ cA_{[3,0]} & cA_{[3,1]} & cA_{[3,2]} & cA_{[3,3]}
 
 #+ATTR_REVEAL: :frag (appear)
 _Note!!:_
+#+ATTR_REVEAL: :frag (appear)
 - the constant $c$ is multiplied with each element of $\mathbf A$
 - this rule is also valid for vectors
 #+REVEAL_HTML: </div>
@@ -415,7 +469,7 @@ or we can use ~@~ operator:
 [[./example1b.png]]
 #+REVEAL_HTML: </div>
 
-** inversion of a matrix
+** inverting a matrix
 
 #+REVEAL_HTML: <div class="column" style="float:left; width:50%">
 _Example:_
@@ -436,7 +490,9 @@ A =
 #+ATTR_REVEAL: :frag (appear)
 $$\mathbf A^{-1} \mathbf A \vec x = \mathbf A^{-1} \vec b$$
 #+ATTR_REVEAL: :frag (appear)
-$$\mathbf A^{-1} \mathbf A = \mathbf I \ \text{(identity matrix)}$$
+$\mathbf A^{-1}$ is the *inverse* of $\mathbf A$
+#+ATTR_REVEAL: :frag (appear)
+We know $\mathbf A^{-1} \mathbf A = \mathbf I \ \text{(identity matrix)}$
 #+ATTR_REVEAL: :frag (appear)
 $$\vec x = \mathbf A^{-1} \vec b$$
 #+REVEAL_HTML: </div>
@@ -472,7 +528,9 @@ We can also use fancy slicing as depicted below,
 1. Reshaping
 2. Joining
 3. Deleting         
-4. Transpose
+4. Changing elements
+5. Transpose
+   
 
 ** Reshaping
 #+REVEAL_HTML: <div class="column" style="float:left; width:50%">
@@ -604,3 +662,159 @@ _Note:_ we cannot use ~vstack~ because dimensions (4,1) and (4,4) mismatch!!
 #+REVEAL_HTML: </div>
 
 ** Deleting
+Let $\mathbf A$ be an (8,8) matrix.
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 700px
+[[./A_matrix.png]]
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+To delete a single row use
+#+ATTR_REVEAL: :frag (appear)
+~np.delete(array, index, axis =~ {{{color(red, 0)}}} ~)~:
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./delete_single_row.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+To delete a single column use
+#+ATTR_REVEAL: :frag (appear)
+~np.delete(array, index, axis =~ {{{color(red, 1)}}} ~)~
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./delete_single_col.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+To delete a multiple rows use
+#+ATTR_REVEAL: :frag (appear)
+~np.delete(array,~ {{{color(green,indices)}}} ~, axis =~ {{{color(red, 0)}}} ~)~:
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./delete_multi_row.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+To delete a single column use
+
+#+ATTR_REVEAL: :frag (appear)
+~np.delete(array,~ {{{color(green,indices)}}} ~, axis =~ {{{color(red, 1)}}} ~)~:
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 800px
+[[./delete_multi_col.png]]
+#+REVEAL_HTML: </div>
+
+#+ATTR_REVEAL: :frag (appear)
+where {{{color(green,indices)}}} can be tuples, lists or np.array() object.
+
+** Changing elements
+The elements of an array can be changed in three ways
+#+ATTR_REVEAL: :frag (appear)
+- indexing a single element: ~B[2,3]~
+- indexing multiple elements using slicing: ~B[:,1]~
+- indexing arbitrarly located elements:
+  #+ATTR_REVEAL: :frag (appear)
+  + ~B[np.arange(1,4), np.arange(0,3)]~
+  + ~B[np.array([1,2,3]), np.array([0,1,2])]~
+  + ~B[(1,2,3), (0,1,2)]~
+#+ATTR_REVEAL: :frag (appear)
+Let $\mathbf B$ a zero (4,4) matrix
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 600px
+[[./B_matrix.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+and let's change the elements using the above methods.
+
+#+REVEAL: split
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+ATTR_HTML: :width 900px
+[[./single_element_change.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 900px
+[[./multi_element_row_change.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 900px
+[[./multi_element_col_change.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 900px
+[[./multi_element_arbitrary_change.png]]
+#+REVEAL_HTML: </div>
+
+** Transpose
+Let $\mathbf C$ be a (3,6) matrix
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 600px
+[[./C_matrix.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+Use ~C.T~ to find $\mathbf C^T$ which is the transpose of $\mathbf C$ and a (6,3) matrix
+
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 600px
+[[./C_T_matrix.png]]
+
+* Statistics
+Given a vector,
+#+BEGIN_SRC python
+vec = np.array([1,2,3,4,5])
+#+END_SRC
+
+| function     | result |
+|--------------+--------|
+| np.mean(vec) |    3.0 |
+| np.min(vec)  |      1 |
+| np.max(vec)  |      5 |
+| np.sum(vec)  |     15 |
+| np.prod(vec) |    120 |
+
+#+REVEAL: split
+
+Given a matrix,
+#+BEGIN_SRC python
+mat = np.array([[1, 2],
+                [3, 4],
+                [5, 6]])
+#+END_SRC
+
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+| function             | result          |
+|----------------------+-----------------|
+| np.mean(mat)         | 3.5             |
+| np.mean(mat, axis=0) | [3., 4.]        |
+| np.mean(mat, axis=1) | [1.5, 3.5, 5.5] |
+| np.min(mat)          | 1               |
+| np.min(mat, axis=0)  | [1, 2]          |
+| np.min(mat, axis=1)  | [1, 3, 5]       |
+
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+| function (cont.)     | result (cont.) |
+|----------------------+----------------|
+| np.max(mat)          | 6               |
+| np.max(mat, axis=0)  | [5, 6]          |
+| np.max(mat, axis=1)  | [2, 4, 6]       |
+| np.sum(mat)          | 21             |
+| np.sum(mat, axis=0)  | [ 9, 12]       |
+| np.sum(mat, axis=1)  | [ 3,  7, 11]   |
+| np.prod(mat)         | 720            |
+| np.prod(mat, axis=0) | [15, 48]       |
+| np.prod(mat, axis=1) | [ 2, 12, 30]   |
+#+REVEAL_HTML: </div>
+
