@@ -1,12 +1,3 @@
-# before you run this code,
-# firstly, open git bash and run:
-# git clone https://github.com/Yeditepe-ES118/2025-Spring.git
-# then:
-# cd 2025-Spring/lecture-11
-# then you can find this code and all the .txt files used
-# in this script
-# and lastly, run this script
-
 import numpy as np
 
 positions = np.loadtxt("positions.txt", delimiter=",") # m
@@ -28,6 +19,8 @@ for step in range(100):
 
     # update positions
     positions += velocities * dt # m
-    
-np.savetxt("new_positions.txt", positions, delimiter=",")
-np.savetxt("new_velocities.txt", velocities, delimiter=",")
+
+
+new_positions = positions
+
+np.savetxt("new_positions.txt", new_positions, delimiter=",")

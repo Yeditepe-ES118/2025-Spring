@@ -318,7 +318,6 @@ Look at the values of $\mathbf C_1$ and $\mathbf C_2$ on the right!
 [[./add_sub_mat.png]]
 #+REVEAL_HTML: </div>
 
-
 ** vector-vector multiplication
 #+REVEAL_HTML: <div class="column" style="float:left; width:50%">
 $$x = \vec v \vec w$$
@@ -505,6 +504,69 @@ First compute $\mathbf A^{-1}$ using ~np.linalg.inv(A)~ then compute $\vec x$.
 [[./example2.png]]
 #+REVEAL_HTML: </div>
 
+* Element-wise arithmetic
+Algebraic operations on matrices and vectors obeys the rules of algebra.
+
+In addition to algebraic operations, we can use arithmetic operators on arrays.
+
+** scalar & array
+The scalar value is distributed over the elements of array
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_addition & subtraction_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 250px
+[[./sca_arr_elem_add.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+_division_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 200px
+[[./sca_arr_elem_div.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+_multiplication (remark)_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 250px
+[[./sca_arr_elem_mult.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+_exponentiation_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 250px
+[[./sca_arr_elem_exp.png]]
+
+#+REVEAL_HTML: </div>
+
+** array & array
+Arithmetic operators can also be applied on two arrays
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+_addition & subtraction (remark)_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 175px
+[[./arr_arr_elem_add.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+_division_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 175px
+[[./arr_arr_elem_div.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+_multiplication_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 175px
+[[./arr_arr_elem_mult.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+_exponentiation_
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 175px
+[[./arr_arr_elem_exp.png]]
+
 * Indexing & slicing
 #+ATTR_REVEAL: :frag (appear)
 - It is a way of selecting elements in an array
@@ -530,8 +592,8 @@ We can also use fancy slicing as depicted below,
 3. Deleting         
 4. Changing elements
 5. Transpose
+6. Copying arrays
    
-
 ** Reshaping
 #+REVEAL_HTML: <div class="column" style="float:left; width:50%">
 ~np.reshape(array, new_shape, order)~
@@ -769,6 +831,15 @@ Use ~C.T~ to find $\mathbf C^T$ which is the transpose of $\mathbf C$ and a (6,3
 #+ATTR_HTML: :width 600px
 [[./C_T_matrix.png]]
 
+** Copying arrays
+In order to copy an array, use ~np.copy()~
+#+BEGIN_SRC python
+B = np.copy(A)
+#+END_SRC
+which creates an independent copy of ~A~, and assigns it to new variable called ~B~.
+
+As a result any operation on ~A~ does not affect ~B~. It is true vice versa.
+
 * Statistics
 Given a vector,
 #+BEGIN_SRC python
@@ -818,3 +889,81 @@ mat = np.array([[1, 2],
 | np.prod(mat, axis=1) | [ 2, 12, 30]   |
 #+REVEAL_HTML: </div>
 
+* ~np.where()~
+~np.where()~ finds the indices of elements satisfying a condition given as the argument:
+
+#+BEGIN_SRC python
+INDICES = np.where(CONDITION)
+#+END_SRC
+
+** A quick remark
+~CONDITION~ can be constructed using logical operators
+
+In the previous lectures we saw
+- ~and~
+- ~or~
+- ~not~
+which are applicable to boolean values.
+
+In order to make logical operations on NumPy arrays we use
+- ~&~
+- ~|~
+- ~~~
+*respectively*.
+
+** Example-1
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+Let $\mathbf M$ be:
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 500px
+[[./where_M.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+We would like to get the indices of elements which are less than five:
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 850px
+[[./where_indices.png]]
+
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_REVEAL: :frag (appear)
+You can see that when we give the condition ~M < 5~, it outputs ~indices~ tuple which has two elements: row and column indices, respectively.
+
+#+ATTR_REVEAL: :frag (appear)
+Therefore, we can unpack the indices according to the row and column indices as follows
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 850px
+[[./where_unpack.png]]
+
+#+REVEAL_HTML: </div>
+
+** Example-2
+Let's set the elements of $\mathbf{M}$ that satisfy $2 \leq \mathbf{M}_{[i,j]} \leq 5$ to 100:
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 700px
+[[./where_change.png]]
+
+** Solving Example-2 again with a shortcut method
+Let's set the elements of $\mathbf{M}$ that satisfy $2 \leq \mathbf{M}_{[i,j]} \leq 5$ to 100:
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 700px
+[[./where_shortcut.png]]
+
+* ~np.sort()~
+Sorting along an axis:
+#+ATTR_REVEAL: :frag (appear)
+#+ATTR_HTML: :width 700px
+[[./sort.png]]
+
+
+* Deliverables
+NumPy functions to
+  + create arrays
+  + perform vector-matrix algebra
+  + perform element-wise arithmetic
+  + accessing the specific locations in arrays
+  + manipulate various aspects of arrays
+  + reveal basic statistics of an array
+  + determine and change entries of an array satisfying a given condition
+  + sorting the elements of an array  
