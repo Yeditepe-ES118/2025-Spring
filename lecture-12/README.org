@@ -1,0 +1,500 @@
+#+TITLE: ES117 Lecture #13
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+DATE: 2024-12-16
+#+SUBTITLE: Visualization
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+
+* Motivation
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+#+ATTR_HTML: :width 900px
+[[./motivation1.png]]
+#+REVEAL_HTML: </div>
+
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+#+ATTR_HTML: :width 900px
+#+ATTR_REVEAL: :frag (appear)
+[[./motivation2.png]]
+#+REVEAL_HTML: </div>
+
+* Single 2-D plot
+** Preliminaries
+- We have to first import necessary libraries
+- Matplotlib is used for plotting
+- Plotting requires data to be visualized, therefore NumPy is suitable for that purpose
+#+BEGIN_SRC python
+  import matplotlib.pyplot as plt
+  import numpy as np
+
+  fig, ax = plt.subplots()
+
+  # CODE FOR PLOTTING
+  # ...
+
+  # FINALLY DO
+  plt.show()
+#+END_SRC
+- ~ax~ variable (handle) is utilized in order to manage the figures
+
+** Changing figure size
+#+REVEAL_HTML: <div class="column" style="float:left; width:40%">
+- Sometimes the figure needs to be resized
+- Use ~figsize~ argument in ~plt.subplots()~
+- In ~figsize = (height, width)~, ~height~ and ~width~ lengths are given in inches
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:right; width:60%">
+#+BEGIN_SRC python
+  import matplotlib.pyplot as plt
+  import numpy as np
+
+  fig, ax = plt.subplots(figsize = (8,10))
+
+  # CODE FOR PLOTTING
+  # ...
+
+  # FINALLY DO
+  plt.show()
+#+END_SRC
+#+REVEAL_HTML: </div>
+  
+** The ~plot~ function
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+- ~plot~: plots any x and y pairs
+#+BEGIN_SRC python
+ax.plot(xvalues, yvalues, 'style-option')
+#+END_SRC
+where
+- ~xvalues~: 1D array
+- ~yvalues~: 1D array
+- ~'style-option'~ specifies
+  + the color
+  + line style
+  + the point-marker style
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+- ~ax.plot(x,y)~: plots y versus x with a solid line
+- ~ax.plot(x,y,'--')~: plots y versus x with a dashed line
+- ~ax.plot(x,y,'r--')~: plots y versus x with a red dashed line
+- ~ax.plot(x,y,'r^')~: plots y versus x with red triangles
+- ~ax.plot(x,y,'r^-')~: plots y versus x with red triangles on a solid line
+#+REVEAL_HTML: </div>
+
+** Single 2-D plot example
+#+REVEAL_HTML: <div class="column" style="float:left; width:60%">
+#+BEGIN_SRC python
+  import matplotlib.pyplot as plt
+  import numpy as np
+
+  fig, ax = plt.subplots()
+
+  t = np.linspace(0,2*np.pi,100); # generate x data
+  f = np.sin(t); # generate y data
+  ax.plot(t, f); # plot with a solid line
+
+  plt.show()
+#+END_SRC
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:40%">
+[[./example1.png]]
+#+REVEAL_HTML: </div>
+
+** ~'style-option'~
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+| Color       | Line           | Marker          |
+|-------------+----------------+-----------------|
+| ~y~ yellow  | ~-~ solid      | ~+~ plus sign   |
+| ~m~ magenta | ~--~ dashed    | ~o~ circle      |
+| ~c~ cyan    | ~:~ dotted     | ~*~ asterisk    |
+| ~r~ red     | ~-.~ dash-dot  | ~x~ x-mark      |
+| ~g~ green   | ~none~ no line | ~.~ point       |
+| ~b~ blue    |                | ~^~ up triangle |
+| ~w~ white   |                | ~s~ square      |
+| ~k~ black   |                | ~d~ diamond     |
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+- ~ax.plot(x,y,'r')~: plots y versus x with a *red solid* line
+- ~ax.plot(x,y,':')~: plots y versus x with a *dotted* line
+- ~ax.plot(x,y,'b--')~: plots y versus x with a *blue dashed* line
+- ~ax.plot(x,y,'+')~: plots y versus x as *unconnected points marked by +*
+#+REVEAL_HTML: </div>
+
+** ~'style-option'~ example
+#+REVEAL_HTML: <div class="column" style="float:left; width:60%">
+#+BEGIN_SRC python
+  import matplotlib.pyplot as plt
+  import numpy as np
+
+  fig, ax = plt.subplots()
+
+  t = np.linspace(0,2*np.pi,100); # generate x data
+  f = np.sin(t); # generate y data
+  ax.plot(t, f, "rs-"); # plot with connected red squares
+
+  plt.show()
+#+END_SRC
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:40%">
+[[./example2.png]]
+#+REVEAL_HTML: </div>
+
+** Labels, title, and other text objects
+#+REVEAL_HTML: <div class="column" style="float:left; width:60%">
+- ~ax.set_xlabel('x (m)')~: labels the x-axis with ~x (m)~
+- ~ax.set_ylabel('p (Pa)')~: labels the y-axis with ~p (Pa)~
+- ~ax.set_title('Pressure Variation')~: titles the plot with ~Pressure Variation~
+- ~ax.text(5,-180,'Note this dip')~: annotates ~"Note this dip"~ at the location (5, -180) in the plot coordinates
+#+BEGIN_SRC python
+import matplotlib.pyplot as plt                        
+import numpy as np                                     
+                                                       
+fig, ax = plt.subplots()                               
+                                                       
+x = np.linspace(0,2*np.pi,100)
+p = np.sin(x)*np.exp(x)
+ax.plot(x, p, 'k')
+ax.set_xlabel('x (m)') # creates the label for x-axis
+ax.set_ylabel('p (Pa)') # creates the label for y-axis
+ax.set_title('Pressure Variation') # creates a title
+ax.annotate('Note this dip', (5,-180)) # annotates a text
+                                                       
+plt.show()
+#+END_SRC
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:40%">
+#+ATTR_HTML: :width 700px
+[[./example3.png]]
+#+REVEAL_HTML: </div>
+** Axis control
+#+REVEAL_HTML: <div class="column" style="float:left; width:40%">
+#+BEGIN_SRC python
+  ax.set_xlim(xmin, xmax)
+  ax.set_ylim(ymin, ymax)
+#+END_SRC
+where
+- ~xmin~ and ~xmax~ specify the x-axis limits
+- ~ymin~ and ~ymax~ specify the y-axis limits
+
+/Ex./:
+- ~ax.set_xlim(-5, 10)~ sets the x-axis from -5 to 10
+- ~ax.set_ylim(2, 22)~ sets the y-axis from 2 to 22
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:60%">
+#+BEGIN_SRC python
+import matplotlib.pyplot as plt                        
+import numpy as np                                     
+                                                       
+fig, ax = plt.subplots()                               
+                                                       
+x = np.linspace(0,2*np.pi,100)
+p = np.sin(x)*np.exp(x)
+ax.plot(x, p, 'k')
+ax.set_xlabel('x (m)') # creates the label for x-axis
+ax.set_ylabel('p (Pa)') # creates the label for y-axis
+ax.set_title('Pressure Variation') # creates a title
+ax.annotate('Note this dip', (5,-180)) # annotates a text
+
+ax.set_xlim(0, x[-1]) # adjust x axis limits
+ax.set_ylim(np.min(p)-20, np.max(p)+20) # adjust y axis limits
+
+plt.show()                                             
+#+END_SRC
+#+ATTR_HTML: :width 700px
+[[./example4.png]]
+#+REVEAL_HTML: </div>
+
+** Semi-control of axes
+- ~ax.set_xlim(left=-5)~: sets the lower x-axis limit at -5, and lets the upper limit to be set automatically
+- ~ax.set_xlim(right=10)~: sets the upper x-axis limit at 10, and lets the lower limit to be set automatically
+- ~ax.set_ylim(bottom=-5)~: sets the lower y-axis limit at -5, and lets the upper limit to be set automatically
+- ~ax.set_ylim(top=10)~: sets the upper y-axis limit at 10, and lets the lower limit to be set automatically
+  
+** Grid
+#+REVEAL_HTML: <div class="column" style="float:left; width:60%">
+- A grid makes it easier to analyze a plot
+- ~ax.grid()~ function draws grid  
+
+#+BEGIN_SRC python
+import matplotlib.pyplot as plt                        
+import numpy as np                                     
+                                                       
+fig, ax = plt.subplots()                               
+                                                       
+x = np.linspace(0,2*np.pi,100)
+p = np.sin(x)*np.exp(x)
+ax.plot(x, p, 'k')
+ax.set_xlabel('x (m)') # creates the label for x-axis
+ax.set_ylabel('p (Pa)') # creates the label for y-axis
+ax.set_title('Pressure Variation') # creates a title
+ax.annotate('Note this dip', (5,-180)) # annotates a text
+ax.grid()
+                                                       
+plt.show()
+#+END_SRC
+
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:40%">
+[[./example6.png]]
+#+REVEAL_HTML: </div>
+
+* Overlay plots
+- We can plot data on top of each other by utilizing the overlay concept.
+- After each ~ax.plot~ function execution, a plot is generated on the same figure
+#+REVEAL_HTML: <div class="column" style="float:left; width:60%">
+/Ex./:
+#+BEGIN_SRC python
+  import matplotlib.pyplot as plt
+  import numpy as np
+
+  # Generate data points
+  x1 = np.linspace(0, 100, 50)
+  x2 = np.linspace(0, 100, 1000)
+
+  f = 20*x1 + 3
+  g = 3*x1**2 + np.sqrt(x1)
+  h = 3e3*np.sin(5*x2) * np.exp(-0.5*x2)
+
+  # Plot an overlay 2D plot for f, g, h
+  fig, ax = plt.subplots()
+  ax.plot(x1, f, "o", label = "f(x) = 20x + 3")
+  ax.plot(x1, g, "^-", label = "g(x) = 3x^2 + x^(1/2)")
+  ax.plot(x2, h, "-", label = "h(x) = 3*10^3*sin(5x) * exp(-0.5x)")
+  ax.legend(loc="lower right")
+
+  # Other stuff
+  ax.set(title = "Plot for f(x), g(x), and h(x)", xlabel = "x", ylabel = "y")
+  ax.grid()
+  ax.set_xlim(left=-0.5, right=40)
+  ax.set_ylim(top=5000)
+
+  plt.show()
+#+END_SRC
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:40%">
+[[./example.png]]
+#+REVEAL_HTML: </div>
+
+As depicted in the plot, when there are more than one data plotted, *legend* is placed on the frame to designate the names of the data.
+- ~ax.legend()~: produces legend using the text provided in ~label~ keyword in the ~ax.plot~ function
+- ~ax.legend(loc)~, where ~loc~ can take
+  + ~'upper right', 'upper left', 'lower left', 'lower right', 'right', 'center left', 'center right', 'lower center', 'upper center', 'center'~
+
+* Subplotting
+- If there are more than one frames, we can collect those frames into one figure by subplotting.
+- All the previous methods can be applied on subplotting, only some minor changes have to be made on:
+  + ~plt.subplots(...)~ call
+  + ~ax~ usage
+  + additional ~plt.tight_layout~ call
+
+** Subplots configured as 1D arrays
+#+REVEAL_HTML: <div class="column" style="float:left; width:60%">
+- Let's create $1\times2$ subplots
+#+BEGIN_SRC python
+import matplotlib.pyplot as plt                        
+import numpy as np                                     
+                                                       
+fig, ax = plt.subplots(1,2)                               
+                                                       
+x = np.linspace(0,2*np.pi,100)
+p = np.sin(x)*np.exp(x)
+ax[0].plot(x, p, 'k')
+ax[0].set_xlabel('x (m)') # creates the label for x-axis
+ax[0].set_ylabel('p (Pa)') # creates the label for y-axis
+ax[0].set_title('Pressure Variation') # creates a title
+ax[0].grid()
+
+g = np.sin(5*x)/x
+ax[1].plot(x, g, 'ro-')
+ax[1].set_xlabel('x') # creates the label for x-axis
+ax[1].set_ylabel('sin(5x)/x') # creates the label for y-axis
+ax[1].set_title('sin(5x)/x vs x') # creates a title
+
+plt.tight_layout()
+plt.show()
+#+END_SRC
+- ~plt.subplots(1,2)~ initializes $1\times2$ subplots
+- ~ax[0]~ and ~ax[1]~ are for first and second subplots, respectively
+- ~plt.tight_layout()~ adjusts the gaps between the figures such that labels and titles are clearly seen
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:right; width:40%">
+[[./example7.png]]
+#+REVEAL_HTML: </div>
+
+
+** Subplots configured as 2D arrays
+#+REVEAL_HTML: <div class="column" style="float:left; width:60%">
+- Let's create $2\times2$ subplots
+#+BEGIN_SRC python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0,2*np.pi,100)
+y1 = np.sin(x)
+y2 = x
+y3 = x - (x**3)/6 + (x**5)/120
+y4 = np.sin(x)*np.exp(x)
+
+fig, ax = plt.subplots(2,2)
+
+# plotting the first frame in a 2x2 grid
+ax[0,0].plot(x,y1)
+ax[0,0].set_xlabel("x")
+ax[0,0].set_ylabel("y1")
+ax[0,0].set_title("First subplot")
+ax[0,0].grid()
+
+# plotting the second frame in a 2x2 grid
+ax[0,1].plot(x,y2)
+ax[0,1].set_xlabel("x")
+ax[0,1].set_ylabel("y2")
+ax[0,1].set_title("Second subplot")
+ax[0,1].grid()
+
+# plotting the third frame in a 2x2 grid
+ax[1,0].plot(x,y3)
+ax[1,0].set_xlabel("x");
+ax[1,0].set_ylabel("y3");
+ax[1,0].set_title("Third subplot");
+ax[1,0].grid()
+
+# plotting the fourth frame in a 2x2 grid
+ax[1,1].plot(x,y4)
+ax[1,1].set_xlabel("x");
+ax[1,1].set_ylabel("y4");
+ax[1,1].set_title("Fourth subplot");
+ax[1,1].grid()
+
+plt.tight_layout()
+plt.show()
+#+END_SRC
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:40%">
+[[./example8.png]]
+#+REVEAL_HTML: </div>
+
+- Different subplots are accessed via ~ax[row,col]~ convention
+- All the functionalities applied on a single plot are also valid on the subplots
+
+* Log-scale functions
+#+REVEAL_HTML: <div class="column" style="float:left; width:60%">
+Sometimes logarithmic scale is utilized in addition to linear (default) scale:
+- ~ax.set_xscale('log')~
+- ~ax.set_yscale('log')~
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:right; width:40%">
+[[./logscale.png]]
+#+REVEAL_HTML: </div>
+
+* Examples
+** Example-1
+#+REVEAL_HTML: <div class="column" style="float:left; width:60%">
+#+BEGIN_SRC python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0,10,100)
+t = np.linspace(0,4,50)
+
+f = np.exp(-x) * np.sin(2*np.pi*x)
+g = 5*x
+h = 1/2 * 9.81 * t**2
+
+fig, ax = plt.subplots()
+ax.plot(x,f,"k")
+ax.grid()
+ax.set_title("f(x) vs x")
+ax.set_xlabel("x")
+ax.set_ylabel("f(x)")
+
+plt.show()
+#+END_SRC
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:40%">
+[[./example10.png]]
+#+REVEAL_HTML: </div>
+
+
+** Example-2
+#+REVEAL_HTML: <div class="column" style="float:left; width:60%">
+#+BEGIN_SRC python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# DATA GENERATION
+## DEFINE FUNCTIONS
+def f(x):
+    y = np.array([])
+    for i in np.arange(0,np.size(x),1):
+        if (x[i] >= 0) & (x[i] <= np.pi/2):
+            y = np.append(y, np.sin(x[i]))
+        elif (x[i] >= np.pi) & (x[i] <= 3*np.pi/2):
+            y = np.append(y, np.sin(x[i]))
+        else:
+            y = np.append(y, 0)
+    return y
+
+def g(x):
+    y = -4 * x**2 + 3
+    return y
+
+def h(x):
+    y = 3*np.ones((np.size(x),))
+    return y
+
+## GENERATE DATA
+x = np.linspace(0, 2*np.pi, 100)
+y1 = f(x)
+y2 = g(x)
+y3 = h(x)
+
+# PLOTTING
+fig, ax = plt.subplots(1,2)
+ax[0].plot(x,y1,"kd-")
+ax[1].plot(x,y2,"gs",label="g(x)")
+ax[1].plot(x,y3,"ro",label="h(x)")
+
+# OTHER STUFF: labels, titles, legend, etc.
+ax[0].set_xlabel("x")
+ax[0].set_ylabel("f(x)")
+ax[1].set_xlabel("x")
+ax[1].set_ylabel("Function output")
+ax[0].set_title("f(x) vs x")
+ax[1].set_title("Two functions")
+ax[1].legend()
+ax[0].grid()
+ax[1].set_xlim(0,2)
+ax[1].set_ylim(-20,10)
+
+plt.tight_layout()
+
+plt.show()
+#+END_SRC
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:40%">
+[[./example9.png]]
+#+REVEAL_HTML: </div>
+
+
+
+* Deliverables
+- 2D plotting fundamentals
+- Making clear data visualization
+- Presentation of multiple data in a compact way
+- Suitable interpretation of different trends of data
