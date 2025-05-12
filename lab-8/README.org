@@ -1,0 +1,42 @@
+#+TITLE: ES118 Lab #8
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+SUBTITLE: 
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+
+* Demo session
+#+ATTR_REVEAL: :frag (appear)
+- Scientific Python Lectures textbook: p70, p82
+- loading file data
+- array arithmetic operations
+- array statistics
+- sorting
+- changing elements using ~np.where()~ and its indexing counterpart
+- vertical stacking (we horizontal stacking previously)  
+- saving the data in a file
+
+* Deliverables
+#+REVEAL_HTML: <div class="column" style="float:left; width:40%">
+#+ATTR_HTML: :width 700px
+[[./populations.png]]
+
+#+ATTR_REVEAL: :frag (appear)
+1. git clone https://github.com/Yeditepe-ES118/2025-Spring.git
+2. cd 2025-Spring/lab-8
+3. write a python script called ~lab8.py~
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:60%">
+#+ATTR_REVEAL: :frag (appear)
+Then, in ~lab8.py~:
+#+ATTR_REVEAL: :frag (appear)
+1. load ~populations.txt~ to a variable called ~data~ using ~np.loadtxt()~.
+2. compute the ratios ~carrot/hare~ and ~hare/lynx~ and assign them to ~c_h~ and ~h_l~, respectively.
+3. create a new matrix called ~output_data~ and make three columns containing ~year~, ~c_h~ and ~h_l~ vectors, respectively.
+4. save ~output_data~ variable in a file called ~output_data.txt~.
+#+REVEAL_HTML: </div>

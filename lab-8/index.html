@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>ES118 Lab #8</title>
+<meta name="author" content="Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../codestyle.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>ES118 Lab #8</h2> <h3></h3> <h4>Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar</h4> <h4></h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org49a389d">Demo session</a></li>
+<li><a href="#/slide-orgb61ec91">Deliverables</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-org49a389d">
+<h2 id="org49a389d">Demo session</h2>
+<ul>
+<li class="fragment appear">Scientific Python Lectures textbook: p70, p82</li>
+<li class="fragment appear">loading file data</li>
+<li class="fragment appear">array arithmetic operations</li>
+<li class="fragment appear">array statistics</li>
+<li class="fragment appear">sorting</li>
+<li class="fragment appear">changing elements using <code>np.where()</code> and its indexing counterpart</li>
+<li class="fragment appear">vertical stacking (we horizontal stacking previously)</li>
+<li class="fragment appear">saving the data in a file</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgb61ec91">
+<h2 id="orgb61ec91">Deliverables</h2>
+<div class="column" style="float:left; width:40%">
+
+<div id="orgb78f654" class="figure">
+<p><img src="./populations.png" alt="populations.png" width="700px" />
+</p>
+</div>
+
+<ol>
+<li class="fragment appear">git clone <a href="https://github.com/Yeditepe-ES118/2025-Spring.git">https://github.com/Yeditepe-ES118/2025-Spring.git</a></li>
+<li class="fragment appear">cd 2025-Spring/lab-8</li>
+<li class="fragment appear">write a python script called <code>lab8.py</code></li>
+
+</ol>
+</div>
+
+<div class="column" style="float:right; width:60%">
+<p class="fragment (appear)">
+Then, in <code>lab8.py</code>:
+</p>
+<ol>
+<li class="fragment appear">load <code>populations.txt</code> to a variable called <code>data</code> using <code>np.loadtxt()</code>.</li>
+<li class="fragment appear">compute the ratios <code>carrot/hare</code> and <code>hare/lynx</code> and assign them to <code>c_h</code> and <code>h_l</code>, respectively.</li>
+<li class="fragment appear">create a new matrix called <code>output_data</code> and make three columns containing <code>year</code>, <code>c_h</code> and <code>h_l</code> vectors, respectively.</li>
+<li class="fragment appear">save <code>output_data</code> variable in a file called <code>output_data.txt</code>.</li>
+
+</ol>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
