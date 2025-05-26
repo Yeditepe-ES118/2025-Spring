@@ -1,0 +1,46 @@
+#+TITLE: ES118 Lab #9
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+SUBTITLE: 
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+
+* Demo session
+#+ATTR_REVEAL: :frag (appear)
+- solution of assignment-2
+- plotting functions
+  #+ATTR_REVEAL: :frag (appear)
+  + single plot
+  + overlay plot
+  + 1x2 subplot
+
+* Deliverables
+#+REVEAL_HTML: <div class="column" style="float:left; width:50%">
+Create the following arrays using NumPy:
+- A 1D array called ~myarray~ which consists of 10 equally spaced numbers between 0 and 5.
+- A 3×3 identity matrix called ~mysecondarray~.
+- A 2D array (5×5) called ~mythirdarray~:
+\begin{equation}
+\mathbf M =
+\begin{bmatrix}
+9 & 8 & 7 & 0 & 0 \\
+8 & 9 & 8 & 7 & 0 \\
+7 & 8 & 9 & 8 & 7 \\
+0 & 7 & 8 & 9 & 8 \\
+0 & 0 & 7 & 8 & 9
+\end{bmatrix}
+\end{equation}
+- Reshape the 1D array from Step 1 into a 2×5 matrix in a column-wise ordering.
+- Compute the mean of the matrix in Step 4 and write the result in a variable called ~avg~.
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width:50%">
+Plot the function y = sin(x) for x in [0, $2\pi$] with 100 sample points and customize the plot:
+- Add a title ("Sine Wave").
+- Label the x-axis ("x") and y-axis ("sin(x)").
+- Use a dashed red line.  
+#+REVEAL_HTML: </div>

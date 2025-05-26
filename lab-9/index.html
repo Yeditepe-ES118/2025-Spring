@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>ES118 Lab #9</title>
+<meta name="author" content="Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../codestyle.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>ES118 Lab #9</h2> <h3></h3> <h4>Ufuk Baler, MSc. &amp; Asst. Prof. Dr. Fethi Okyar</h4> <h4></h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-orgdf39a7c">Demo session</a></li>
+<li><a href="#/slide-org63b4085">Deliverables</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-orgdf39a7c">
+<h2 id="orgdf39a7c">Demo session</h2>
+<ul>
+<li class="fragment appear">solution of assignment-2</li>
+<li class="fragment appear">plotting functions
+<ul>
+<li class="fragment appear">single plot</li>
+<li class="fragment appear">overlay plot</li>
+<li class="fragment appear">1x2 subplot</li>
+
+</ul></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org63b4085">
+<h2 id="org63b4085">Deliverables</h2>
+<div class="column" style="float:left; width:50%">
+<p>
+Create the following arrays using NumPy:
+</p>
+<ul>
+<li>A 1D array called <code>myarray</code> which consists of 10 equally spaced numbers between 0 and 5.</li>
+<li>A 3×3 identity matrix called <code>mysecondarray</code>.</li>
+<li>A 2D array (5×5) called <code>mythirdarray</code>:</li>
+
+</ul>
+<div>
+\begin{equation}
+\mathbf M =
+\begin{bmatrix}
+9 & 8 & 7 & 0 & 0 \\
+8 & 9 & 8 & 7 & 0 \\
+7 & 8 & 9 & 8 & 7 \\
+0 & 7 & 8 & 9 & 8 \\
+0 & 0 & 7 & 8 & 9
+\end{bmatrix}
+\end{equation}
+
+</div>
+<ul>
+<li>Reshape the 1D array from Step 1 into a 2×5 matrix in a column-wise ordering.</li>
+<li>Compute the mean of the matrix in Step 4 and write the result in a variable called <code>avg</code>.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width:50%">
+<p>
+Plot the function y = sin(x) for x in [0, \(2\pi\)] with 100 sample points and customize the plot:
+</p>
+<ul>
+<li>Add a title ("Sine Wave").</li>
+<li>Label the x-axis ("x") and y-axis ("sin(x)").</li>
+<li>Use a dashed red line.</li>
+
+</ul>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
