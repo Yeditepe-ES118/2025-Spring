@@ -1,6 +1,5 @@
-#+TITLE: ES117 Lecture #13
+#+TITLE: ES118 Lecture #12
 #+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
-#+DATE: 2024-12-16
 #+SUBTITLE: Visualization
 #+STARTUP: overview
 #+REVEAL_THEME: simple
