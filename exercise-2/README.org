@@ -1,0 +1,24 @@
+#+TITLE: ES118 Exercise-2
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+
+* We’ll write a function called ~simulate_decay~ which
+1. accepts ~initial_amount~ ($N_0$ scalar), ~decay_constant~ ($\lambda$ scalar), ~time_points~ (1D array of 500 steps) arguments
+2. Simulate the decay of a radioactive isotope over time using the exponential decay law: U-238 ($\lambda = 1.55(10^{-10})$ 1/s, $N_0=100$ g)
+3. Compute the remaining quantity of the substance at each time step: $t_{max} = 1000$ s
+4. Plot the decay curve and half-life using proper titles, labels, etc.
+5. Return the remaining quantity of the substance at each time step and half-life
+
+* Exponential Decay Law
+$$N(t) = N_0 e^{-\lambda t}$$
+- $N_0$ (g): Initial quantity.
+- $\lambda$ (1/s): Decay constant (probability of decay per unit time).
+
+* Half-life Calculation
+$$t_{1/2} = \frac{\ln(2)}{\lambda}$$
