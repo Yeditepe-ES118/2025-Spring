@@ -10,10 +10,10 @@
 
 * We’ll write a function called ~simulate_decay~ which
 1. accepts ~initial_amount~ ($N_0$ scalar), ~decay_constant~ ($\lambda$ scalar), ~time_points~ (1D array of 500 steps) arguments
-2. Simulate the decay of a radioactive isotope over time using the exponential decay law: U-238 ($\lambda = 1.55(10^{-10})$ 1/s, $N_0=100$ g)
-3. Compute the remaining quantity of the substance at each time step: $t_{max} = 1000$ s
-4. Plot the decay curve and half-life using proper titles, labels, etc.
-5. Return the remaining quantity of the substance at each time step and half-life
+2. simulates the decay of a radioactive isotope over time using the exponential decay law: U-238 ($\lambda = 1.55(10^{-10})$ 1/s, $N_0=100$ g)
+3. computes the remaining quantity of the substance at each time step: $t_{max} = 1000$ s
+4. plots the decay curve and half-life using proper titles, labels, etc.
+5. returns the remaining quantity of the substance at each time step and half-life
 
 * Exponential Decay Law
 $$N(t) = N_0 e^{-\lambda t}$$

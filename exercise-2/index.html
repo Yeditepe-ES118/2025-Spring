@@ -232,27 +232,27 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8eeb1ae">We’ll write a function called <code>simulate_decay</code> which</a></li>
-<li><a href="#orgcb6d23f">Exponential Decay Law</a></li>
-<li><a href="#org1fbf647">Half-life Calculation</a></li>
+<li><a href="#org42dd27b">We’ll write a function called <code>simulate_decay</code> which</a></li>
+<li><a href="#orga31a113">Exponential Decay Law</a></li>
+<li><a href="#org32af0ed">Half-life Calculation</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8eeb1ae" class="outline-2">
-<h2 id="org8eeb1ae">We’ll write a function called <code>simulate_decay</code> which</h2>
-<div class="outline-text-2" id="text-org8eeb1ae">
+<div id="outline-container-org42dd27b" class="outline-2">
+<h2 id="org42dd27b">We’ll write a function called <code>simulate_decay</code> which</h2>
+<div class="outline-text-2" id="text-org42dd27b">
 <ol class="org-ol">
 <li>accepts <code>initial_amount</code> (\(N_0\) scalar), <code>decay_constant</code> (\(\lambda\) scalar), <code>time_points</code> (1D array of 500 steps) arguments</li>
-<li>Simulate the decay of a radioactive isotope over time using the exponential decay law: U-238 (\(\lambda = 1.55(10^{-10})\) 1/s, \(N_0=100\) g)</li>
-<li>Compute the remaining quantity of the substance at each time step: \(t_{max} = 1000\) s</li>
-<li>Plot the decay curve and half-life using proper titles, labels, etc.</li>
-<li>Return the remaining quantity of the substance at each time step and half-life</li>
+<li>simulates the decay of a radioactive isotope over time using the exponential decay law: U-238 (\(\lambda = 1.55(10^{-10})\) 1/s, \(N_0=100\) g)</li>
+<li>computes the remaining quantity of the substance at each time step: \(t_{max} = 1000\) s</li>
+<li>plots the decay curve and half-life using proper titles, labels, etc.</li>
+<li>returns the remaining quantity of the substance at each time step and half-life</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-orgcb6d23f" class="outline-2">
-<h2 id="orgcb6d23f">Exponential Decay Law</h2>
-<div class="outline-text-2" id="text-orgcb6d23f">
+<div id="outline-container-orga31a113" class="outline-2">
+<h2 id="orga31a113">Exponential Decay Law</h2>
+<div class="outline-text-2" id="text-orga31a113">
 <p>
 \[N(t) = N_0 e^{-\lambda t}\]
 </p>
@@ -262,9 +262,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org1fbf647" class="outline-2">
-<h2 id="org1fbf647">Half-life Calculation</h2>
-<div class="outline-text-2" id="text-org1fbf647">
+<div id="outline-container-org32af0ed" class="outline-2">
+<h2 id="org32af0ed">Half-life Calculation</h2>
+<div class="outline-text-2" id="text-org32af0ed">
 <p>
 \[t_{1/2} = \frac{\ln(2)}{\lambda}\]
 </p>
