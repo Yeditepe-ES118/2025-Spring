@@ -1,0 +1,44 @@
+#+TITLE: ES118 Exercise-1
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+
+You are given a dataset of exam scores for a class of students across 3 subjects (Math, Physics, Chemistry). Your task is to use NumPy arrays to analyze the data.
+
+| Student # | Math | Physics | Chemistry |
+|-----------+------+---------+-----------|
+|         1 |   85 |      90 |        78 |
+|         2 |   72 |      88 |        91 |
+|         3 |   93 |      87 |        80 |
+|         4 |   65 |      70 |        75 |
+|         5 |   78 |      82 |        84 |
+
+* Array Generation
+Use ~np.array()~ to represent the grade table as a 2D array.
+* Array Inspection & Basic Stats
+- Print the dimension of the array.
+- Print the shape of the array.
+- Compute the average score for each subject.
+- Find the highest and lowest score across all exams.
+
+* Indexing & Slicing
+- Extract the scores of the 3rd student.
+- Get the Physics scores of all students.
+- Select the scores of students who scored above 80 in Math.
+
+* Array Manipulation
+- Add 5 bonus points to all Chemistry scores.
+- Create a new column representing the total score for each student.
+- Normalize all scores (divide by the max possible score, 100).
+
+* Boolean Masking & Filtering
+- Find all students who scored above 85 in any subject.
+- Count how many students failed (score < 70) in at least one subject.
+
+* Broadcasting & Advanced Operations
+- Compute the percentage for each student (assuming max score per subject is 100).
